@@ -1,0 +1,107 @@
+version: '3.9'
+
+services:
+  # Vector database for RAG
+  qdrant:
+    image: qdrant/qdrant:v1.15.0
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: unless-stopped
+    networks:
+      - character_simulation
+
+  # PostgreSQL for timeline and character data (more robust than SQLite)
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: character_simulation
+      POSTGRES_USER: timeline_user
+      POSTGRES_PASSWORD: timeline_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - character_simulation
+
+  # Redis for caching and session management
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - character_simulation
+
+  # MCP Character Simulation Server
+  mcp_server:
+    build:
+      context: .
+      dockerfile: Dockerfile.mcp
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://timeline_user:timeline_pass@postgres:5432/character_simulation
+      - QDRANT_URL=http://qdrant:6333
+      - REDIS_URL=redis://redis:6379
+      - AZURE_ENDPOINT=${AZURE_ENDPOINT}
+      - AZURE_API_KEY=${AZURE_API_KEY}
+    depends_on:
+      - postgres
+      - qdrant
+      - redis
+    volumes:
+      - character_data:/app/character_data
+      - model_cache:/app/model_cache
+    restart: unless-stopped
+    networks:
+      - character_simulation
+
+  # Discord Bot (separate container for scalability)
+  discord_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.discord
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - MCP_SERVER_URL=http://mcp_server:8000
+      - DATABASE_URL=postgresql://timeline_user:timeline_pass@postgres:5432/character_simulation
+    depends_on:
+      - mcp_server
+      - postgres
+    restart: unless-stopped
+    networks:
+      - character_simulation
+
+  # Optional: Web interface for timeline management
+  web_interface:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - MCP_SERVER_URL=http://mcp_server:8000
+    depends_on:
+      - mcp_server
+    restart: unless-stopped
+    networks:
+      - character_simulation
+
+volumes:
+  qdrant_data:
+  postgres_data:
+  redis_data:
+  character_data:
+  model_cache:
+
+networks:
+  character_simulation:
+    driver: bridge

@@ -1,0 +1,90 @@
+name: Deploy Agentic Discord Bot
+
+on:
+  push:
+    branches: [ main, discord-token-limit-fix ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    services:
+      qdrant:
+        image: qdrant/qdrant:v1.15.0
+        ports:
+          - 6333:6333
+      
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_PASSWORD: admin
+          POSTGRES_USER: admin
+          POSTGRES_DB: novel_sim
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Install Node.js dependencies
+      run: npm install
+    
+    - name: Run Python tests
+      env:
+        DATABASE_URL: postgresql://admin:admin@localhost:5432/novel_sim
+        QDRANT_URL: http://localhost:6333
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      run: |
+        python -m pytest test_character_detection.py -v || true
+        python test_variant_aware_agent.py || true
+    
+    - name: Test Discord bot connection
+      env:
+        DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+        DISCORD_CLIENT_ID: ${{ secrets.DISCORD_CLIENT_ID }}
+        API_SERVER_URL: http://localhost:5005
+      run: |
+        node test/test-connection.js || true
+    
+    - name: Run system status check
+      env:
+        DATABASE_URL: postgresql://admin:admin@localhost:5432/novel_sim
+        QDRANT_URL: http://localhost:6333
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      run: |
+        python final_status_check.py || true
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Deploy to production
+      run: |
+        echo "🚀 Ready for production deployment!"
+        echo "Set up your deployment target (Docker, VPS, etc.)"

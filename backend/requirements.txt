@@ -1,0 +1,6 @@
+flask
+flask-cors
+qdrant-client
+sentence-transformers
+azure-ai-inference
+waitress

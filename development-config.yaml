@@ -1,0 +1,235 @@
+# Mojin RAG Project Development Configuration
+# Enhanced Agentic AI with Discord Bot Integration
+# Created: 2025-08-13
+
+project:
+  name: "mojin-rag-project"
+  description: "Enhanced Agentic AI that queries SQL for bigger picture story and RAG for enriching details"
+  version: "1.0.0"
+  type: "hybrid-ai-system"
+
+# Node.js Dependencies (Discord Bot)
+node_dependencies:
+  runtime:
+    - name: "discord.js"
+      version: "^14.14.1"
+      purpose: "Discord bot framework"
+    - name: "axios"
+      version: "^1.6.8"
+      purpose: "HTTP client for API calls"
+    - name: "dotenv"
+      version: "^16.4.5"
+      purpose: "Environment variable management"
+    - name: "express"
+      version: "^4.19.2"
+      purpose: "Web server framework"
+    - name: "cors"
+      version: "^2.8.5"
+      purpose: "Cross-origin resource sharing"
+    - name: "winston"
+      version: "^3.11.0"
+      purpose: "Logging framework"
+  
+  development:
+    - name: "nodemon"
+      version: "^3.1.0"
+      purpose: "Development auto-restart"
+
+# Python Dependencies (AI/RAG Backend)
+python_dependencies:
+  core_ai:
+    - name: "langchain"
+      purpose: "LLM framework"
+    - name: "transformers"
+      purpose: "Hugging Face models"
+    - name: "sentence-transformers"
+      purpose: "Text embeddings"
+    - name: "torch"
+      purpose: "PyTorch ML framework"
+    - name: "azure-ai-inference"
+      purpose: "Azure AI services"
+  
+  rag_system:
+    - name: "qdrant-client"
+      purpose: "Vector database client"
+    - name: "tiktoken"
+      purpose: "Token counting"
+    - name: "pyarrow"
+      purpose: "Data serialization"
+  
+  data_processing:
+    - name: "ebooklib"
+      purpose: "EPUB processing"
+    - name: "beautifulsoup4"
+      purpose: "HTML/XML parsing"
+    - name: "pandas"
+      purpose: "Data manipulation"
+    - name: "pymupdf"
+      purpose: "PDF processing"
+  
+  utilities:
+    - name: "sentencepiece"
+      purpose: "Text tokenization"
+    - name: "protobuf"
+      purpose: "Data serialization"
+    - name: "accelerate"
+      purpose: "Model acceleration"
+
+# MCP (Model Context Protocol) Dependencies
+mcp_dependencies:
+  - name: "mcp[cli]"
+    version: ">=1.0.0"
+    purpose: "MCP framework"
+  - name: "fastmcp"
+    version: ">=0.1.0"
+    purpose: "Fast MCP implementation"
+  - name: "discord.py"
+    version: ">=2.3.0"
+    purpose: "Discord integration"
+  - name: "aiohttp"
+    version: ">=3.8.0"
+    purpose: "Async HTTP client"
+  - name: "pydantic"
+    version: ">=2.0.0"
+    purpose: "Data validation"
+  - name: "asyncio-mqtt"
+    version: ">=0.16.0"
+    purpose: "MQTT async client"
+  - name: "python-dotenv"
+    version: ">=1.0.0"
+    purpose: "Environment variables"
+  - name: "numpy"
+    version: ">=1.24.0"
+    purpose: "Numerical computing"
+
+# Backend API Dependencies
+backend_dependencies:
+  - name: "flask"
+    purpose: "Web framework"
+  - name: "flask-cors"
+    purpose: "CORS handling"
+  - name: "waitress"
+    purpose: "WSGI server"
+
+# Scripts and Commands
+scripts:
+  node:
+    start: "node agentic-discord-bot.js"
+    dev: "nodemon agentic-discord-bot.js"
+    test: "node test/test-connection.js"
+  
+  python:
+    api_server: "python agentic_api.py"
+    populate_rag: "python populate_qdrant.py"
+    mcp_server: "python mcp_server.py"
+    hybrid_agent: "python enhanced_hybrid_agent.py"
+  
+  docker:
+    build_discord: "docker build -f Dockerfile.discord -t mojin-discord-bot ."
+    build_mcp: "docker build -f Dockerfile.mcp -t mojin-mcp-server ."
+    compose_up: "docker-compose -f docker-compose-enhanced.yml up"
+    compose_hybrid: "docker-compose -f docker-compose-hybrid.yml up"
+
+# Testing Configuration
+testing:
+  frameworks:
+    node: "Built-in test runner"
+    python: "pytest (when implemented)"
+  
+  test_files:
+    - "test/test-connection.js"
+  
+  commands:
+    connection_test: "node test/test-connection.js"
+    manual_health_check: "curl http://localhost:5004/health"
+
+# Development Environment Setup
+development_setup:
+  requirements:
+    - "Node.js >= 18.0.0"
+    - "Python >= 3.8"
+    - "Docker (optional)"
+    - "Qdrant vector database"
+  
+  environment_variables:
+    required:
+      - "DISCORD_TOKEN"
+      - "DISCORD_CLIENT_ID"
+      - "DEEPSEEK_API_KEY"
+    optional:
+      - "DISCORD_GUILD_ID"
+      - "API_SERVER_URL (default: http://localhost:5004)"
+      - "QDRANT_URL"
+      - "AZURE_API_KEY"
+
+# Known Issues and Fixes
+known_issues:
+  discord_token_limit:
+    description: "Model responses exceed Discord's 2000 character limit"
+    status: "partial_fix_implemented"
+    current_handling:
+      - "Text truncation at 4000 chars for embeds"
+      - "Follow-up messages for long responses"
+      - "Sentence-aware truncation"
+    improvements_needed:
+      - "Better chunking algorithm"
+      - "Response summarization for very long outputs"
+      - "Pagination for complex analyses"
+  
+  asyncio_conflicts:
+    description: "Event loop conflicts for consecutive requests"
+    status: "fixed"
+    solution: "Implemented proper async handling"
+
+# Project Structure
+structure:
+  core_files:
+    - "agentic-discord-bot.js (Discord bot main)"
+    - "enhanced_hybrid_agent.py (AI agent core)"
+    - "agentic_api.py (REST API server)"
+    - "enhanced_rag.py (RAG system)"
+  
+  configuration:
+    - "package.json (Node.js config)"
+    - "requirements.txt (Python dependencies)"
+    - "mcp_requirements.txt (MCP dependencies)"
+    - "docker-compose-enhanced.yml (Docker setup)"
+  
+  data:
+    - "qdrant_data/ (Vector database)"
+    - "database/ (SQL schemas)"
+
+# Deployment Options
+deployment:
+  local:
+    command: "npm start && python agentic_api.py"
+    ports:
+      - "5004 (API server)"
+      - "Discord bot (no port)"
+  
+  docker:
+    compose_file: "docker-compose-enhanced.yml"
+    services:
+      - "discord-bot"
+      - "mcp-server"
+      - "qdrant"
+  
+  production:
+    considerations:
+      - "Environment variable security"
+      - "Database persistence"
+      - "API rate limiting"
+      - "Discord bot hosting"
+
+# Maintenance Tasks
+maintenance:
+  regular:
+    - "Update dependencies monthly"
+    - "Monitor Discord API changes"
+    - "Check Qdrant database size"
+    - "Review logs for errors"
+  
+  upgrades:
+    - "Monitor discord.js updates"
+    - "Update AI models periodically"
+    - "Refresh novel embeddings as needed"

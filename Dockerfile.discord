@@ -1,0 +1,35 @@
+# Discord Bot Dockerfile
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements
+COPY mcp_requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r mcp_requirements.txt
+
+# Copy Discord bot code
+COPY discord_bot.py .
+COPY timeline_models.py .
+COPY character_config.py .
+
+# Create logs directory
+RUN mkdir -p logs
+
+# Set environment variables
+ENV PYTHONPATH=/app
+ENV PYTHONUNBUFFERED=1
+
+# Health check (check if bot is responsive)
+HEALTHCHECK --interval=60s --timeout=10s --start-period=30s --retries=3 \
+    CMD python -c "import requests; requests.get('${MCP_SERVER_URL}/health')" || exit 1
+
+# Run the Discord bot
+CMD ["python", "discord_bot.py"]

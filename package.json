@@ -1,0 +1,29 @@
+{
+  "name": "mojin-discord-js-bot",
+  "version": "1.0.0",
+  "description": "Discord.js bot with Python API integration for RAG and character simulation",
+  "main": "discord-bot.js",
+  "scripts": {
+    "start": "node discord-bot.js",
+    "dev": "nodemon discord-bot.js",
+    "api": "python api_server.py",
+    "test": "node test/test-connection.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["discord", "bot", "rag", "character-simulation"],
+  "author": "",
+  "license": "MIT"
+}

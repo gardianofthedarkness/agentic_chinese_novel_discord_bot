@@ -5,51 +5,41 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 
-# Python Virtual Environment
-myenv/
-venv/
-env/
-.env
-.venv
-ENV/
-env.bak/
-venv.bak/
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-# Large Data Files
-*.csv
-preprocessed_data_for_*.csv
-*.parquet
-*.h5
-*.hdf5
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
-# Machine Learning Models
-*.pkl
-*.pickle
-*.model
-*.joblib
-
-# PyTorch/TensorFlow
-*.pth
-*.pt
-*.ckpt
-*.pb
-
-# Logs
-*.log
-logs/
-debug_logs/
-
-# Database data
-qdrant_data/
-*.db
-*.sqlite
-*.sqlite3
-
-# IDE
+# IDEs
 .vscode/
 .idea/
 *.swp
@@ -65,7 +55,25 @@ qdrant_data/
 ehthumbs.db
 Thumbs.db
 
-# API keys and secrets
+# Logs
+*.log
+logs/
+debug_logs/
+
+# Database data (but keep schema)
+qdrant_data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+nul
+temp/
+tmp/
+
+# API keys and secrets (keep .env.example but not .env)
 .env
 *.key
 *.secret
@@ -73,16 +81,33 @@ Thumbs.db
 # Build outputs
 *.tar.gz
 *.zip
-dist/
-build/
 
-# Temporary files
-*.tmp
-*.temp
-temp/
-tmp/
+# Docker
+docker-compose.override.yml
 
-# Project specific
+# Testing
+.coverage
+.pytest_cache/
+.tox/
+htmlcov/
+
+# Project specific temporary files
 *debug*
-*test_output*
+*test_*
+*_test.py
+*_debug.py
 *working*
+*final*
+*fixed*
+*manual*
+*quick*
+*guild*
+*global*
+*force*
+*sync*
+*logging*
+*generate*
+*diagnostic*
+sync_output.log
+diagnostic.log
+server.log

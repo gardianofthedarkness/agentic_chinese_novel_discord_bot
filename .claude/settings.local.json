@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python test_mcp_basic.py)",
+      "Bash(python test_discord_connection.py:*)",
+      "Bash(python:*)",
+      "Bash(timeout:*)",
+      "Bash(start /B python:*)",
+      "Bash(node:*)",
+      "Bash(curl:*)",
+      "Bash(psql:*)",
+      "Bash(git checkout:*)",
+      "Bash(git push:*)"
+    ],
+    "deny": []
+  }
+}
