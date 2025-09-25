@@ -1,0 +1,2269 @@
+{
+  "success": true,
+  "volumes_processed": [
+    1,
+    2
+  ],
+  "processing_time": 3241.034857,
+  "total_batches": 50,
+  "total_chunks": 243,
+  "total_iterations": 102,
+  "total_tokens": 252964,
+  "total_cost": 5.05928,
+  "avg_satisfaction": 0.8314000000000005,
+  "meaningful_improvements": 99,
+  "early_terminations": 1,
+  "volume_breakdown": {
+    "1": {
+      "batches": 24,
+      "chunks": 117,
+      "iterations": 44,
+      "tokens": 108441,
+      "cost": 2.16882,
+      "avg_satisfaction": 0.8350000000000003,
+      "improvements": 44,
+      "early_terminations": 0
+    },
+    "2": {
+      "batches": 26,
+      "chunks": 126,
+      "iterations": 58,
+      "tokens": 144523,
+      "cost": 2.89046,
+      "avg_satisfaction": 0.8280769230769233,
+      "improvements": 55,
+      "early_terminations": 1
+    }
+  },
+  "batch_results": [
+    {
+      "batch_id": 1,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 3,
+      "final_satisfaction": 0.82,
+      "processing_stage": "beginning",
+      "meaningful_improvements": 3,
+      "total_tokens": 6945,
+      "total_cost": 0.13890000000000002,
+      "characters_detected": [],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/高中生",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神秘少女（未命名）",
+          "role": "超能力者/对手",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/高中生', 'key_actions': ['被不良少年追赶', '在餐厅遭遇麻烦', '逃到铁桥上', '与神秘少女对话']}, {'name': '神秘少女（未命名）', 'role': '超能力者/等级5', 'key_actions': ['追赶主角', '表达对强者的敌意', '展示超能力者的优越感']}, {'name': '不良少年群体', 'role': ' antagonists/等级0能力者', 'key_actions': ['骚扰国中生', '追赶主角', '展示学园都市的底层存在']}], 'events': [{'description': '上条当麻在餐厅遭遇不良少年骚扰事件', 'importance': 0.7, 'timeline': '故事开端'}, {'description': '上条逃离不良少年追逐至铁桥', 'importance': 0.8, 'timeline': '追逐场景高潮'}, {'description': '神秘等级5超能力者现身并与上条对峙', 'importance': 0.9, 'timeline': '情节转折点'}], 'analysis': {'main_theme': '超能力社会的等级制度与冲突', 'plot_significance': '通过主角与等级5超能力者的对峙，建立学园都市的能力等级体系和世界观冲突', 'function_calls': [{'action': 'register_character', 'params': {'name': '上条当麻', 'role': '主角/等级0能力者', 'description': '学园都市高中生，无超能力但性格正义感强', 'confidence': 0.95}}, {'action': 'register_character', 'params': {'name': '神秘少女', 'role': '等级5超能力者/ antagonist', 'description': '学园都市顶尖超能力者，对弱者持蔑视态度', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['神秘少女的具体身份和能力细节尚未明确', '故事背景设定需要更多解释'], refinement_requests=['增加更多世界观背景说明', '明确神秘少女的身份和动机'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2345)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/高中生', 'key_actions': ['救助被骚扰的女生', '被不良少年追赶', '与神秘少女对峙']}, {'name': '神秘少女（未命名）', 'role': '超能力者/等级5', 'key_actions': ['追杀上条当麻', '展示强大能力', '表达对弱者的蔑视']}], 'events': [{'description': '上条当麻在餐厅救助被不良少年骚扰的女生', 'importance': 0.7, 'timeline': '故事开端'}, {'description': '上条被不良少年同伙追赶至铁桥', 'importance': 0.8, 'timeline': '追赶过程'}, {'description': '神秘等级5超能力少女与上条当麻在桥上对峙', 'importance': 0.9, 'timeline': '当前高潮'}], 'analysis': {'main_theme': '超能力社会的等级歧视与冲突', 'plot_significance': '建立了学园都市的超能力等级体系，展现了主角作为等级0的弱势地位，同时引入了强大的敌对角色，为后续冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '上条当麻', 'role': '主角/等级0能力者', 'description': '学园都市高中生，无超能力但富有正义感', 'confidence': 0.9}}, {'action': 'register_character', 'params': {'name': '神秘少女', 'role': '敌对超能力者/等级5', 'description': '学园都市顶尖超能力者，蔑视弱者，追杀上条当麻', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['神秘少女的具体身份和名字尚未明确', '超能力等级系统的详细规则需要更多解释'], refinement_requests=['尽快揭示神秘少女的身份信息', '补充更多关于超能力等级系统的背景设定'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.030000000000000027, tokens_used=2280)",
+        "IterationResult(iteration_num=3, analysis={'characters': [{'name': '上条当麻', 'role': '主角/高中生', 'key_actions': ['救助被骚扰的女生', '被不良少年追赶', '与神秘少女对峙', '自称等级0无能力者']}, {'name': '神秘少女（未命名）', 'role': '超能力者/对手', 'key_actions': ['追杀上条当麻', '自称等级5超能力者', '表达对强者的执着', '透露能力开发的痛苦经历']}], 'events': [{'description': '上条当麻在餐厅救助被不良少年骚扰的女生，反遭对方同伙追赶', 'importance': 0.7, 'timeline': '故事开端'}, {'description': '上条逃到铁桥后被神秘少女拦截，两人展开对峙并揭示能力等级差异', 'importance': 0.9, 'timeline': '开端高潮部分'}, {'description': '少女透露成为等级5超能力者所经历的残酷训练过程', 'importance': 0.8, 'timeline': '对峙过程中'}], 'analysis': {'main_theme': '超能力社会的等级制度与能力者的心理挣扎', 'plot_significance': '建立了学园都市的超能力世界观，铺垫了主角与高阶能力者的冲突，暗示了能力开发背后的黑暗面', 'function_calls': [{'action': 'register_character', 'params': {'name': '上条当麻', 'role': '主角/等级0无能力者', 'description': '看似普通的高中生，经常遭遇不幸事件，但具有正义感', 'confidence': 0.95}}, {'action': 'register_character', 'params': {'name': '神秘少女', 'role': '等级5超能力者/ antagonist', 'description': '拥有顶尖超能力，对强者有执念，经历过残酷的能力开发训练', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['神秘少女的具体身份和能力类型尚未明确', '故事时间线略显跳跃'], refinement_requests=['可更早揭示少女的身份信息', '增加一些世界观设定的细节交代'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2320)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 2,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 1,
+      "final_satisfaction": 0.82,
+      "processing_stage": "beginning",
+      "meaningful_improvements": 1,
+      "total_tokens": 2489,
+      "total_cost": 0.049780000000000005,
+      "characters_detected": [
+        "上条当麻",
+        "不良少年群体",
+        "神秘少女（未命名）"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/高中生/特殊能力者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "不良少年群体",
+          "role": " antagonists/等级0能力者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神秘少女（御坂美琴）",
+          "role": "超能力者/等级5",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/魔法侧角色",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/高中生/特殊能力者', 'key_actions': ['用右手抵挡雷击', '自嘲不幸', '发现神秘少女', '与茵蒂克丝对话']}, {'name': '不良少年群体', 'role': ' antagonists/等级0能力者', 'key_actions': ['被神秘少女击退']}, {'name': '神秘少女（御坂美琴）', 'role': '超能力者/等级5', 'key_actions': ['释放雷击之枪', '对上条的能力感到惊讶']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色', 'key_actions': ['出现在上条房间', '自称禁书目录', '表明神职人员身份', '透露魔法名']}], 'events': [{'description': '上条当麻用右手抵挡等级5超能力者的雷击', 'importance': 0.95, 'timeline': '故事开端，7月19日晚'}, {'description': '上条遭遇各种不幸事件（电器损坏、食物变质、踩到面包）', 'importance': 0.7, 'timeline': '7月20日早晨'}, {'description': '发现神秘银发修女茵蒂克丝出现在自己房间', 'importance': 0.9, 'timeline': '7月20日上午'}, {'description': '茵蒂克丝透露自己是禁书目录和英国清教神职人员', 'importance': 0.85, 'timeline': '对话过程中'}], 'analysis': {'main_theme': '科学与魔法的冲突、不幸命运的转折、超能力与神秘力量的交织', 'plot_significance': '成功建立了学园都市的超能力设定，引入魔法侧角色，为主角特殊能力埋下伏笔，构建了科学与魔法两大体系的冲突基础', 'function_calls': [{'action': 'register_character', 'params': {'name': '茵蒂克丝', 'role': '神秘修女/禁书目录/魔法侧代表', 'description': '银发绿眼的修女，自称禁书目录，拥有魔法名Dedicatus545，属于英国清教体系', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['神秘少女（御坂美琴）的名字尚未明确出现', '部分设定解释略显生硬（如魔法名的突然提及）'], refinement_requests=['尽早明确主要角色的正式名称', '魔法设定的引入可以更加自然过渡'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.82, tokens_used=2489)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 3,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.8,
+      "processing_stage": "beginning",
+      "meaningful_improvements": 2,
+      "total_tokens": 4796,
+      "total_cost": 0.09592,
+      "characters_detected": [
+        "上条当麻",
+        "不良少年群体",
+        "茵蒂克丝",
+        "神秘少女（未命名）",
+        "神秘少女（御坂美琴）"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/高中生/等级0能力者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/魔法侧角色/禁书目录",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "不良少年群体",
+          "role": " antagonists/等级0能力者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神秘少女（御坂美琴）",
+          "role": "超能力者/等级5",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/高中生/等级0能力者', 'key_actions': ['收留神秘少女', '质疑魔法存在', '展现特殊右手能力']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色/禁书目录', 'key_actions': ['被追杀逃亡', '解释魔法存在', '自称拥有十万三千本魔道书']}, {'name': '放电少女', 'role': '超能力者/等级5（推测）', 'key_actions': ['引发落雷干扰监控']}], 'events': [{'description': '茵蒂克丝从屋顶逃亡时挂在阳台上被上条发现', 'importance': 0.9, 'timeline': '故事开端'}, {'description': '上条与茵蒂克丝关于魔法存在的辩论', 'importance': 0.85, 'timeline': '晚餐对话期间'}, {'description': '茵蒂克丝透露被魔法组织追杀的原因', 'importance': 0.95, 'timeline': '对话后期'}], 'analysis': {'main_theme': '科学与魔法的对立与共存', 'plot_significance': '建立了核心冲突框架：科学侧的超能力城市与魔法侧的神秘组织，通过主角与神秘修女的相遇引出主线', 'function_calls': [{'action': 'update_character', 'params': {'name': '茵蒂克丝', 'new_role': '魔法侧关键角色/禁书目录/被追杀者', 'confidence': 0.95}}, {'action': 'update_character', 'params': {'name': '神秘少女（御坂美琴）', 'new_role': '超能力者/等级5/放电能力者', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['部分魔法设定解释略显生硬', '放电少女的具体身份尚未明确'], refinement_requests=['增加魔法组织的具体威胁展示', '更自然地融入世界观解释'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2415)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/高中生/等级0能力者', 'key_actions': ['救助茵蒂克丝', '质疑魔法存在', '分析城市监控系统', '准备食物']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色/禁书目录', 'key_actions': ['被追杀逃亡', '解释魔法存在', '透露拥有十万三千本魔道书', '展示异文化特征']}, {'name': '不良少年群体', 'role': ' antagonists/等级0能力者', 'key_actions': []}, {'name': '神秘少女（御坂美琴）', 'role': '超能力者/等级5', 'key_actions': ['引发落雷干扰监控']}], 'events': [{'description': '茵蒂克丝从屋顶逃亡时挂在阳台上被上条救下', 'importance': 0.9, 'timeline': '故事开始前'}, {'description': '上条与茵蒂克丝关于魔法存在的辩论', 'importance': 0.85, 'timeline': '当前时间线'}, {'description': '茵蒂克丝透露被魔法组织追杀的原因', 'importance': 0.95, 'timeline': '当前时间线'}, {'description': '御坂美琴的落雷干扰了城市监控系统', 'importance': 0.7, 'timeline': '前一天'}], 'analysis': {'main_theme': '科学与魔法的冲突与共存', 'plot_significance': '建立了科学与魔法两个对立世界观的基础设定，为主角卷入魔法侧事件埋下伏笔', 'function_calls': []}}, confidence_scores={'overall': 0.8}, satisfaction_level=0.8, identified_issues=['神秘少女角色信息过于模糊', '不良少年群体尚未在文本中出现'], refinement_requests=['尽快明确神秘少女的身份和动机', '需要在后续片段中引入不良少年群体的具体表现'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.050000000000000044, tokens_used=2381)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 4,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 3,
+      "final_satisfaction": 0.82,
+      "processing_stage": "beginning",
+      "meaningful_improvements": 3,
+      "total_tokens": 7060,
+      "total_cost": 0.14120000000000002,
+      "characters_detected": [
+        "上条当麻",
+        "不良少年群体",
+        "茵蒂克丝",
+        "神秘少女（未命名）",
+        "神秘少女（御坂美琴）"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/高中生/异能无效化能力者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/魔法侧角色/禁书目录",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/高中生/异能无效化能力者', 'key_actions': ['展示幻想杀手能力', '与茵蒂克丝争论超能力与魔法', '试图帮助茵蒂克丝', '遭遇不幸事件（手机摔坏）']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色/禁书目录', 'key_actions': ['质疑超能力体系', '展示移动教会防御结界', '被幻想杀手破坏衣服', '用安全别针修复衣服', '决定离开以避免危险']}], 'events': [{'description': '茵蒂克丝的移动教会被幻想杀手破坏，导致全裸状态', 'importance': 0.9, 'timeline': '片段3-4'}, {'description': '茵蒂克丝决定离开上条住所以避免追兵带来危险', 'importance': 0.85, 'timeline': '片段5'}, {'description': '上条当麻遭遇典型不幸事件（脚踢门框、手机摔坏）', 'importance': 0.7, 'timeline': '片段5'}], 'analysis': {'main_theme': '科学与魔法的冲突、能力等级制度的不合理性、主角的特殊能力与不幸体质', 'plot_significance': '建立了魔法与超能力两个对立体系的基本设定，展示了主角能力的特殊性，为后续冲突埋下伏笔', 'function_calls': [{'action': 'update_character', 'params': {'name': '上条当麻', 'new_role': '主角/幻想杀手能力者/不幸体质', 'confidence': 0.95}}, {'action': 'update_character', 'params': {'name': '茵蒂克丝', 'new_role': '魔法侧修女/禁书目录/移动教会使用者', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['部分对话略显重复', '角色转换场景的过渡可以更自然'], refinement_requests=['增加更多世界观背景说明', '强化两个体系冲突的具体表现', '细化角色情感变化的描写'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2439)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/能力者', 'key_actions': ['展示幻想杀手能力', '与茵蒂克丝争论超能力与魔法', '试图帮助茵蒂克丝']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色', 'key_actions': ['解释移动教会', '展示魔法能力', '被幻想杀手解除防御', '咬人行为']}], 'events': [{'description': '上条当麻展示幻想杀手能力，意外解除茵蒂克丝的移动教会防御结界', 'importance': 0.9, 'timeline': '片段3-4'}, {'description': '茵蒂克丝解释移动教会的魔法原理并试图证明其防御能力', 'importance': 0.85, 'timeline': '片段2'}, {'description': '茵蒂克丝因担心追兵而决定离开，上条试图挽留但遭遇不幸事件', 'importance': 0.7, 'timeline': '片段5'}], 'analysis': {'main_theme': '科学与魔法的冲突、能力者的社会等级制度、不幸命运的设定', 'plot_significance': '建立了科学与魔法两个对立体系的世界观，展示了主角的特殊能力及其副作用，为后续冲突埋下伏笔', 'function_calls': []}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['部分对话略显重复', '角色情绪转变有些突兀', '魔法解释的细节略显复杂'], refinement_requests=['精简对话中的重复内容', '平滑角色情绪过渡', '简化魔法设定的解释方式'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.030000000000000027, tokens_used=2304)",
+        "IterationResult(iteration_num=3, analysis={'characters': [{'name': '上条当麻', 'role': '主角/高中生/异能无效化能力者', 'key_actions': ['展示幻想杀手能力', '与茵蒂克丝争论超能力与魔法', '试图帮助茵蒂克丝', '遭遇不幸事件（手机摔坏）']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色/禁书目录', 'key_actions': ['解释移动教会功能', '展示魔法结界', '被幻想杀手破坏衣服', '用安全别针修复衣服', '决定离开以避免危险']}], 'events': [{'description': '茵蒂克丝展示移动教会防御结界，上条当麻用幻想杀手意外破坏', 'importance': 0.9, 'timeline': '片段2-3'}, {'description': '茵蒂克丝衣服被破坏后全裸，用安全别针勉强修复修道服', 'importance': 0.7, 'timeline': '片段3-4'}, {'description': '茵蒂克丝决定离开以避免追兵，上条试图帮助但遭遇不幸', 'importance': 0.8, 'timeline': '片段5'}], 'analysis': {'main_theme': '科学与魔法的冲突、异能之力与现实世界的交织', 'plot_significance': '建立了魔法与超能力两个对立体系的基本设定，展示了主角能力的特殊性，为后续冲突埋下伏笔', 'function_calls': []}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['部分对话略显重复', '角色情绪转变有些突兀'], refinement_requests=['精简重复性对话', '增加情绪转变的过渡描写', '加强场景描写的连贯性'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2317)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 5,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 3,
+      "final_satisfaction": 0.82,
+      "processing_stage": "early",
+      "meaningful_improvements": 3,
+      "total_tokens": 7723,
+      "total_cost": 0.15446000000000001,
+      "characters_detected": [
+        "上条当麻",
+        "不良少年群体",
+        "茵蒂克丝",
+        "神秘少女（未命名）",
+        "神秘少女（御坂美琴）"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/被保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "蓝发戴耳环的班长",
+          "role": "同学/喜剧调剂",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/能力者（右手能消除异能）', 'key_actions': ['关心茵蒂克丝的安危并提供庇护', '解释学园都市的特殊性', '与同学进行日常互动', '对魔法存在持怀疑态度']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色', 'key_actions': ['解释移动教会的功能与风险', '阐述基督教各教派区别', '接受上条的庇护提议', '展现对学园都市科技的好奇']}, {'name': '蓝发戴耳环的班长', 'role': '同学/喜剧配角', 'key_actions': ['与上条进行搞笑对话', '展现恋童癖倾向', '被老师点名批评']}, {'name': '小萌老师', 'role': '教师/课程监督者', 'key_actions': ['监督上条补课', '威胁增加透视游戏惩罚', '展现严厉又可爱的反差形象']}], 'events': [{'description': '上条邀请茵蒂克丝躲藏并讨论移动教会的追踪风险', 'importance': 0.9, 'timeline': '片段1'}, {'description': '茵蒂克丝解释基督教派别差异及在日本寻找教会的困难', 'importance': 0.7, 'timeline': '片段2'}, {'description': '上条介绍学园都市的特殊性质与科技水平', 'importance': 0.8, 'timeline': '片段3'}, {'description': '上条在补课期间与同学的搞笑互动及被老师警告', 'importance': 0.5, 'timeline': '片段4-5'}], 'analysis': {'main_theme': '科学与魔法的初次碰撞与世界观建立', 'plot_significance': '这些片段奠定了故事的核心冲突基础——科学侧（学园都市）与魔法侧（茵蒂克丝）的相遇，同时通过日常校园生活展现主角的平凡与特殊并存的特性', 'function_calls': [{'action': 'register_character', 'params': {'name': '蓝发戴耳环的班长', 'role': '同学/喜剧配角', 'description': '上条当麻的同学，具有恋童癖倾向和搞笑性格，经常与上条进行无厘头对话', 'confidence': 0.85}}, {'action': 'register_character', 'params': {'name': '小萌老师', 'role': '教师/课程监督者', 'description': '上条当麻的老师，外表可爱但教学严厉，负责监督学生的补课和超能力开发课程', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['神秘少女（御坂美琴）尚未在文本中出现', '不良少年群体的具体形象还不够清晰', '魔法与科学的世界观解释略显信息密集'], refinement_requests=['逐步引入其他已注册但未出现的角色', '通过更多具体事件展现不良少年群体的威胁性', '将世界观解释分散到更多对话和情节中'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2677)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['关心茵蒂克丝的安全', '提供住所庇护', '解释学园都市背景', '与同学互动展现日常']}, {'name': '茵蒂克丝', 'role': '神秘修女/被保护者', 'key_actions': ['解释移动教会的危险性', '阐述基督教派系差异', '接受上条的保护提议', '展现天真单纯性格']}, {'name': '蓝发戴耳环的班长', 'role': '同学/喜剧配角', 'key_actions': ['与上条课堂互动', '展现特殊癖好性格', '提供轻松氛围']}], 'events': [{'description': '上条邀请茵蒂克丝躲藏并提供保护', 'importance': 0.9, 'timeline': '片段1-主要互动'}, {'description': '茵蒂克丝解释移动教会作为追踪信标的危险性', 'importance': 0.85, 'timeline': '片段1-关键信息揭示'}, {'description': '宗教派系差异的详细说明', 'importance': 0.7, 'timeline': '片段2-世界观构建'}, {'description': '学园都市背景和科技水平的介绍', 'importance': 0.8, 'timeline': '片段3-设定展开'}, {'description': '课堂互动展现日常校园生活', 'importance': 0.6, 'timeline': '片段4-5-氛围营造'}], 'analysis': {'main_theme': '保护与责任、魔法与科学的碰撞', 'plot_significance': '建立主角保护者形象，揭示魔法侧基本设定，为后续冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '蓝发耳环', 'role': '同学/喜剧配角', 'description': '上条当麻的同班同学，戴耳环的蓝发男生，有恋童癖倾向，性格开朗喜欢开玩笑', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['部分对话略显冗长', '课堂场景转换稍显突兀', '新角色描述不够详细'], refinement_requests=['精简宗教解释部分', '加强场景过渡', '更清晰地介绍新出场角色背景'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.030000000000000027, tokens_used=2485)",
+        "IterationResult(iteration_num=3, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['关心茵蒂克丝的安全', '提供住所保护', '解释学园都市背景', '与同学互动展现日常']}, {'name': '茵蒂克丝', 'role': '神秘修女/被保护者', 'key_actions': ['解释移动教会的危险性', '阐述宗教派别知识', '接受上条的保护提议', '展现对学园都市的好奇']}, {'name': '蓝发戴耳环的班长', 'role': '同学/喜剧调剂', 'key_actions': ['调侃上条与小萌老师的关系', '展现特殊癖好性格', '提供轻松对话氛围']}], 'events': [{'description': '上条邀请茵蒂克丝躲藏并提供保护', 'importance': 0.9, 'timeline': '片段1-主要情节推进'}, {'description': '茵蒂克丝解释移动教会的追踪机制和宗教派别差异', 'importance': 0.85, 'timeline': '片段1-2-世界观建立'}, {'description': '上条介绍学园都市的特殊性和科技水平', 'importance': 0.8, 'timeline': '片段3-背景设定交代'}, {'description': '教室互动展现上条日常校园生活和人际关系', 'importance': 0.7, 'timeline': '片段4-5-角色日常刻画'}], 'analysis': {'main_theme': '保护与信任的建立，魔法与科学世界的碰撞', 'plot_significance': '通过上条与茵蒂克丝的互动，建立了主角的保护者形象和两人的依赖关系，同时逐步揭示魔法侧与科学侧的世界观冲突', 'function_calls': [{'action': 'register_character', 'params': {'name': '小萌老师', 'role': '教师/学园都市教职工', 'description': '外表可爱的教师，负责上条当麻的补课课程', 'confidence': 0.85}}, {'action': 'register_character', 'params': {'name': '蓝发耳环', 'role': '同学/班长', 'description': '上条当麻的同班同学，有特殊癖好的班长角色', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['部分对话略显冗长', '世界观解释性对话较多', '新角色蓝发耳环的命名需要确认'], refinement_requests=['增加更多动作描写平衡对话', '通过事件而非对话展现世界观', '确认次要角色的正式名称'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2561)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 6,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "early",
+      "meaningful_improvements": 2,
+      "total_tokens": 5213,
+      "total_cost": 0.10426,
+      "characters_detected": [
+        "上条当麻",
+        "不良少年群体",
+        "茵蒂克丝",
+        "蓝发戴耳环的班长",
+        "神秘少女（未命名）"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/能力者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/魔法侧角色",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "蓝发耳环",
+          "role": "同学/喜剧配角",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "小萌老师",
+          "role": "教师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "御坂美琴",
+          "role": "超能力者/等级5",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/能力者', 'key_actions': ['化解电击攻击', '与不良少年对峙', '思考茵蒂克丝的秘密', '逃避警卫机器人追捕']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色', 'key_actions': ['提及神秘书籍', '移动教会与幻想杀手产生反应']}, {'name': '蓝发戴耳环的班长', 'role': '喜剧配角/同学', 'key_actions': ['课堂上陷害上条', '使用关西腔说话']}, {'name': '御坂美琴', 'role': '超能力者/等级5', 'key_actions': ['使用电击攻击', '对上条的能力感到恐惧', '多次挑战上条失败']}, {'name': '小萌老师', 'role': '教师', 'key_actions': ['对上条不专心上课感到失望', '管理暑假补课']}, {'name': '不良少年群体', 'role': ' antagonists/等级0能力者', 'key_actions': ['缠上柔弱少女', '引发冲突']}], 'events': [{'description': '上条在课堂上思考茵蒂克丝书籍之谜，被同学陷害', 'importance': 0.7, 'timeline': '白天/暑假补课期间'}, {'description': '御坂美琴与上条的第二次冲突，美琴电击被化解', 'importance': 0.9, 'timeline': '放学后'}, {'description': '电磁波攻击触发警报系统，引发警卫机器人追捕', 'importance': 0.8, 'timeline': '冲突后立即'}, {'description': '美琴对上条能力产生未知恐惧，关系出现微妙变化', 'importance': 0.85, 'timeline': '逃跑过程中'}], 'analysis': {'main_theme': '超能力与魔法的冲突，主角的特殊能力与日常不幸', 'plot_significance': '建立了主角与主要女性角色御坂美琴的敌对但微妙的关系，暗示了魔法与科学侧的冲突开端', 'function_calls': [{'action': 'register_character', 'params': {'name': '御坂美琴', 'role': '超能力者/等级5/主要对手', 'description': '能够操控电磁力的强大能力者，性格强硬但怕寂寞，对上条的能力感到困惑和恐惧', 'confidence': 0.95}}, {'action': 'register_character', 'params': {'name': '小萌老师', 'role': '教师/指导者', 'description': '关心学生的教师，负责暑假补课，对学生行为有严格要求', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['部分角色描述还不够详细', '魔法与科学侧的界限需要更清晰界定'], refinement_requests=['增加更多角色背景信息', '明确世界观规则设定', '深化角色间的情感联系建立'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2653)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/能力者', 'key_actions': ['化解电击攻击', '引发教室骚动', '逃避警卫机器人追捕']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色', 'key_actions': ['提及神秘书籍', '移动教会与幻想杀手产生反应']}, {'name': '蓝发耳环', 'role': '同学/喜剧配角', 'key_actions': ['陷害上条看女生裙子', '使用关西腔制造喜剧效果']}, {'name': '小萌老师', 'role': '教师', 'key_actions': ['对上条不专心上课感到失望', '引发全班敌意']}, {'name': '御坂美琴', 'role': '超能力者/等级5', 'key_actions': ['使用电击攻击', '对上条能力产生恐惧', '频繁找上条报仇']}], 'events': [{'description': '上条在教室因蓝发耳环陷害被全班敌视', 'importance': 0.6, 'timeline': '白天上课时间'}, {'description': '御坂美琴对上条发动电击攻击被化解', 'importance': 0.9, 'timeline': '放学后'}, {'description': '警卫机器人误判电磁波为恐怖攻击引发追捕', 'importance': 0.8, 'timeline': '事件发生后'}, {'description': '美琴对上条能力产生未知恐惧', 'importance': 0.85, 'timeline': '冲突后'}], 'analysis': {'main_theme': '超能力冲突与误解', 'plot_significance': '建立主角与主要对手的关系动态，展示幻想杀手能力的特殊性，为后续冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '御坂美琴', 'role': '超能力者/等级5/主要对手', 'description': '能够操控电磁力的强大能力者，性格强硬但怕寂寞，动物股长', 'confidence': 0.95}}, {'action': 'register_character', 'params': {'name': '小萌老师', 'role': '教师/教育者', 'description': '关心学生但容易受伤的教师，对学生行为敏感', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['部分角色动机交代不够清晰', '时间线跳跃略显突兀'], refinement_requests=['加强御坂美琴背景介绍', '细化冲突发生的环境描写', '增加上条内心独白的连贯性'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2560)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 7,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "early",
+      "meaningful_improvements": 2,
+      "total_tokens": 5021,
+      "total_cost": 0.10042000000000001,
+      "characters_detected": [
+        "上条当麻",
+        "不良少年群体",
+        "茵蒂克丝",
+        "蓝发戴耳环的班长",
+        "御坂美琴"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被追捕的神秘修女",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "魔法师（新角色）",
+          "role": "追捕者/魔法侧反派",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神裂（新角色）",
+          "role": "攻击者/魔法侧执行者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['试图保护受伤的茵蒂克丝', '与魔法师对峙', '表达对茵蒂克丝的关心和自责']}, {'name': '茵蒂克丝', 'role': '神秘修女/被追捕者', 'key_actions': ['重伤倒地', '返回上条住处寻找失物', '携带十万三千本魔道书知识']}, {'name': '魔法师（未命名）', 'role': '追捕者/信息提供者', 'key_actions': ['解释追捕原因', '透露茵蒂克丝的能力和秘密', '表现出对事件的困惑']}, {'name': '神裂', 'role': '未出场但重要的追捕者', 'key_actions': ['重伤茵蒂克丝', '被提及为强大的魔法师']}], 'events': [{'description': '茵蒂克丝重伤返回上条住处，被清扫机器人包围', 'importance': 0.9, 'timeline': '当前时间点'}, {'description': '神秘魔法师出现并解释追捕茵蒂克丝的原因', 'importance': 0.95, 'timeline': '紧接着上条发现茵蒂克丝后'}, {'description': '揭示茵蒂克丝拥有完全记忆能力和十万三千本魔道书知识', 'importance': 0.98, 'timeline': '魔法师解释过程中'}], 'analysis': {'main_theme': '保护与责任、魔法与科学的冲突、记忆与知识的代价', 'plot_significance': '这些片段揭示了故事的核心冲突 - 魔法侧对茵蒂克丝的追捕，建立了上条作为保护者的角色定位，并引入了重要的世界观元素（完全记忆能力、魔道书、移动教会）', 'function_calls': [{'action': 'register_character', 'params': {'name': '神裂', 'role': '魔法师/追捕者', 'description': '重伤茵蒂克丝的强大魔法师，使用刀剑', 'confidence': 0.85}}, {'action': 'register_character', 'params': {'name': '未命名魔法师', 'role': '魔法师/信息提供者', 'description': '皮肤白皙的高个子年轻男性，抽烟，提供关键背景信息', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['魔法师的名称尚未明确，可能影响读者记忆', '神裂的角色细节需要更多描述'], refinement_requests=['为未命名魔法师提供更具特色的外貌或行为描述', '逐步揭示神裂的背景和能力信息'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2530)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['试图保护茵蒂克丝', '与清扫机器人搏斗', '面对魔法师质问']}, {'name': '茵蒂克丝', 'role': '被追捕的神秘修女', 'key_actions': ['重伤倒地', '返回上条住处', '携带十万三千本魔道书']}, {'name': '魔法师（新角色）', 'role': '追捕者/魔法侧反派', 'key_actions': ['解释追捕原因', '透露茵蒂克丝能力', '展现对情况的掌控']}, {'name': '神裂（新角色）', 'role': '攻击者/魔法侧执行者', 'key_actions': ['重伤茵蒂克丝']}], 'events': [{'description': '茵蒂克丝重伤返回上条住处，被清扫机器人包围', 'importance': 0.9, 'timeline': '当前时间点'}, {'description': '神秘魔法师出现并解释追捕茵蒂克丝的原因', 'importance': 0.95, 'timeline': '紧接着上条发现茵蒂克丝后'}, {'description': '揭示茵蒂克丝拥有完全记忆能力和脑中存有十万三千本魔道书', 'importance': 0.98, 'timeline': '魔法师解释过程中'}], 'analysis': {'main_theme': '责任与羁绊的代价', 'plot_significance': '这段内容揭示了魔法侧世界观的核心设定，建立了主要冲突的根源，同时深化了上条与茵蒂克丝之间的羁绊关系', 'function_calls': [{'action': 'register_character', 'params': {'name': '魔法师', 'role': '追捕者/魔法侧反派', 'description': '皮肤白皙的高个子男性，使用香烟，负责解释追捕茵蒂克丝的原因', 'confidence': 0.85}}, {'action': 'register_character', 'params': {'name': '神裂', 'role': '攻击者/魔法侧执行者', 'description': '重伤茵蒂克丝的魔法师，实力强大', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['魔法师解释过于直白，缺乏悬念感', '神裂这个重要角色仅被提及而未直接出现'], refinement_requests=['可通过更隐晦的方式透露信息，增加神秘感', '让神裂提前登场或通过更具体的方式展现其威胁性'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2491)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 8,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "early",
+      "meaningful_improvements": 2,
+      "total_tokens": 4801,
+      "total_cost": 0.09602000000000001,
+      "characters_detected": [
+        "上条当麻",
+        "不良少年群体",
+        "茵蒂克丝",
+        "蓝发戴耳环的班长",
+        "御坂美琴"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/能力者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "魔法师/ antagonist",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/魔法侧角色",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "御坂美琴",
+          "role": "超能力者/等级5",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/能力者', 'key_actions': ['对抗魔法师史提尔', '使用右手能力消除魔法', '展现愤怒和决心']}, {'name': '史提尔·马格努斯', 'role': '魔法师/ antagonist', 'key_actions': ['使用火焰魔法攻击', '自称FortiS93l', '对上条的能力感到震惊和恐惧']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色', 'key_actions': ['被提及移动教会被破坏', '作为冲突的核心原因']}, {'name': '御坂美琴', 'role': '超能力者/等级5', 'key_actions': ['被提及超电磁炮能力', '作为能力对比参照']}], 'events': [{'description': '上条当麻与魔法师史提尔的激烈战斗', 'importance': 0.9, 'timeline': '故事早期，暑假第一天'}, {'description': '上条右手能力对魔法的首次测试和验证', 'importance': 0.95, 'timeline': '战斗过程中'}, {'description': '史提尔发现上条破坏移动教会的真相', 'importance': 0.85, 'timeline': '战斗后期'}], 'analysis': {'main_theme': '科学与魔法的冲突、特殊能力的对抗与探索', 'plot_significance': '这是魔法侧与科学侧的首次正面冲突，确立了上条右手能力对魔法的有效性，为后续剧情发展奠定基础', 'function_calls': [{'action': 'register_character', 'params': {'name': '史提尔·马格努斯', 'role': '魔法师/ antagonist', 'description': '使用火焰魔法的魔法师，自称FortiS93l，与上条当麻激烈战斗', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['魔法系统的解释略显模糊', '战斗场景的物理逻辑需要更清晰'], refinement_requests=['增加魔法原理的简要说明', '明确能力作用的范围和限制'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2395)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/能力者', 'key_actions': ['对抗魔法师史提尔', '使用右手能力消除魔法', '保护茵蒂克丝']}, {'name': '史提尔·马格努斯', 'role': '魔法师/ antagonist', 'key_actions': ['使用火焰魔法攻击上条', '自称FortiS93l', '对上条的能力感到震惊']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色', 'key_actions': ['被提及移动教会被破坏', '成为冲突的核心原因']}, {'name': '御坂美琴', 'role': '超能力者/等级5', 'key_actions': ['被提及超电磁炮能力', '作为能力对比参照']}], 'events': [{'description': '上条当麻与魔法师史提尔的首次战斗', 'importance': 0.9, 'timeline': '故事早期，暑假第一天'}, {'description': '上条右手能力对魔法的首次验证', 'importance': 0.95, 'timeline': '战斗过程中'}, {'description': '史提尔发现上条破坏移动教会的真相', 'importance': 0.85, 'timeline': '战斗后期'}], 'analysis': {'main_theme': '科学与魔法的冲突与能力验证', 'plot_significance': '这是主角能力体系的首次重要展示，建立了科学与魔法两个世界观的对立关系，为后续剧情发展奠定基础', 'function_calls': [{'action': 'register_character', 'params': {'name': '史提尔·马格努斯', 'role': '魔法师/ antagonist', 'description': '使用火焰魔法的魔法师，自称FortiS93l，与上条当麻发生激烈冲突', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['魔法系统的解释略显模糊', '战斗节奏在某些部分略显拖沓'], refinement_requests=['增加魔法原理的简要说明', '优化战斗场景的节奏控制'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2406)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 9,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "early",
+      "meaningful_improvements": 2,
+      "total_tokens": 4973,
+      "total_cost": 0.09946,
+      "characters_detected": [
+        "上条当麻",
+        "不良少年群体",
+        "茵蒂克丝",
+        "蓝发戴耳环的班长",
+        "御坂美琴"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/拯救者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/魔法侧角色/受害者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/ antagonist",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/高中生', 'key_actions': ['对抗火焰巨神', '试图拯救茵蒂克丝', '发现符文魔法的弱点', '从二楼跳下逃生']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色', 'key_actions': ['揭示符文魔法的秘密', '展现机械般的非人性状态', '背部受伤流血但无动于衷']}, {'name': '史提尔', 'role': '魔法师/ antagonist', 'key_actions': ['操控火焰巨神追击上条', '使用符文魔法', '对电梯声音产生警觉']}], 'events': [{'description': '上条当麻与火焰巨神战斗并发现符文魔法的弱点', 'importance': 0.9, 'timeline': '片段1-3'}, {'description': '上条决定拯救茵蒂克丝而非逃跑，展现角色成长', 'importance': 0.95, 'timeline': '片段4'}, {'description': '史提尔在电梯处遭遇神秘人物，暗示新角色登场', 'importance': 0.85, 'timeline': '片段5'}], 'analysis': {'main_theme': '魔法与科学的冲突、牺牲与拯救的抉择', 'plot_significance': '这是上条当麻从被动逃生到主动拯救的关键转折点，建立了与茵蒂克丝的深刻羁绊，同时引入了魔法侧的基本规则和世界观', 'function_calls': [{'action': 'register_character', 'params': {'name': '史提尔', 'role': '魔法师/ antagonist', 'description': '使用符文魔法的魔法师，操控火焰巨神追击上条当麻', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['部分战斗场景的物理逻辑略显牵强', '魔法规则的说明略显生硬'], refinement_requests=['增加魔法规则的自然融入', '强化战斗场景的合理性描述'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2391)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/拯救者', 'key_actions': ['对抗火焰巨神', '发现符文魔法的弱点', '决定拯救茵蒂克丝', '从二楼跳下逃生', '最后出现在电梯口']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色/受害者', 'key_actions': ['解释符文魔法原理', '揭示自己作为魔道书图书馆的身份', '处于机械般的无感情状态', '背部受伤流血但不在意']}, {'name': '史提尔', 'role': '魔法师/ antagonist', 'key_actions': ['操控火焰巨神猎杀魔女之王', '使用符文魔法', '对当麻的逃脱感到惊讶', '准备带走茵蒂克丝', '对当麻的再次出现感到震惊']}], 'events': [{'description': '茵蒂克丝揭示自己作为魔道书图书馆的真实身份和符文魔法的原理', 'importance': 0.9, 'timeline': '片段1'}, {'description': '上条当麻发现符文魔法的弱点并成功逃脱火焰巨神的追击', 'importance': 0.85, 'timeline': '片段2'}, {'description': '上条当麻从二楼跳下逃生，面临生命危险但决心拯救茵蒂克丝', 'importance': 0.8, 'timeline': '片段3'}, {'description': '上条当麻内心挣扎后决定相信茵蒂克丝并决心将她从地狱中拯救出来', 'importance': 0.95, 'timeline': '片段4'}, {'description': '上条当麻神秘出现在电梯口，让史提尔感到震惊和恐惧', 'importance': 0.9, 'timeline': '片段5'}], 'analysis': {'main_theme': '魔法与科学的冲突、牺牲与拯救、身份认同危机', 'plot_significance': '这是魔法侧与科学侧首次正式冲突的关键场景，建立了上条当麻作为拯救者的角色定位，同时揭示了茵蒂克丝作为魔法容器的悲惨命运，为后续剧情发展奠定基础', 'function_calls': [{'action': 'register_character', 'params': {'name': '史提尔', 'role': '魔法师/ antagonist', 'description': '使用符文魔法的魔法师，操控火焰巨神猎杀魔女之王，试图带走茵蒂克丝', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['魔法系统的解释略显复杂，可能影响读者理解', '战斗场景的节奏控制可以更加紧凑'], refinement_requests=['简化魔法原理的解释，使用更多比喻', '增加角色内心独白的深度，强化情感连接', '优化战斗场景的节奏，减少冗长的技术描述'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2582)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 10,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "middle",
+      "meaningful_improvements": 2,
+      "total_tokens": 4899,
+      "total_cost": 0.09798000000000001,
+      "characters_detected": [
+        "史提尔",
+        "不良少年群体",
+        "茵蒂克丝",
+        "蓝发戴耳环的班长",
+        "御坂美琴"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/能力者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "魔法师/antagonist",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/魔法侧角色",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "月咏小萌",
+          "role": "班导师/潜在协助者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/能力者', 'key_actions': ['用右手能力消灭猎杀魔女之王', '救出受伤的茵蒂克丝', '寻求魔法治疗的方法']}, {'name': '史提尔·马格努斯', 'role': '魔法师/antagonist', 'key_actions': ['召唤猎杀魔女之王攻击上条', '因能力被破解而震惊', '被上条反击击倒']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色', 'key_actions': ['解释魔法与超能力的本质区别', '透露十万三千本魔道书知识', '说明治疗魔法的限制条件']}, {'name': '月咏小萌', 'role': '班导师/潜在协助者', 'key_actions': ['提供住所庇护', '展现喜剧性性格特征', '发现茵蒂克丝的伤势']}], 'events': [{'description': '上条当麻用幻想杀手能力破解史提尔的猎杀魔女之王', 'importance': 0.9, 'timeline': '战斗高潮阶段'}, {'description': '茵蒂克丝解释魔法是为无才能者设计的系统，与超能力冲突', 'importance': 0.85, 'timeline': '受伤后的解释阶段'}, {'description': '上条找到月咏小萌老师寻求帮助，进入其住所', 'importance': 0.7, 'timeline': '寻求庇护阶段'}], 'analysis': {'main_theme': '魔法与超能力的本质冲突与对立体系', 'plot_significance': '本段揭示了作品核心的世界观设定——魔法是为无才能者设计的替代系统，与学园都市的超能力开发形成根本对立，为后续的阵营冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '月咏小萌', 'role': '班导师/庇护者', 'description': '外表像小学生的老师，有抽烟喝酒的不良习惯，但关键时刻提供帮助', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['战斗场景转换略显突兀', '部分解释性对话在紧张情境下显得不够自然'], refinement_requests=['增加战斗后的环境描写过渡', '调整解释性对话的节奏使其更符合紧急情境'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2485)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/能力者', 'key_actions': ['用右手能力消灭猎杀魔女之王', '救出受伤的茵蒂克丝', '寻求魔法治疗的方法']}, {'name': '史提尔·马格努斯', 'role': '魔法师/antagonist', 'key_actions': ['召唤猎杀魔女之王', '被上条能力震惊', '战斗失败']}, {'name': '茵蒂克丝', 'role': '神秘修女/魔法侧角色', 'key_actions': ['解释魔法本质', '揭示超能力者与魔法的冲突', '提供治疗线索']}, {'name': '月咏小萌', 'role': '班导师/潜在协助者', 'key_actions': ['提供住所', '展现喜剧特质', '可能协助魔法实施']}], 'events': [{'description': '上条当麻用幻想杀手能力摧毁史提尔的猎杀魔女之王', 'importance': 0.9, 'timeline': '战斗高潮阶段'}, {'description': '茵蒂克丝揭示魔法与超能力者的根本冲突', 'importance': 0.95, 'timeline': '战后治疗阶段'}, {'description': '上条寻求月咏小萌老师的帮助', 'importance': 0.85, 'timeline': '夜间求助阶段'}], 'analysis': {'main_theme': '魔法与超能力的体系冲突与世界观构建', 'plot_significance': '本段揭示了作品核心设定：魔法是为无才能者设计，与学园都市的超能力体系形成根本对立，为后续冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '月咏小萌', 'role': '班导师/魔法协助者', 'description': '外表像小学生的老师，抽烟喝酒，可能具备实施魔法的条件', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['部分过渡场景略显仓促', '魔法设定的解释稍显信息密集'], refinement_requests=['增加战斗后的情绪过渡描写', '更渐进地展开魔法体系说明'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2414)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 11,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "middle",
+      "meaningful_improvements": 2,
+      "total_tokens": 4987,
+      "total_cost": 0.09974000000000001,
+      "characters_detected": [
+        "史提尔",
+        "月咏小萌",
+        "茵蒂克丝",
+        "蓝发戴耳环的班长",
+        "御坂美琴"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/拯救者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "月咏小萌",
+          "role": "班导师/魔法仪式协助者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/重伤魔法师",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/拯救者', 'key_actions': ['展示茵蒂克丝的伤口说服小萌老师', '忍受伤口带来的晕眩感', '寻求帮助']}, {'name': '月咏小萌', 'role': '班导师/魔法仪式协助者', 'key_actions': ['被伤口惊吓', '提供时间信息', '参与魔法仪式', '模仿咒语诵唱']}, {'name': '茵蒂克丝', 'role': '神秘修女/重伤魔法师', 'key_actions': ['展示魔法能力', '解释魔法原理', '指导仪式进行', '承受严重伤势']}], 'events': [{'description': '上条当麻向小萌老师展示茵蒂克丝的严重伤口以寻求帮助', 'importance': 0.9, 'timeline': '夜晚8:30左右'}, {'description': '茵蒂克丝通过天文观测验证时间准确性，展示非凡知识', 'importance': 0.8, 'timeline': '伤口展示后立即'}, {'description': '魔法仪式准备与执行，使用日常物品构建魔法阵', 'importance': 0.95, 'timeline': '时间确认后'}, {'description': '天使召唤仪式开始，出现超自然现象', 'importance': 0.9, 'timeline': '诵唱咒语后'}], 'analysis': {'main_theme': '科学与魔法的冲突与融合，紧急情况下的信任建立', 'plot_significance': '这是魔法侧与科学侧角色首次深度合作的转折点，建立了后续剧情发展的基础框架', 'function_calls': [{'action': 'register_character', 'params': {'name': '上条当麻', 'role': '主角/拥有特殊右手的拯救者', 'description': '拥有能消除超能力和魔法的右手\"幻想杀手\"，性格善良但不幸', 'confidence': 0.95}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['部分魔法解释略显晦涩', '角色心理转变过程可以更细腻'], refinement_requests=['增加小萌老师接受魔法的心理过渡描写', '简化部分魔法术语的解释方式'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.78, tokens_used=2452)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/拯救者', 'key_actions': ['展示茵蒂克丝的伤口说服老师', '紧急寻求帮助']}, {'name': '月咏小萌', 'role': '班导师/魔法仪式协助者', 'key_actions': ['被伤口震惊', '质疑魔法概念', '配合进行魔法仪式']}, {'name': '茵蒂克丝', 'role': '神秘修女/重伤魔法师', 'key_actions': ['展示精确时间感知能力', '解释魔法原理', '指导魔法仪式', '警告仪式危险']}], 'events': [{'description': '上条当麻向小萌老师展示茵蒂克丝的严重伤口，试图说服她接受魔法治疗的必要性', 'importance': 0.9, 'timeline': '片段1-开始'}, {'description': '茵蒂克丝展示超常的时间感知能力，通过星辰位置精确判断时间', 'importance': 0.85, 'timeline': '片段2-中间'}, {'description': '茵蒂克丝解释魔法原理并警告仪式失败会导致肉体毁灭和死亡', 'importance': 0.95, 'timeline': '片段4-中间'}, {'description': '魔法仪式开始实施，玩具人偶开始唱歌，超自然现象显现', 'importance': 0.88, 'timeline': '片段4-结尾'}, {'description': '小萌老师尝试想象天使形态，周围气氛开始扭曲变化', 'importance': 0.82, 'timeline': '片段5-结尾'}], 'analysis': {'main_theme': '科学与魔法的冲突与融合，紧急状况下的信任建立', 'plot_significance': '这是魔法侧与科学侧角色首次深度互动的关键场景，建立了后续魔法仪式的基础，同时展示了茵蒂克丝作为魔法专家的专业知识和危险性', 'function_calls': [{'action': 'register_character', 'params': {'name': '上条当麻', 'role': '主角/拥有特殊右手的拯救者', 'description': '拥有能够消除超能力和魔法的右手『幻想杀手』，性格善良，经常卷入各种事件中', 'confidence': 0.95}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['魔法仪式的具体机制描述不够清晰', '小萌老师从震惊到配合的转变略显突兀'], refinement_requests=['增加魔法原理的更详细解释', '加强小萌老师心理转变的描写层次感'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2535)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 12,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "middle",
+      "meaningful_improvements": 2,
+      "total_tokens": 4842,
+      "total_cost": 0.09684000000000001,
+      "characters_detected": [
+        "史提尔",
+        "月咏小萌",
+        "茵蒂克丝",
+        "蓝发戴耳环的班长",
+        "御坂美琴"
+      ],
+      "ai_characters": [
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/魔法侧核心角色",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "月咏小萌",
+          "role": "班导师/道德指引者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '茵蒂克丝', 'role': '神秘修女/魔法侧核心角色', 'key_actions': ['自动书记休眠状态切换', '解释魔法本质', '因魔法反噬而病倒', '讨论宗教分裂原因']}, {'name': '月咏小萌', 'role': '班导师/道德指引者', 'key_actions': ['照顾病倒的茵蒂克丝', '表达教师责任担当', '质疑上条的处理方式', '展现教育者使命感']}, {'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['照顾生病的茵蒂克丝', '与老师坦诚交流', '试图理解魔法原理', '展现保护他人的决心']}], 'events': [{'description': '茵蒂克丝完成魔法仪式后体力耗尽病倒，出现类似感冒症状', 'importance': 0.7, 'timeline': '第二天早晨'}, {'description': '小萌老师与上条当麻关于责任与保护的深刻对话', 'importance': 0.8, 'timeline': '茵蒂克丝病倒期间'}, {'description': '茵蒂克丝解释魔法本质和宗教分裂的政治原因', 'importance': 0.9, 'timeline': '病床上的对话'}], 'analysis': {'main_theme': '魔法代价与责任担当', 'plot_significance': '本段展现了魔法使用的物理和精神代价，同时通过师生对话深化了责任主题，为后续冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '上条当麻', 'role': '主角/保护者', 'description': '拥有特殊右手能力的学生，保护茵蒂克丝的关键人物', 'confidence': 0.95}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['部分魔法解释略显技术性，可能影响阅读流畅度', '角色情感转变需要更多铺垫'], refinement_requests=['增加魔法解释的生活化比喻', '强化病倒前后情感变化的细节描写'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2422)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '茵蒂克丝', 'role': '神秘修女/魔法侧核心角色', 'key_actions': ['自动书记休眠状态切换', '解释魔法本质', '因魔法反噬而病倒', '揭示宗教分裂真相']}, {'name': '月咏小萌', 'role': '班导师/道德指引者', 'key_actions': ['为茵蒂克丝治疗伤势', '表达教师责任担当', '与上条当麻进行价值观对话']}, {'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['照顾病中的茵蒂克丝', '与老师坦诚交流', '试图理解魔法原理', '展现保护他人的决心']}], 'events': [{'description': '茵蒂克丝完成魔法仪式后体力耗尽病倒，出现类似感冒的症状', 'importance': 0.7, 'timeline': '魔法事件结束后次日'}, {'description': '月咏小萌与上条当麻关于责任与保护的深刻对话', 'importance': 0.8, 'timeline': '茵蒂克丝病倒期间'}, {'description': '茵蒂克丝揭示基督教分裂的政治本质和宗教斗争真相', 'importance': 0.9, 'timeline': '病床上的忏悔式对话'}], 'analysis': {'main_theme': '魔法代价与责任担当', 'plot_significance': '本段承上启下，既解决了前期的魔法危机，又为后续的宗教冲突埋下伏笔，同时深化了角色间的情感联系和责任认知', 'function_calls': [{'action': 'register_character', 'params': {'name': '上条当麻', 'role': '主角/保护者', 'description': '拥有特殊右手能力的学生，保护茵蒂克丝的关键人物', 'confidence': 0.95}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['魔法原理解释略显抽象', '部分对话转换稍显突兀'], refinement_requests=['增加魔法体系的具体规则说明', '加强场景过渡的自然流畅性'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2420)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 13,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "middle",
+      "meaningful_improvements": 2,
+      "total_tokens": 4870,
+      "total_cost": 0.09740000000000001,
+      "characters_detected": [
+        "史提尔",
+        "月咏小萌",
+        "茵蒂克丝",
+        "蓝发戴耳环的班长",
+        "御坂美琴"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/知识载体",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/追捕者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神裂火织",
+          "role": "魔法师/追捕者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['分析魔道书机制', '表达对茵蒂克丝处境的愤怒', '决心保护茵蒂克丝']}, {'name': '茵蒂克丝', 'role': '神秘修女/知识载体', 'key_actions': ['解释魔道书知识本质', '情绪崩溃哭泣', '接受上条的保护']}, {'name': '史提尔', 'role': '魔法师/追捕者', 'key_actions': ['监视上条和茵蒂克丝', '与神裂讨论情报', '误判上条所属组织']}], 'events': [{'description': '上条理解茵蒂克丝作为魔道书容器的真正意义和价值', 'importance': 0.9, 'timeline': 'middle'}, {'description': '茵蒂克丝情绪爆发，首次接受上条的保护承诺', 'importance': 0.85, 'timeline': 'middle'}, {'description': '史提尔和神裂误认为上条属于某个神秘魔法组织', 'importance': 0.8, 'timeline': 'middle'}], 'analysis': {'main_theme': '知识的力量与代价，保护与被保护的信任关系', 'plot_significance': '这段情节揭示了魔道书知识的本质和危险性，建立了上条保护茵蒂克丝的坚定决心，同时引入了魔法侧对学园都市的误解，为后续冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '神裂火织', 'role': '魔法师/追捕者', 'description': '十八岁女性魔法师，使用日本令刀，与史提尔共同行动', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['魔法体系解释略显复杂，可能影响阅读流畅性', '角色情感转变略显突然'], refinement_requests=['简化魔法概念的阐述方式', '增加情感转变的过渡描写'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2408)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['分析魔法机制', '表达对茵蒂克丝处境的愤怒', '决心保护茵蒂克丝']}, {'name': '茵蒂克丝', 'role': '神秘修女/知识载体', 'key_actions': ['解释魔道书知识本质', '情绪崩溃哭泣', '接受上条的保护']}, {'name': '史提尔', 'role': '魔法师/追捕者', 'key_actions': ['监视上条和茵蒂克丝', '与神裂讨论情报', '误判上条所属组织']}, {'name': '神裂火织', 'role': '魔法师/追捕者', 'key_actions': ['询问茵蒂克丝状况', '分析学园都市局势', '担忧敌方战力']}], 'events': [{'description': '上条理解茵蒂克丝作为魔道书容器的真正价值与危险', 'importance': 0.9, 'timeline': 'middle'}, {'description': '茵蒂克丝情绪爆发，首次接受上条的保护', 'importance': 0.85, 'timeline': 'middle'}, {'description': '史提尔和神裂误判上条属于某个神秘魔法组织', 'importance': 0.8, 'timeline': 'middle'}, {'description': '揭示魔神概念——完全掌握魔法进入神之领域的存在', 'importance': 0.95, 'timeline': 'middle'}], 'analysis': {'main_theme': '知识的价值与代价、保护与被保护的矛盾', 'plot_significance': '这段情节深化了魔法世界的设定，建立了主角的动机，同时制造了敌方的误判，为后续冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '神裂火织', 'role': '魔法师/追捕者', 'description': '十八岁女性，黑色长发马尾，使用超过两公尺的日本令刀，与史提尔共同行动', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['神裂火织的角色引入略显突兀', '魔神概念的突然出现需要更多铺垫'], refinement_requests=['提前暗示神裂的存在', '在前期对话中 subtly 提及魔神概念'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2462)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 14,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "middle",
+      "meaningful_improvements": 2,
+      "total_tokens": 5100,
+      "total_cost": 0.10200000000000001,
+      "characters_detected": [
+        "史提尔",
+        "月咏小萌",
+        "茵蒂克丝",
+        "蓝发戴耳环的班长",
+        "御坂美琴"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/被保护对象",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/antagonist",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神裂火织",
+          "role": "魔法师/敌对势力",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['与茵蒂克丝互动', '察觉环境异常', '面对神裂火织的威胁', '担心茵蒂克丝安全']}, {'name': '茵蒂克丝', 'role': '神秘修女/被保护对象', 'key_actions': ['与上条互动', '表现出失忆症状', '生气咬上条的头', '独自前往澡堂']}, {'name': '史提尔', 'role': '魔法师/antagonist', 'key_actions': ['使用驱除闲人符文', '在远处观察', '与神裂对话']}, {'name': '神裂火织', 'role': '新角色/魔法侧执行者', 'key_actions': ['与史提尔对话', '拦截上条当麻', '发出最后通牒', '准备使用魔法名']}], 'events': [{'description': '茵蒂克丝透露失忆信息，表明不记得英国的事，只记得在圣乔治大圣堂长大', 'importance': 0.9, 'timeline': '片段2'}, {'description': '茵蒂克丝生气咬上条的头，独自前往大众澡堂', 'importance': 0.7, 'timeline': '片段3结尾'}, {'description': '上条发现周围环境异常，街道空无一人，意识到魔法干预', 'importance': 0.8, 'timeline': '片段4开头'}, {'description': '神裂火织现身拦截上条，解释驱除闲人符文效果，发出最后通牒', 'importance': 0.95, 'timeline': '片段4结尾至片段5'}, {'description': '远处发生火焰爆炸，暗示史提尔对茵蒂克丝采取行动', 'importance': 0.9, 'timeline': '片段5中间'}], 'analysis': {'main_theme': '记忆缺失与身份认同、保护与威胁的对抗、魔法与现实的冲突', 'plot_significance': '此段是情节转折点，从日常互动突然转入危机爆发。茵蒂克丝的失忆背景被进一步揭示，同时魔法侧组织正式展开行动，将故事推向高潮冲突。神裂火织的出现和最后通牒标志着对抗升级，远处的火焰爆炸暗示茵蒂克丝已陷入危险。', 'function_calls': [{'action': 'register_character', 'params': {'name': '神裂火织', 'role': '魔法侧执行者/剑士', 'description': '使用日本刀的魔法师，与史提尔同属一个组织，实力强大，行事果断', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['神裂火织的突然出现缺乏足够铺垫', '驱除闲人符文的效果描述略显突兀'], refinement_requests=['可增加神裂火织出现的征兆描述', '对符文魔法的作用机制可做更细致解释'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2599)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['与茵蒂克丝互动', '察觉环境异常', '面对神裂的威胁', '担心茵蒂克丝安全']}, {'name': '茵蒂克丝', 'role': '神秘修女/被保护对象', 'key_actions': ['与上条互动', '表达失忆', '生气咬上条', '独自前往澡堂']}, {'name': '史提尔', 'role': '魔法师/antagonist', 'key_actions': ['使用驱除闲人符文', '在远处观察', '与神裂对话']}, {'name': '神裂火织', 'role': '魔法师/敌对势力', 'key_actions': ['拦截上条', '解释魔法效果', '发出最后通牒', '准备战斗']}], 'events': [{'description': '上条与茵蒂克丝的日常互动和争吵，展现角色关系', 'importance': 0.7, 'timeline': '片段1-3'}, {'description': '茵蒂克丝透露失忆信息，揭示她的背景谜团', 'importance': 0.8, 'timeline': '片段2'}, {'description': '环境异常现象出现，街道空无一人', 'importance': 0.9, 'timeline': '片段4'}, {'description': '神裂现身解释魔法效果并威胁上条交出茵蒂克丝', 'importance': 1.0, 'timeline': '片段4-5'}, {'description': '远处发生爆炸，暗示茵蒂克丝遭遇危险', 'importance': 1.0, 'timeline': '片段5'}], 'analysis': {'main_theme': '保护与威胁的对抗，记忆与身份的谜团', 'plot_significance': '这段情节标志着从日常向危机的转折，揭示了魔法组织的威胁和茵蒂克丝的重要性，为后续冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '神裂火织', 'role': '魔法师/敌对势力成员', 'description': '强大的魔法师，使用日本刀作为武器，与史提尔同属一个组织，试图带走茵蒂克丝', 'confidence': 0.95}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['部分对话转换略显突兀', '环境描写的紧张感构建可以更充分'], refinement_requests=['加强环境异常感的渐进式描写', '细化角色情绪变化的过渡'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2501)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 15,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "middle",
+      "meaningful_improvements": 2,
+      "total_tokens": 5005,
+      "total_cost": 0.10010000000000001,
+      "characters_detected": [
+        "上条当麻",
+        "茵蒂克丝",
+        "月咏小萌",
+        "史提尔",
+        "神裂火织"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神裂火织",
+          "role": "魔法侧执行者/追捕者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/目标",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['承受神裂的七闪攻击', '试图突破神裂的防御', '右手被钢丝割伤', '质问神裂的动机']}, {'name': '神裂火织', 'role': '魔法侧执行者/追捕者', 'key_actions': ['使用七闪斩击攻击上条', '展示钢丝操控技巧', '对上条的坚持表示困惑', '展现手下留情的一面']}, {'name': '茵蒂克丝', 'role': '被保护对象/目标', 'key_actions': ['被提及为追捕目标', '作为冲突的核心原因']}], 'events': [{'description': '神裂使用七闪对上条进行压倒性攻击，展示其超凡的魔法战斗能力', 'importance': 0.9, 'timeline': '战斗初期'}, {'description': '上条发现神裂的攻击实际上是操控七根钢丝而非真正的刀剑，但仍无法抵挡', 'importance': 0.85, 'timeline': '战斗中段'}, {'description': '上条右手被神裂的钢丝严重割伤，但神裂明显手下留情未切断手指', 'importance': 0.8, 'timeline': '战斗关键转折点'}, {'description': '上条质问神裂为何仅为组织命令而追杀茵蒂克丝，展现道德冲突', 'importance': 0.9, 'timeline': '战斗后期'}], 'analysis': {'main_theme': '信念与职责的冲突，弱者对抗强者的不屈精神', 'plot_significance': '这段战斗场景深刻展现了魔法侧与科学侧的冲突，同时揭示了神裂这个复杂角色的内心矛盾。上条明知不敌仍拼死抵抗的行为，凸显了他保护茵蒂克丝的坚定决心，为后续的角色发展和剧情转折埋下伏笔。', 'function_calls': [{'action': 'update_character', 'params': {'name': '神裂火织', 'new_role': '复杂 antagonist/潜在盟友', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['战斗场景描述略显重复', '部分动作描写的连贯性可以加强'], refinement_requests=['增加更多角色内心独白来丰富心理描写', '可以适当简化重复的战斗动作描述', '加强环境描写与战斗氛围的融合'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.78, tokens_used=2498)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['承受神裂的攻击', '试图突破防御', '质问神裂的动机', '表达无力保护茵蒂克丝的绝望']}, {'name': '神裂火织', 'role': '魔法侧执行者/追捕者', 'key_actions': ['使用七闪攻击', '展示钢丝操控能力', '对上条手下留情', '表达对上条行为的困惑']}, {'name': '茵蒂克丝', 'role': '被保护对象/目标', 'key_actions': ['被提及为追捕目标', '成为双方冲突的核心']}], 'events': [{'description': '神裂使用七闪对上条发动毁灭性攻击，展示其超强战斗力', 'importance': 0.9, 'timeline': '战斗初期'}, {'description': '上条发现神裂攻击的秘密是操控七根钢丝而非真正的刀剑', 'importance': 0.85, 'timeline': '战斗中段'}, {'description': '上条质问神裂追杀茵蒂克丝的动机，揭示神裂只是执行组织命令', 'importance': 0.95, 'timeline': '战斗后期'}, {'description': '上条表达自己作为弱者的绝望，同时承认神裂拥有保护他人的能力', 'importance': 0.9, 'timeline': '冲突高潮'}], 'analysis': {'main_theme': '力量悬殊下的坚持与道德抉择', 'plot_significance': '这段战斗场景不仅展示了神裂的强大实力和战斗方式，更重要的是揭示了角色间的道德冲突。上条虽然力量弱小但坚持保护茵蒂克丝，而神裂虽然强大却只是机械执行命令，形成了强烈的对比。这段情节为后续的角色发展和关系转变埋下伏笔。', 'function_calls': [{'action': 'update_character', 'params': {'name': '神裂火织', 'new_role': '魔法侧执行者/复杂 antagonist', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['战斗场景描述略显重复', '神裂的动机揭示不够深入', '上条的心理转变过程可以更细腻'], refinement_requests=['增加神裂内心矛盾的描写', '细化上条从物理对抗到道德质问的转变过程', '加强环境描写与情绪氛围的融合'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2507)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 16,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 1,
+      "final_satisfaction": 0.88,
+      "processing_stage": "middle",
+      "meaningful_improvements": 1,
+      "total_tokens": 2360,
+      "total_cost": 0.047200000000000006,
+      "characters_detected": [
+        "上条当麻",
+        "茵蒂克丝",
+        "月咏小萌",
+        "史提尔",
+        "神裂火织"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神裂火织",
+          "role": "魔法侧执行者/前友人",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/受害者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/antagonist",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['质疑神裂的解释', '为茵蒂克丝辩护', '表达对朋友的忠诚']}, {'name': '神裂火织', 'role': '魔法侧执行者/前友人', 'key_actions': ['揭示真相', '解释记忆消除原因', '表达内心痛苦']}, {'name': '茵蒂克丝', 'role': '被保护对象/受害者', 'key_actions': ['被揭示记忆机制', '成为冲突核心']}, {'name': '史提尔', 'role': '魔法师/antagonist', 'key_actions': ['被提及作为追捕者']}], 'events': [{'description': '神裂揭示茵蒂克丝完全记忆能力的真相和记忆消除的必要性', 'importance': 0.95, 'timeline': 'middle'}, {'description': '上条当麻激烈反对神裂等人的做法并表达对茵蒂克丝的忠诚', 'importance': 0.9, 'timeline': 'middle'}, {'description': '神裂崩溃讲述他们承受的痛苦和选择成为敌人的原因', 'importance': 0.92, 'timeline': 'middle'}], 'analysis': {'main_theme': '记忆的痛苦与保护的真谛', 'plot_significance': '这是情节的重大转折点，彻底颠覆了前期的敌我认知，揭示了魔法师追捕茵蒂克丝的真相实际上是为了保护她，展现了深刻的道德困境和情感冲突', 'function_calls': []}}, confidence_scores={'overall': 0.88}, satisfaction_level=0.88, identified_issues=['情感冲突的强度可能过于集中', '部分解释可能需要更详细的铺垫'], refinement_requests=['可适当增加一些回忆片段来强化情感铺垫', '考虑加入更多视觉化的记忆闪回增强感染力'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.88, tokens_used=2360)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 17,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "climax",
+      "meaningful_improvements": 2,
+      "total_tokens": 5156,
+      "total_cost": 0.10312,
+      "characters_detected": [
+        "上条当麻",
+        "茵蒂克丝",
+        "月咏小萌",
+        "史提尔",
+        "神裂火织"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/被保护对象",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神裂火织",
+          "role": "魔法侧执行者/潜在转变者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "月咏小萌",
+          "role": "班导师/协助者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/追捕者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['重伤状态下坚持战斗', '质问神裂的动机', '保护茵蒂克丝的觉悟']}, {'name': '茵蒂克丝', 'role': '神秘修女/被保护对象', 'key_actions': ['照顾重伤的上条三天', '表达自责和担忧', '展现人性化情感']}, {'name': '神裂火织', 'role': '魔法侧执行者/antagonist', 'key_actions': ['与上条对峙', '透露教会内幕', '展现内心矛盾']}, {'name': '月咏小萌', 'role': '班导师/潜在协助者', 'key_actions': ['提供医疗照顾', '暂时离开场景', '带回魔法师访客']}, {'name': '史提尔', 'role': '魔法师/antagonist', 'key_actions': ['再次出现', '表现出对茵蒂克丝的关心']}], 'events': [{'description': '上条与神裂的最终对峙，上条在重伤状态下质问神裂的保护动机', 'importance': 0.95, 'timeline': '高潮阶段初期'}, {'description': '上条重伤昏迷三天后苏醒，发现茵蒂克丝一直在照顾他', 'importance': 0.85, 'timeline': '高潮阶段中期'}, {'description': '茵蒂克丝展现人性化情感，表达对成为冰冷机器的恐惧', 'importance': 0.9, 'timeline': '高潮阶段中期'}, {'description': '史提尔等魔法师再次出现，但态度似乎有所转变', 'importance': 0.8, 'timeline': '高潮阶段后期'}], 'analysis': {'main_theme': '保护他人的真正意义与人性价值', 'plot_significance': '这是故事的核心冲突爆发点，上条通过实际行动证明保护他人不是基于力量而是基于信念，同时揭示了教会体系的黑暗面和角色的内心转变', 'function_calls': [{'action': 'update_character', 'params': {'name': '神裂火织', 'new_role': '复杂 antagonist/潜在转变者', 'confidence': 0.85}}, {'action': 'update_character', 'params': {'name': '史提尔', 'new_role': '立场转变的 antagonist', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['战斗场景的细节描写略显模糊', '神裂态度转变的铺垫不够充分', '三天时间跨度的过渡略显突兀'], refinement_requests=['增加战斗场景的具体动作描写', '加强神裂内心矛盾的铺垫', '添加时间过渡的衔接描述'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2577)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['重伤状态下坚持战斗', '质问神裂的动机', '保护茵蒂克丝的觉悟']}, {'name': '茵蒂克丝', 'role': '神秘修女/被保护对象', 'key_actions': ['照顾重伤的上条三天', '表达自责和担忧', '展现人性化情感']}, {'name': '神裂火织', 'role': '魔法侧执行者/潜在转变者', 'key_actions': ['与上条对峙', '透露教会内幕', '展现内心矛盾']}, {'name': '月咏小萌', 'role': '班导师/协助者', 'key_actions': ['提供医疗帮助', '作为中间人调解']}, {'name': '史提尔', 'role': '魔法师/追捕者', 'key_actions': ['再次出现', '态度似乎有所转变']}], 'events': [{'description': '上条当麻与神裂火织的最终对峙，上条在重伤状态下坚持战斗并质问神裂的动机', 'importance': 0.95, 'timeline': '三天前（高潮战斗）'}, {'description': '上条昏迷三天后苏醒，发现茵蒂克丝一直在照顾他', 'importance': 0.85, 'timeline': '当前时间（高潮后恢复期）'}, {'description': '茵蒂克丝表达自责和情感，展现人性化的一面', 'importance': 0.9, 'timeline': '苏醒后的情感交流'}, {'description': '史提尔和神裂再次出现，但态度似乎有所转变', 'importance': 0.8, 'timeline': '当前时间（转折点）'}], 'analysis': {'main_theme': '力量与保护的真谛、人性的价值vs工具化', 'plot_significance': '这是故事的关键转折点，上条通过自己的行动和言语动摇了神裂的立场，同时茵蒂克丝的人性化表现改变了双方的对立关系，为后续剧情发展奠定基础', 'function_calls': [{'action': 'update_character', 'params': {'name': '神裂火织', 'new_role': '矛盾执行者/潜在盟友', 'confidence': 0.85}}, {'action': 'update_character', 'params': {'name': '史提尔', 'new_role': '态度转变的追捕者', 'confidence': 0.75}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['战斗场景的细节描写略显简略', '神裂转变的内心描写可以更深入'], refinement_requests=['增加神裂心理活动的细节描写', '强化战斗场景的紧张感和细节', '更清晰地展示角色立场转变的过程'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2579)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 18,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "climax",
+      "meaningful_improvements": 2,
+      "total_tokens": 5222,
+      "total_cost": 0.10444,
+      "characters_detected": [
+        "上条当麻",
+        "茵蒂克丝",
+        "月咏小萌",
+        "史提尔",
+        "神裂火织"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/被保护对象",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/antagonist",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神裂火织",
+          "role": "魔法侧执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "月咏小萌",
+          "role": "班导师/潜在协助者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['承受心理煎熬', '质疑魔法师的决定', '寻求拯救茵蒂克丝的方法']}, {'name': '茵蒂克丝', 'role': '神秘修女/被保护对象', 'key_actions': ['保护上条当麻', '决定牺牲自己', '接受命运安排']}, {'name': '史提尔', 'role': '魔法师/antagonist', 'key_actions': ['执行残酷计划', '内心挣扎', '保护茵蒂克丝']}, {'name': '神裂火织', 'role': '魔法侧执行者', 'key_actions': ['解释真相', '传达最终时限', '表达无奈与绝望']}, {'name': '月咏小萌', 'role': '班导师/潜在协助者', 'key_actions': ['情感上受影响', '旁观冲突']}], 'events': [{'description': '茵蒂克丝为保护上条当麻而决定接受魔法师们的条件，牺牲自己', 'importance': 0.95, 'timeline': '高潮前期'}, {'description': '神裂火织致电上条当麻，确认最终时限为零时，宣告计划将执行', 'importance': 0.9, 'timeline': '高潮中期'}, {'description': '上条当麻与神裂火织的激烈对话，揭露魔法师们的无奈和科学救赎的可能性', 'importance': 0.85, 'timeline': '高潮中期'}, {'description': '魔法师们离开房间，留下上条与茵蒂克丝面对残酷现实', 'importance': 0.8, 'timeline': '高潮前期'}], 'analysis': {'main_theme': '牺牲与保护的道德困境', 'plot_significance': '这是故事的核心转折点，揭示了魔法师们并非纯粹的恶人，而是被迫采取极端手段的保护者。情节从单纯的对立转向复杂的道德抉择，为上条当麻后续的行动埋下伏笔。', 'function_calls': [{'action': 'update_character', 'params': {'name': '史提尔', 'new_role': '复杂反派/被迫的保护者', 'confidence': 0.85}}, {'action': 'update_character', 'params': {'name': '神裂火织', 'new_role': '悲剧执行者/信息提供者', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['部分情感转折略显突兀', '魔法与科学对立的解释可以更深入'], refinement_requests=['加强角色心理描写的连贯性', '更详细展示魔法师内部的分歧与挣扎'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2565)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['保护茵蒂克丝的决心', '质疑魔法师们的动机', '内心挣扎与反思']}, {'name': '茵蒂克丝', 'role': '神秘修女/被保护对象', 'key_actions': ['挺身保护上条当麻', '自愿接受命运以保护上条的日常生活', '情感上的自我牺牲']}, {'name': '史提尔', 'role': '魔法师/antagonist', 'key_actions': ['执行残酷的演技', '内心痛苦但强忍', '展现对茵蒂克丝的深厚友情']}, {'name': '神裂火织', 'role': '魔法侧执行者', 'key_actions': ['告知最终时限', '解释魔法侧的无奈', '透露曾考虑科学侧的可能性']}, {'name': '月咏小萌', 'role': '班导师/潜在协助者', 'key_actions': ['情感上受影响而移开视线', '作为旁观者见证冲突']}], 'events': [{'description': '茵蒂克丝为保护上条当麻挺身而出，成为魔法师们计划中的枷锁', 'importance': 0.9, 'timeline': '高潮初期'}, {'description': '史提尔和神裂因茵蒂克丝的反应而内心动摇，暴露他们的真实情感', 'importance': 0.85, 'timeline': '高潮中期'}, {'description': '神裂火织来电告知最终时限，揭示营救计划的紧迫性', 'importance': 0.95, 'timeline': '高潮转折点'}, {'description': '上条当麻质疑魔法师们的无能，引发关于科学与魔法界限的讨论', 'importance': 0.88, 'timeline': '高潮后期'}, {'description': '神裂透露曾考虑科学侧解决方案但因自豪感而放弃的关键信息', 'importance': 0.92, 'timeline': '高潮关键转折'}], 'analysis': {'main_theme': '牺牲与保护的道德困境，科学与魔法的界限与偏见', 'plot_significance': '这是故事的核心转折点，揭示了魔法师们并非纯粹的恶人，而是陷入道德困境的无奈执行者。同时引入了科学侧可能成为解决方案的重要伏笔，为后续剧情发展奠定基础', 'function_calls': [{'action': 'update_character', 'params': {'name': '史提尔', 'new_role': '复杂反派/内心矛盾的魔法师', 'confidence': 0.9}}, {'action': 'update_character', 'params': {'name': '神裂火织', 'new_role': '道德困境中的执行者/潜在盟友', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['部分情感转折略显突兀', '魔法师动机的复杂性需要更充分展现'], refinement_requests=['增加魔法师内心独白来强化动机合理性', '加强科学与魔法对立主题的铺垫'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2657)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 19,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 1,
+      "final_satisfaction": 0.82,
+      "processing_stage": "climax",
+      "meaningful_improvements": 1,
+      "total_tokens": 2586,
+      "total_cost": 0.05172,
+      "characters_detected": [
+        "上条当麻",
+        "茵蒂克丝",
+        "月咏小萌",
+        "史提尔",
+        "神裂火织"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/受害者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/antagonist",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神裂火织",
+          "role": "魔法侧执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "月咏小萌",
+          "role": "班导师/潜在协助者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['与魔法师电话对峙', '寻找拯救方法', '情绪崩溃', '决心保护茵蒂克丝']}, {'name': '茵蒂克丝', 'role': '被保护对象/受害者', 'key_actions': ['陷入昏迷状态', '生命垂危', '成为冲突核心']}, {'name': '史提尔', 'role': '魔法师/antagonist', 'key_actions': ['决定消除记忆', '使用魔法仪式', '抛弃人性拯救茵蒂克丝']}, {'name': '神裂火织', 'role': '魔法侧执行者', 'key_actions': ['犹豫不决', '被上条说服动摇', '面临道德抉择']}, {'name': '月咏小萌', 'role': '班导师/潜在协助者', 'key_actions': ['提供帮助建议', '告知时间紧迫', '成为外部支援渠道']}], 'events': [{'description': '上条当麻与魔法师的电话对峙，试图说服对方放弃消除记忆', 'importance': 0.9, 'timeline': '高潮初期'}, {'description': '上条意识到时间紧迫，疯狂寻找拯救方法但陷入绝望', 'importance': 0.85, 'timeline': '高潮中期'}, {'description': '发现茵蒂克丝完全昏迷，生命迹象消失', 'importance': 0.95, 'timeline': '高潮转折点'}, {'description': '史提尔决定执行记忆消除仪式，神裂被要求协助', 'importance': 0.92, 'timeline': '高潮后期'}, {'description': '上条情绪崩溃，意识到自己的无力但决心反抗', 'importance': 0.88, 'timeline': '高潮顶点'}], 'analysis': {'main_theme': '记忆与生命的价值冲突，科学与魔法的对立，个人意志与命运的对抗', 'plot_significance': '这是整个故事的核心冲突爆发点，上条当麻面临无法解决的困境，魔法师们被迫做出残酷选择，茵蒂克丝的命运悬于一线', 'function_calls': [{'action': 'register_character', 'params': {'name': '克劳利', 'role': '传奇魔法师/理论奠基者', 'description': '二十世纪最伟大的魔法师，其著作《月之子》为当前魔法仪式提供理论基础', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['时间紧迫感可以更强烈', '魔法原理解释略显复杂', '角色情绪转变需要更细腻描写'], refinement_requests=['增加倒计时元素增强紧迫感', '简化魔法理论解释', '深化角色内心独白和情感变化'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.82, tokens_used=2586)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 20,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "climax",
+      "meaningful_improvements": 2,
+      "total_tokens": 5093,
+      "total_cost": 0.10186,
+      "characters_detected": [
+        "上条当麻",
+        "茵蒂克丝",
+        "月咏小萌",
+        "史提尔",
+        "神裂火织"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/被保护对象",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "魔法师/antagonist",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神裂火织",
+          "role": "魔法侧执行者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['内心挣扎与自我质疑', '面对魔法师的挑衅', '发现关键线索(85%脑容量)', '做出保护茵蒂克丝的决定']}, {'name': '茵蒂克丝', 'role': '神秘修女/被保护对象', 'key_actions': ['察觉危险警告上条', '展现对主角的关心', '再次失去意识']}, {'name': '史提尔·马格努斯', 'role': '魔法师/antagonist', 'key_actions': ['心理折磨上条当麻', '展示消除记忆的十字架', '质疑主角的人性']}, {'name': '神裂火织', 'role': '魔法侧执行者', 'key_actions': ['透露仪式时间信息', '回忆过去的情感经历', '展现矛盾心理']}], 'events': [{'description': '史提尔对上条进行心理折磨，展示消除记忆的十字架并质疑他的人性', 'importance': 0.9, 'timeline': '高潮阶段中期'}, {'description': '上条陷入深度自我怀疑，认识到自己的无力感', 'importance': 0.85, 'timeline': '高潮阶段中期'}, {'description': '神裂透露过去消除记忆时的情感经历，展现魔法师方的矛盾心理', 'importance': 0.8, 'timeline': '高潮阶段中后期'}, {'description': '茵蒂克丝苏醒并察觉危险，警告上条逃离', 'importance': 0.75, 'timeline': '高潮阶段后期'}, {'description': '上条发现85%脑容量的关键线索，出现转折希望', 'importance': 0.95, 'timeline': '高潮阶段结尾'}], 'analysis': {'main_theme': '人性与伪善的界限、无力感与希望的交织、记忆与存在的价值', 'plot_significance': '这是整个故事的情感与情节双重高潮，主角面临道德和能力的双重考验，同时揭示了关键线索为后续转折埋下伏笔', 'function_calls': [{'action': 'update_character', 'params': {'name': '神裂火织', 'new_role': '矛盾执行者/情感连接者', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['部分情感转折略显突兀', '魔法师动机的深层挖掘不足'], refinement_requests=['加强主角心理转变的铺垫', '深化魔法师方的情感冲突描写'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.78, tokens_used=2511)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['内心挣扎与自我怀疑', '面对魔法师的挑衅', '保护茵蒂克丝的决心', '发现关键线索（85%脑容量）']}, {'name': '茵蒂克丝', 'role': '神秘修女/被保护对象', 'key_actions': ['察觉危险警告上条', '表现出对上条的关心', '再次失去意识']}, {'name': '史提尔·马格努斯', 'role': '魔法师/antagonist', 'key_actions': ['心理折磨上条当麻', '展示消除记忆的十字架', '质疑上条的人性', '与神裂产生分歧']}, {'name': '神裂火织', 'role': '魔法侧执行者', 'key_actions': ['透露仪式时间信息', '回忆过去的痛苦经历', '表现出内心的矛盾', '质疑同伴的冷酷态度']}], 'events': [{'description': '史提尔对上条进行心理折磨，展示消除记忆的十字架并质疑他的人性', 'importance': 0.9, 'timeline': '高潮阶段中期'}, {'description': '上条陷入自我怀疑和绝望，认识到自己的无力', 'importance': 0.85, 'timeline': '高潮阶段中期'}, {'description': '神裂透露过去的痛苦经历，显示魔法师方也有情感矛盾', 'importance': 0.8, 'timeline': '高潮阶段中后期'}, {'description': '茵蒂克丝苏醒并警告上条逃离危险', 'importance': 0.75, 'timeline': '高潮阶段后期'}, {'description': '上条发现85%脑容量的关键线索，出现转机', 'importance': 0.95, 'timeline': '高潮阶段结尾'}], 'analysis': {'main_theme': '自我牺牲与人性的挣扎、记忆与身份的价值、无力感与希望的对抗', 'plot_significance': '这是故事的情感高潮和转折点，上条从绝望到发现关键线索，为后续的反击埋下伏笔。同时揭示了 antagonists 的内心矛盾，增加了角色的复杂性。', 'function_calls': [{'action': 'register_character', 'params': {'name': '奥雷欧斯·伊萨德', 'role': '幕后操纵者/真正的 antagonist', 'description': '可能是消除记忆仪式的真正执行者，隐藏在史提尔和神裂背后的更高层魔法师', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['部分对话略显重复', '心理描写有时过于冗长', '时间线跳跃略显突兀'], refinement_requests=['精简重复的心理独白', '加强场景转换的连贯性', '更清晰地交代魔法阵的作用原理'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2582)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 21,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 1,
+      "final_satisfaction": 0.92,
+      "processing_stage": "climax",
+      "meaningful_improvements": 1,
+      "total_tokens": 2497,
+      "total_cost": 0.049940000000000005,
+      "characters_detected": [
+        "上条当麻",
+        "茵蒂克丝",
+        "月咏小萌",
+        "史提尔",
+        "神裂火织"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/被保护对象",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "月咏小萌",
+          "role": "班导师/信息提供者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/ antagonist",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神裂火织",
+          "role": "魔法侧执行者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['揭露教会阴谋', '使用右手能力尝试解除魔法', '发现喉咙深处的魔法符号', '承受魔法反噬受伤']}, {'name': '茵蒂克丝', 'role': '神秘修女/被保护对象', 'key_actions': ['展现自动防御系统', '启动圣乔治圣域魔法', '被操控对抗上条']}, {'name': '月咏小萌', 'role': '班导师/信息提供者', 'key_actions': ['否定记忆容量限制说法', '提供完全记忆能力真相']}, {'name': '史提尔', 'role': '魔法师/ antagonist', 'key_actions': ['间接参与阴谋设定']}, {'name': '神裂火织', 'role': '魔法侧执行者', 'key_actions': ['前期造成上条伤势', '作为教会势力代表']}], 'events': [{'description': '上条向小萌老师求证完全记忆能力真相，得知人类大脑可记忆140年信息', 'importance': 0.9, 'timeline': '高潮前期'}, {'description': '上条识破教会阴谋：在茵蒂克丝脑中动手脚制造记忆容量限制', 'importance': 0.95, 'timeline': '高潮中期'}, {'description': '上条使用幻想杀手能力尝试解除魔法，但初期失败', 'importance': 0.85, 'timeline': '高潮中期'}, {'description': '发现喉咙深处的魔法符号并伸手触碰，触发自动防御系统', 'importance': 0.98, 'timeline': '高潮顶点'}, {'description': '茵蒂克丝启动圣乔治圣域魔法，进入战斗状态', 'importance': 0.96, 'timeline': '高潮后期'}], 'analysis': {'main_theme': '真相揭露与反抗压迫', 'plot_significance': '这是整个第一卷的核心转折点，揭露了教会对茵蒂克丝的操控真相，主角从被动保护转为主动反抗，同时展现了幻想杀手的真正价值和局限性', 'function_calls': []}}, confidence_scores={'overall': 0.92}, satisfaction_level=0.92, identified_issues=['魔法反噬的机制描述略显模糊', '喉咙深处符号的出现位置有些突兀'], refinement_requests=['可更详细解释魔法防御系统的运作原理', '增加对符号来历的暗示或铺垫'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.92, tokens_used=2497)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 22,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 1,
+      "final_satisfaction": 0.88,
+      "processing_stage": "ending",
+      "meaningful_improvements": 1,
+      "total_tokens": 2527,
+      "total_cost": 0.05054,
+      "characters_detected": [
+        "上条当麻",
+        "茵蒂克丝",
+        "月咏小萌",
+        "史提尔",
+        "神裂火织"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "神秘修女/被保护对象",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/antagonist",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神裂火织",
+          "role": "魔法侧执行者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['用右手抵挡龙王的叹息', '质问魔法师真实意图', '冲向茵蒂克丝试图解救']}, {'name': '茵蒂克丝', 'role': '神秘修女/被保护对象', 'key_actions': ['发动龙王的叹息', '释放血红色光柱魔法', '进入自动防御模式']}, {'name': '史提尔', 'role': '魔法师/antagonist', 'key_actions': ['震惊于茵蒂克丝使用魔法', '呼吸停止的反应', '表现出对现状的不可置信']}, {'name': '神裂火织', 'role': '魔法侧执行者', 'key_actions': ['解释龙王的叹息的本质', '呆滞于眼前景象', '提供关键魔法信息']}], 'events': [{'description': '茵蒂克丝意外发动龙王的叹息，释放出毁灭性光柱', 'importance': 0.95, 'timeline': '高潮阶段'}, {'description': '上条当麻用右手勉强抵挡光柱，同时质问魔法师的真实意图', 'importance': 0.9, 'timeline': '冲突升级'}, {'description': '光柱偏离方向摧毁公寓结构，转化为数十片发光羽毛落下', 'importance': 0.85, 'timeline': '转折点'}, {'description': '茵蒂克丝进入自动防御模式，准备发动更强大的魔法攻击', 'importance': 0.9, 'timeline': '危机加剧'}], 'analysis': {'main_theme': '打破命运循环与自我救赎', 'plot_significance': '这是整个故事的核心转折点，揭露了教会关于茵蒂克丝不能使用魔法的谎言，同时展现了上条当麻从被动接受命运到主动挑战命运的角色成长。魔法师们的震惊反应暗示着更大的阴谋和真相即将揭晓', 'function_calls': [{'action': 'register_character', 'params': {'name': '猎杀魔女之王', 'role': '魔法造物/防御机制', 'description': '史提尔创造的火焰魔法生物，正在逐渐被龙王的叹息削弱', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.88}, satisfaction_level=0.88, identified_issues=['魔法系统解释略显复杂，可能影响读者理解', '战斗节奏过快，情感铺垫稍显不足'], refinement_requests=['增加对魔法原理的简单可视化描述', '在激烈战斗中插入更多角色内心独白以增强情感深度'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.88, tokens_used=2527)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 23,
+      "volume_id": 1,
+      "chunks_processed": 5,
+      "total_iterations": 1,
+      "final_satisfaction": 0.88,
+      "processing_stage": "ending",
+      "meaningful_improvements": 1,
+      "total_tokens": 2562,
+      "total_cost": 0.05124,
+      "characters_detected": [
+        "上条当麻",
+        "茵蒂克丝",
+        "月咏小萌",
+        "史提尔",
+        "神裂火织"
+      ],
+      "ai_characters": [],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'fallback_parsing': True}, confidence_scores={'fallback': 0.88}, satisfaction_level=0.88, identified_issues=['JSON parsing failed - using fallback'], refinement_requests=['Fix JSON format in response'], reasoning_trace=[\"Fallback parsing due to: Expecting ',' delimiter: line 11 column 53 (char 259)\"], improvement_score=0.88, tokens_used=2562)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 24,
+      "volume_id": 1,
+      "chunks_processed": 2,
+      "total_iterations": 1,
+      "final_satisfaction": 0.92,
+      "processing_stage": "ending",
+      "meaningful_improvements": 1,
+      "total_tokens": 1714,
+      "total_cost": 0.034280000000000005,
+      "characters_detected": [
+        "上条当麻",
+        "茵蒂克丝",
+        "月咏小萌",
+        "史提尔",
+        "神裂火织"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/失忆的保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/神秘修女",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "医生",
+          "role": "真相传递者/哲学提问者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/前敌对方",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神裂火织",
+          "role": "魔法侧执行者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/失忆的保护者', 'key_actions': ['重伤住院', '假装记得过去', '用谎言保护茵蒂克丝', \"提出'回忆在心里'的哲学观点\"]}, {'name': '茵蒂克丝', 'role': '被保护对象/神秘修女', 'key_actions': ['被送往医院', '成为上条谎言的对象', '未知真相的被保护者']}, {'name': '医生', 'role': '真相传递者/哲学提问者', 'key_actions': ['转述魔法大战真相', '质疑上条的记忆状态', '提出记忆存储的哲学问题']}, {'name': '史提尔', 'role': '魔法师/前敌对方', 'key_actions': ['将伤者送医', '交代事件前因后果']}, {'name': '神裂火织', 'role': '魔法侧执行者', 'key_actions': ['协助送医', '参与事件解决']}], 'events': [{'description': '魔法大战结束后，上条当麻重伤住院并完全失忆', 'importance': 0.95, 'timeline': '结局阶段'}, {'description': '医生向失忆的上条转述整个事件的真相', 'importance': 0.9, 'timeline': '结局阶段'}, {'description': '上条选择用谎言保护茵蒂克丝，假装记得一切', 'importance': 0.98, 'timeline': '结局高潮'}, {'description': '医生与上条关于记忆本质的哲学对话', 'importance': 0.85, 'timeline': '结局结尾'}], 'analysis': {'main_theme': '记忆与身份的本质，以及为了保护他人而选择自我牺牲的崇高性', 'plot_significance': \"这个结尾巧妙地解决了魔法大战的情节冲突，同时通过上条的失忆和选择性的谎言，展现了角色深层次的成长——从物理层面的保护者升华到情感和心灵层面的守护者。医生的哲学提问和上条的回答('在心里')为整个故事赋予了深刻的哲学内涵，暗示记忆不仅存在于大脑，更存在于心灵和情感连接中。\", 'function_calls': [{'action': 'register_character', 'params': {'name': '医生', 'role': '真相传递者/哲学引导者', 'description': '负责治疗上条的医生，承担了向失忆主角传递真相的责任，并引导出关于记忆本质的哲学思考', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.92}, satisfaction_level=0.92, identified_issues=['医生角色略显工具化，主要功能是推动哲学讨论', '其他魔法师角色的结局交代不够清晰'], refinement_requests=['可增加医生角色的个人背景和动机', '适当交代史提尔和神裂的后续行动和立场转变'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.92, tokens_used=1714)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 1,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 3,
+      "final_satisfaction": 0.82,
+      "processing_stage": "beginning",
+      "meaningful_improvements": 3,
+      "total_tokens": 7130,
+      "total_cost": 0.1426,
+      "characters_detected": [],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "重要女配角/魔法侧角色",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/情报提供者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角', 'key_actions': ['抱怨不幸', '购买参考书', '隐藏失忆事实', '与茵蒂克丝互动']}, {'name': '茵蒂克丝', 'role': '女主角/魔法侧关键角色', 'key_actions': ['穿着修道服', '询问资金用途', '表达宗教约束', '对炎热天气反应强烈']}, {'name': '史提尔', 'role': '魔法师/情报提供者', 'key_actions': ['说明巫女被囚禁事件']}], 'events': [{'description': '三泽塾巫女被魔法师囚禁事件被揭露', 'importance': 0.9, 'timeline': '故事开端'}, {'description': '上条当麻在书店因参考书恢复原价而感叹不幸', 'importance': 0.7, 'timeline': '失忆后日常生活展示'}, {'description': '上条与茵蒂克丝关于资金和宗教约束的对话', 'importance': 0.8, 'timeline': '角色关系建立阶段'}], 'analysis': {'main_theme': '科学与魔法的冲突与个人身份认知危机', 'plot_significance': '通过主角的失忆设定建立悬疑感，同时引入魔法侧事件为后续冲突铺垫，日常生活与超常事件的交织凸显系列特色', 'function_calls': [{'action': 'register_character', 'params': {'name': '上条当麻', 'role': '主角', 'description': '拥有吸收不幸体质且失去记忆的高中生，右手具有消除超能力/魔法的能力', 'confidence': 0.95}}, {'action': 'register_character', 'params': {'name': '茵蒂克丝', 'role': '女主角', 'description': '身穿特殊修道服的银发修女，受宗教约束禁止享受奢侈品，与主角有未知的过去联系', 'confidence': 0.9}}, {'action': 'register_character', 'params': {'name': '史提尔', 'role': '魔法师', 'description': '向主角提供魔法侧情报的关键角色', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['角色背景信息呈现较零散', '魔法与科学世界的设定衔接略显突兀'], refinement_requests=['增加主角能力体系的早期提示', '强化日常场景与主线事件的过渡衔接'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2375)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角', 'key_actions': ['抱怨不幸的日常生活', '购买参考书', '隐藏失忆事实', '与茵蒂克丝互动']}, {'name': '茵蒂克丝', 'role': '重要配角/女主角', 'key_actions': ['穿着夸张修道服', '表达对炎热天气的不满', '询问金钱用途', '坚持宗教戒律']}, {'name': '史提尔', 'role': '魔法师/信息提供者', 'key_actions': ['向上条说明巫女被囚禁事件']}], 'events': [{'description': '上条当麻在书店购买参考书，遭遇经济困境', 'importance': 0.6, 'timeline': '故事开端'}, {'description': '魔法师史提尔告知上条关于三泽塾巫女被囚禁的事件', 'importance': 0.9, 'timeline': '故事主要冲突引入'}, {'description': '上条与茵蒂克丝关于金钱和冰淇淋的对话，展现角色关系', 'importance': 0.7, 'timeline': '角色互动发展'}], 'analysis': {'main_theme': '超能力与魔法的冲突、个人身份认同、日常与异常的交织', 'plot_significance': '开头成功建立了学园都市的超能力科学世界观与魔法世界的冲突，通过上条的失忆设定制造悬念，同时引入主要事件线索（巫女被囚禁）', 'function_calls': [{'action': 'register_character', 'params': {'name': '上条当麻', 'role': '主角', 'description': '拥有吸收不幸体质的高中生，失去记忆但保留知识，在学园都市生活', 'confidence': 0.95}}, {'action': 'register_character', 'params': {'name': '茵蒂克丝', 'role': '女主角', 'description': '穿着特殊修道服的银发少女，与上条有未知的过去关系，遵守严格的宗教戒律', 'confidence': 0.9}}, {'action': 'register_character', 'params': {'name': '史提尔', 'role': '魔法师', 'description': '向上条提供魔法侧信息的魔法师，告知巫女被囚禁事件', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['部分对话略显冗长', '世界观信息交代略显分散'], refinement_requests=['更紧凑地整合世界观信息', '加强事件紧迫感的营造'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.030000000000000027, tokens_used=2395)",
+        "IterationResult(iteration_num=3, analysis={'characters': [{'name': '上条当麻', 'role': '主角', 'key_actions': ['抱怨不幸的日常生活', '为保护少女情感而扮演失忆前的自己', '与茵蒂克丝互动']}, {'name': '茵蒂克丝', 'role': '重要女配角/魔法侧角色', 'key_actions': ['穿着夸张修道服', '对奢侈品有宗教限制', '与上条当麻互动表现出单纯性格']}, {'name': '史提尔', 'role': '魔法师/情报提供者', 'key_actions': ['向上条说明巫女被囚禁事件']}], 'events': [{'description': '三泽塾巫女被魔法师囚禁事件', 'importance': 0.9, 'timeline': '故事开端'}, {'description': '上条当麻失忆后的日常生活展现', 'importance': 0.7, 'timeline': '故事开始阶段'}, {'description': '上条与茵蒂克丝的互动和关系建立', 'importance': 0.8, 'timeline': '故事初期'}], 'analysis': {'main_theme': '科学与魔法的冲突、记忆丧失与身份认同、日常中的异常', 'plot_significance': '建立了学园都市的超能力世界观与魔法侧入侵的冲突主线，同时通过主角失忆设定制造悬念和情感张力', 'function_calls': [{'action': 'register_character', 'params': {'name': '上条当麻', 'role': '主角', 'description': '拥有吸收不幸体质且丧失记忆的高中生，右手具有特殊能力', 'confidence': 0.95}}, {'action': 'register_character', 'params': {'name': '茵蒂克丝', 'role': '魔法侧修女', 'description': '银发修女，穿着夸张的修道服，对奢侈品有宗教限制', 'confidence': 0.9}}, {'action': 'register_character', 'params': {'name': '史提尔', 'role': '魔法师', 'description': '向上条提供魔法侧情报的魔法师', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['部分角色背景信息还不够完整', '魔法与科学世界观的具体规则尚未完全展开'], refinement_requests=['增加更多角色背景细节', '更清晰地解释世界观设定规则'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2360)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 2,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "beginning",
+      "meaningful_improvements": 2,
+      "total_tokens": 5252,
+      "total_cost": 0.10504000000000001,
+      "characters_detected": [
+        "茵蒂克丝",
+        "上条当麻",
+        "史提尔"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/高中生/超能力者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "女主角/修女/食客",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/教会代表/情报提供者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "蓝发耳环",
+          "role": "上条的朋友/同学",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/高中生/超能力者', 'key_actions': ['抱怨茵蒂克丝带来的经济负担', '与朋友对话', '担心茵蒂克丝的反应', '内心独白表达不幸感']}, {'name': '茵蒂克丝', 'role': '女主角/修女/食客', 'key_actions': ['听到上条的抱怨后露出危险笑容', '独占三杯冰沙', '表现出天真和危险的双重性格', '被描述为缺乏危机意识']}, {'name': '史提尔', 'role': '魔法师/教会代表/情报提供者', 'key_actions': ['访问学园都市指挥中心', '面对亚雷斯塔时的恐惧表现', '被描述为杀人不眨眼但仍有不适感']}, {'name': '蓝发耳环', 'role': '上条的朋友/同学', 'key_actions': ['对修女和巫女组合表现出兴趣', '眼神闪耀光芒']}], 'events': [{'description': '上条当麻与朋友讨论茵蒂克丝作为食客带来的经济压力，被茵蒂克丝听到', 'importance': 0.7, 'timeline': '开头部分'}, {'description': '茵蒂克丝在冷饮店独占三杯冰沙，周围女高中生讨论超能力作弊事件', 'importance': 0.6, 'timeline': '中间部分'}, {'description': '史提尔访问学园都市核心设施，面对神秘的亚雷斯塔', 'importance': 0.9, 'timeline': '后半部分'}, {'description': '出现神秘巫女角色，引发新的剧情线索', 'importance': 0.8, 'timeline': '结尾部分'}], 'analysis': {'main_theme': '科学与魔法的冲突、日常生活与超常事件的交织', 'plot_significance': '建立了魔法侧与科学侧的对立框架，同时展示了主角日常生活中的超自然元素，为后续冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '蓝发耳环', 'role': '上条当麻的朋友/同学', 'description': '对特殊女性组合有浓厚兴趣的角色', 'confidence': 0.8}}, {'action': 'register_character', 'params': {'name': '亚雷斯塔', 'role': '学园都市高层/神秘存在', 'description': '悬浮在培养液中的神秘人物，掌控学园都市', 'confidence': 0.9}}, {'action': 'register_character', 'params': {'name': '巫女', 'role': '神秘角色/潜在冲突点', 'description': '在冷饮店睡觉的诡异巫女，可能引发新事件', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['多个场景切换略显突兀', '部分对话信息量较大可能影响阅读流畅性'], refinement_requests=['加强场景过渡的自然性', '适当简化对话中的信息密度'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2589)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/高中生/超能力者', 'key_actions': ['抱怨茵蒂克丝带来的经济负担', '与朋友对话时表现出日常生活的烦恼', '对茵蒂克丝的反应感到恐惧', '内心独白显示不幸体质']}, {'name': '茵蒂克丝', 'role': '女主角/修女/食客', 'key_actions': ['听到上条抱怨后露出危险笑容', '独占三杯冰沙显示贪吃性格', '对陌生环境缺乏危机意识', '表现出纯真幸福的表情']}, {'name': '史提尔', 'role': '魔法师/教会代表/情报提供者', 'key_actions': ['面对亚雷斯塔时表现出极度恐惧', '在敌方大本营进行交涉', '对科学阵营不理解但保持警惕']}, {'name': '蓝发耳环', 'role': '上条的朋友/同学', 'key_actions': ['对修女与巫女组合表现出兴趣', '显示日常校园生活的氛围']}], 'events': [{'description': '上条当麻与朋友讨论茵蒂克丝作为食客带来的经济压力，被茵蒂克丝听到引发危机', 'importance': 0.7, 'timeline': '开头部分'}, {'description': '茵蒂克丝在冷饮店独占三杯冰沙，周围女高中生讨论超能力考试作弊话题', 'importance': 0.6, 'timeline': '中间部分'}, {'description': '史提尔在学园都市核心设施与亚雷斯塔会面，面临生命威胁', 'importance': 0.9, 'timeline': '后半部分'}, {'description': '神秘巫女角色的出现，暗示后续超自然事件发展', 'importance': 0.8, 'timeline': '结尾部分'}], 'analysis': {'main_theme': '科学与魔法的冲突、日常生活与超常事件的交织、角色间的经济与情感依赖关系', 'plot_significance': '建立主角日常生活与超能力世界的双重设定，铺垫魔法与科学阵营的冲突，引入关键反派角色亚雷斯塔', 'function_calls': [{'action': 'register_character', 'params': {'name': '亚雷斯塔', 'role': '反派/学园都市统治者', 'description': '神秘的存在，头下脚上悬浮在培养液中，拥有绝对权力和危险性的科学阵营领导者', 'confidence': 0.9}}, {'action': 'register_character', 'params': {'name': '蓝发耳环', 'role': '配角/上条当麻的朋友', 'description': '上条的同学，对特殊角色组合有浓厚兴趣的普通学生', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['场景切换略显突兀，从日常对话突然转到高紧张度的政治交涉', '部分对话节奏过快，可能影响读者对世界观的理解'], refinement_requests=['增加过渡段落使场景转换更自然', '适当加入更多世界观解释性内容', '强化亚雷斯塔威胁性的具体表现'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2663)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 3,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.8,
+      "processing_stage": "beginning",
+      "meaningful_improvements": 2,
+      "total_tokens": 5056,
+      "total_cost": 0.10112,
+      "characters_detected": [
+        "茵蒂克丝",
+        "蓝发耳环",
+        "上条当麻",
+        "史提尔"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/幻想杀手持有者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/教会特派员",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "女主角/魔法侧关键角色",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "蓝发耳环",
+          "role": "上条的朋友/同学",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "亚雷斯塔",
+          "role": "学园都市高层/神秘决策者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/幻想杀手能力者', 'key_actions': ['与魔法师战斗', '被学园都市视为等级零无能力者']}, {'name': '史提尔', 'role': '魔法师/教会特派员/情报提供者', 'key_actions': ['分析学园都市与教会关系', '质疑亚雷斯塔的动机', '参与清理门户任务']}, {'name': '茵蒂克丝', 'role': '女主角/魔法侧关键角色', 'key_actions': ['与上条和蓝发耳环互动', '参与猜拳决定牺牲者']}, {'name': '蓝发耳环', 'role': '上条的朋友/同学', 'key_actions': ['提醒上条礼貌回应', '参与三人猜拳']}, {'name': '亚雷斯塔', 'role': '学园都市高层/神秘决策者', 'key_actions': ['解释超能力本质', '操纵史提尔行动', '揭示学园都市内部规则']}], 'events': [{'description': '史提尔被派往学园都市执行清理门户任务，揭示科学阵营与魔法阵营的微妙关系', 'importance': 0.9, 'timeline': '当前主要事件'}, {'description': '亚雷斯塔向史提尔解释超能力本质和学园都市的阶级制度', 'importance': 0.85, 'timeline': '与史提尔对话期间'}, {'description': '上条、茵蒂克丝和蓝发耳环在餐厅遇到神秘巫女，通过猜拳决定应对者', 'importance': 0.7, 'timeline': '片段5中的场景'}], 'analysis': {'main_theme': '科学与魔法的冲突与共存，以及隐藏在表面之下的权力博弈', 'plot_significance': '建立了两大阵营的紧张关系，揭示了上条当麻特殊能力的价值被刻意低估，为后续冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '亚雷斯塔', 'role': '学园都市高层/神秘决策者', 'description': '倒浮在巨大试管中的神秘存在，掌控学园都市的运作，深谙操纵之术', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['巫女角色的突然出现略显突兀', '部分对话转换略显生硬'], refinement_requests=['可对巫女角色进行更自然的引入', '加强场景转换的连贯性'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2507)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/幻想杀手持有者', 'key_actions': ['与魔法师共同行动', '被学园都市视为等级零无能力者']}, {'name': '史提尔', 'role': '魔法师/教会特派员', 'key_actions': ['分析学园都市与教会关系', '接受特殊任务', '与亚雷斯塔对话']}, {'name': '茵蒂克丝', 'role': '女主角/魔法侧关键角色', 'key_actions': ['与上条、蓝发耳环在餐厅场景出现', '参与猜拳决定牺牲者']}, {'name': '蓝发耳环', 'role': '上条的朋友/同学', 'key_actions': ['在餐厅场景出现', '建议上条回应巫女']}, {'name': '亚雷斯塔', 'role': '学园都市高层/神秘决策者', 'key_actions': ['解释超能力本质', '透露学园都市机密信息', '操纵史提尔行动']}], 'events': [{'description': '史提尔被特殊召唤处理魔法师与超能力者冲突事件', 'importance': 0.9, 'timeline': '当前时间点前两星期'}, {'description': '亚雷斯塔向史提尔解释超能力本质和薛丁格的猫理论', 'importance': 0.85, 'timeline': '当前对话中'}, {'description': '上条、茵蒂克丝、蓝发耳环在餐厅遇到神秘巫女', 'importance': 0.7, 'timeline': '当前时间点'}, {'description': '学园都市隐藏吸血杀手等稀有超能力者的存在', 'importance': 0.8, 'timeline': '背景设定'}], 'analysis': {'main_theme': '科学与魔法的冲突与共存，稀有能力的价值与危险性', 'plot_significance': '建立学园都市与魔法教会的复杂关系，铺垫吸血鬼相关危机，展示主角群的日常与异常交织的生活', 'function_calls': [{'action': 'register_character', 'params': {'name': '亚雷斯塔', 'role': '学园都市高层/神秘决策者', 'description': '倒浮在巨大试管中的神秘存在，掌握学园都市机密，能够解释超能力本质', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.8}, satisfaction_level=0.8, identified_issues=['巫女角色突然出现缺乏铺垫', '多个场景切换略显跳跃', '部分概念解释（如薛丁格的猫）可能过于抽象'], refinement_requests=['为巫女出场增加更多情境描述', '加强场景转换的过渡', '用更具体例子解释抽象概念'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.050000000000000044, tokens_used=2549)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 4,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "beginning",
+      "meaningful_improvements": 2,
+      "total_tokens": 4950,
+      "total_cost": 0.099,
+      "characters_detected": [
+        "茵蒂克丝",
+        "蓝发耳环",
+        "上条当麻",
+        "史提尔",
+        "亚雷斯塔"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/失忆者/学园都市学生",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "女主角/魔法侧关键角色",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "蓝发耳环",
+          "role": "上条的朋友/同学",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "巫女",
+          "role": "神秘新角色/疑似魔法师",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/失忆者/学园都市学生', 'key_actions': ['与神秘巫女互动', '处理财务困境', '应对多方责难', '照顾茵蒂克丝', '内心挣扎于失忆身份']}, {'name': '茵蒂克丝', 'role': '女主角/魔法侧关键角色', 'key_actions': ['表达对魔法师身份的敏感', '嫉妒新出现的巫女', '与上条当麻争吵', '展现对猫的喜爱', '暴露过去与上条的亲密关系']}, {'name': '蓝发耳环', 'role': '上条的朋友/同学', 'key_actions': ['调侃上条的二次元观念', '观察并评论事件发展', '提供幽默缓解紧张氛围']}, {'name': '神秘巫女', 'role': '新出现的谜样角色/疑似魔法师', 'key_actions': ['自称魔法师', '利用美貌获取金钱', '引发团队内部冲突', '被神秘西装男子带走']}], 'events': [{'description': '神秘巫女出现并向上条索要金钱，引发关于魔法师身份的讨论', 'importance': 0.7, 'timeline': '故事开端'}, {'description': '茵蒂克丝因嫉妒而爆发，揭露过去与上条的亲密关系', 'importance': 0.8, 'timeline': '咖啡馆冲突阶段'}, {'description': '近十名神秘西装男子包围并带走巫女，留下谜团', 'importance': 0.9, 'timeline': '咖啡馆事件高潮'}, {'description': '上条与茵蒂克丝关于养猫的争吵，展现两人关系动态', 'importance': 0.6, 'timeline': '傍晚解散后'}], 'analysis': {'main_theme': '身份认同与记忆缺失的冲突，魔法与现实的界限模糊', 'plot_significance': '通过新角色巫女的引入，引发魔法侧的新冲突，同时加深主角失忆带来的身份危机，为后续魔法与科学冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '神秘巫女', 'role': '谜样魔法师/引发冲突的新角色', 'description': '自称魔法师的美丽巫女，利用美貌获取金钱，被神秘组织带走，引发关于魔法师身份的争议', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['巫女角色的背景信息过于模糊', '西装男子的身份和目的缺乏交代', '部分对话转换略显突兀'], refinement_requests=['增加巫女背景的暗示性描述', '为西装男子的出现提供更多铺垫', '优化对话过渡的自然度'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2557)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/失忆者/学园都市学生', 'key_actions': ['与巫女对话', '处理财务困境', '安抚茵蒂克丝', '应对多方责难']}, {'name': '茵蒂克丝', 'role': '女主角/魔法侧关键角色', 'key_actions': ['表达不满', '质疑巫女身份', '与上条争吵', '展现魔法知识']}, {'name': '蓝发耳环', 'role': '上条的朋友/同学', 'key_actions': ['发表二次元相关评论', '观察互动', '提出疑问']}, {'name': '巫女', 'role': '神秘新角色/疑似魔法师', 'key_actions': ['寻求金钱帮助', '利用美貌获取利益', '引发身份争议']}], 'events': [{'description': '上条与神秘巫女相遇并讨论金钱问题', 'importance': 0.7, 'timeline': '开场阶段'}, {'description': '四人组被近十名神秘西装男子包围', 'importance': 0.9, 'timeline': '中间阶段'}, {'description': '上条与茵蒂克丝关于养猫的争吵', 'importance': 0.6, 'timeline': '结束阶段'}], 'analysis': {'main_theme': '身份认知与记忆缺失的冲突，魔法与现实的交织', 'plot_significance': '引入新神秘角色（巫女），建立魔法侧新线索，强化上条失忆带来的身份认同危机', 'function_calls': [{'action': 'register_character', 'params': {'name': '巫女', 'role': '神秘魔法师/身份不明者', 'description': '外表美丽的巫女装扮女性，行为诡异，疑似魔法师，与上部流有关联', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['巫女角色背景信息不足', '西装男子身份未明确解释'], refinement_requests=['提供更多巫女背景线索', '明确西装男子与巫女的关系'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2393)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 5,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "beginning",
+      "meaningful_improvements": 2,
+      "total_tokens": 4764,
+      "total_cost": 0.09528,
+      "characters_detected": [
+        "茵蒂克丝",
+        "蓝发耳环",
+        "神秘巫女",
+        "上条当麻",
+        "史提尔"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/失忆者/魔法对抗者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法师/情报提供者/敌对试探者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神秘巫女",
+          "role": "被监禁者/任务目标",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/失忆者/魔法对抗者', 'key_actions': ['隐藏失忆事实', '应对史提尔攻击', '摆出战斗姿势', '质疑史提尔的动机']}, {'name': '史提尔', 'role': '魔法师/情报提供者/敌对试探者', 'key_actions': ['突然袭击上条', '展示火焰魔法', '提供三泽塾情报', '察觉上条行为异常']}, {'name': '神秘巫女', 'role': '被监禁者/任务目标', 'key_actions': ['被提及为救援对象']}], 'events': [{'description': '史提尔突然袭击上条当麻，使用火焰魔法攻击', 'importance': 0.9, 'timeline': '开场冲突'}, {'description': '上条当麻成功抵挡魔法攻击，展现右手特殊能力', 'importance': 0.85, 'timeline': '冲突中段'}, {'description': '史提尔揭示三泽塾被炼金术师占领的秘密', 'importance': 0.8, 'timeline': '情报揭示'}, {'description': '史提尔察觉上条当麻行为异常，怀疑其身份', 'importance': 0.75, 'timeline': '怀疑产生'}], 'analysis': {'main_theme': '失忆主角在魔法世界的生存与伪装', 'plot_significance': '建立了主角的失忆设定，引入了魔法冲突主线，铺垫了三泽塾救援任务', 'function_calls': [{'action': 'register_character', 'params': {'name': '三泽塾炼金术师', 'role': '敌对势力/占领者', 'description': '占领补习班的苏黎世学派炼金术师，疑似监禁神秘巫女', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['魔法战斗场景描述略显突兀', '史提尔态度转变稍显生硬'], refinement_requests=['增加战斗前的氛围铺垫', '细化角色情绪转变过程'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.78, tokens_used=2384)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/失忆者/魔法对抗者', 'key_actions': ['伪装失忆', '应对史提尔攻击', '举起右手防御魔法', '质疑史提尔的意图']}, {'name': '史提尔', 'role': '魔法师/情报提供者/敌对试探者', 'key_actions': ['突然出现试探上条', '使用火焰魔法攻击', '提供三泽塾情报', '察觉上条行为异常']}, {'name': '神秘巫女', 'role': '被监禁者/任务目标', 'key_actions': ['被提及为监禁受害者']}], 'events': [{'description': '史提尔突然出现并试探失忆的上条当麻', 'importance': 0.9, 'timeline': '开场冲突'}, {'description': '史提尔使用火焰剑魔法攻击上条，被右手能力消除', 'importance': 0.95, 'timeline': '魔法对抗开始'}, {'description': '揭示街道异常空无一人，暗示结界或魔法影响', 'importance': 0.85, 'timeline': '环境异常揭示'}, {'description': '史提尔说明三泽塾被炼金术师占领和女孩被监禁的任务', 'importance': 0.88, 'timeline': '主线任务交代'}], 'analysis': {'main_theme': '失忆伪装与魔法世界的危险试探', 'plot_significance': '建立主角失忆状态下的生存危机，引入魔法侧冲突和三泽塾事件主线', 'function_calls': [{'action': 'update_character', 'params': {'name': '史提尔', 'new_role': '魔法师/敌对试探者/情报提供者', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['神秘巫女角色信息过于模糊', '史提尔动机转换略显突兀'], refinement_requests=['增加对神秘巫女的背景暗示', '细化史提尔从敌对到合作的过渡逻辑'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2380)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 6,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 3,
+      "final_satisfaction": 0.82,
+      "processing_stage": "early",
+      "meaningful_improvements": 3,
+      "total_tokens": 8119,
+      "total_cost": 0.16238000000000002,
+      "characters_detected": [
+        "茵蒂克丝",
+        "蓝发耳环",
+        "神秘巫女",
+        "上条当麻",
+        "史提尔"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "魔法师/情报提供者/威胁者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "女主角/被保护对象",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "姬神秋沙",
+          "role": "吸血杀手/被追捕对象",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "炼金术师",
+          "role": "幕后黑手/追捕者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['质疑吸血鬼的存在', '担心姬神秋沙的处境', '回忆与茵蒂克丝的羁绊', '对史提尔的威胁感到愤怒']}, {'name': '史提尔·马格努斯', 'role': '魔法师/情报提供者/威胁者', 'key_actions': ['解释吸血鬼和吸血杀手的背景', '透露炼金术师与三泽塾的冲突', '用茵蒂克丝的安全威胁上条', '描述姬神秋沙的悲惨过去']}, {'name': '茵蒂克丝', 'role': '女主角/被保护对象', 'key_actions': ['被史提尔作为威胁筹码', '与上条有深厚羁绊但未直接出场']}, {'name': '姬神秋沙', 'role': '吸血杀手/被追捕对象', 'key_actions': ['从三泽塾逃出', '在快餐店陷入经济困境', '向上条求助100日元']}, {'name': '炼金术师', 'role': '幕后反派/追逐者', 'key_actions': ['计划绑架吸血杀手', '与三泽塾争夺姬神秋沙', '目前躲藏在三泽塾内']}], 'events': [{'description': '史提尔向上条解释吸血鬼、吸血杀手以及炼金术师与三泽塾的冲突', 'importance': 0.9, 'timeline': '当前时间点的主要对话'}, {'description': '史提尔以茵蒂克丝的安全威胁上条配合行动', 'importance': 0.95, 'timeline': '对话后半段的关键转折'}, {'description': '上条意识到快餐店遇到的巫女就是逃出的姬神秋沙', 'importance': 0.85, 'timeline': '上条的个人推理过程'}, {'description': '姬神秋沙从三泽塾逃出但陷入经济困境', 'importance': 0.8, 'timeline': '发生在与上条相遇之前'}], 'analysis': {'main_theme': '超自然威胁与个人羁绊的冲突', 'plot_significance': '这些片段建立了吸血鬼威胁的世界观背景，揭示了姬神秋沙的悲惨过去和当前困境，同时通过史提尔的威胁强化了上条与茵蒂克丝的羁绊关系，为后续冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '姬神秋沙', 'role': '吸血杀手/被追捕的巫女', 'description': '拥有杀死吸血鬼能力的少女，从三泽塾逃出但陷入困境，需要上条的帮助', 'confidence': 0.9}}, {'action': 'register_character', 'params': {'name': '炼金术师', 'role': '幕后反派/魔法师', 'description': '企图绑架吸血杀手的魔法师，目前与三泽塾对峙中', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['部分世界观解释略显冗长', '新角色姬神的引入方式有些突然'], refinement_requests=['可以增加更多角色互动的具体描写', '适当简化背景说明的对话长度'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2690)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['质疑吸血鬼的存在', '担忧姬神秋沙的处境', '回忆与茵蒂克丝的相遇', '对史提尔的威胁产生强烈反应']}, {'name': '史提尔·马格努斯', 'role': '魔法师/情报提供者/威胁者', 'key_actions': ['解释吸血鬼和吸血杀手的关系', '威胁上条配合教会行动', '提供关于三泽塾和炼金术师的情报', '暗示对茵蒂克丝的控制权']}, {'name': '茵蒂克丝', 'role': '女主角/被保护对象', 'key_actions': ['被史提尔作为威胁筹码', '与上条的过去联系被提及']}, {'name': '姬神秋沙', 'role': '吸血杀手/被追捕对象', 'key_actions': ['从三泽塾逃脱', '在快餐店寻求帮助', '因资金不足无法继续逃亡']}, {'name': '神秘巫女', 'role': '新出现的谜样角色/疑似魔法师', 'key_actions': ['被提及作为牺牲品的可能性']}, {'name': '炼金术师', 'role': '幕后追捕者', 'key_actions': ['计划捕获吸血杀手', '与三泽塾争夺姬神秋沙']}], 'events': [{'description': '史提尔解释吸血鬼与吸血杀手的关系及三泽塾的阴谋', 'importance': 0.9, 'timeline': '当前对话中'}, {'description': '史提尔威胁上条配合教会行动，否则对茵蒂克丝不利', 'importance': 0.95, 'timeline': '对话高潮部分'}, {'description': '上条意识到快餐店遇到的巫女就是逃脱的吸血杀手姬神秋沙', 'importance': 0.85, 'timeline': '回忆推理过程'}, {'description': '揭示姬神秋沙的悲惨过去和村庄毁灭事件', 'importance': 0.8, 'timeline': '背景信息交代'}], 'analysis': {'main_theme': '超自然威胁与保护责任的冲突', 'plot_significance': '本片段建立了吸血鬼传说的世界观基础，揭示了多方势力对吸血杀手的争夺，同时通过史提尔的威胁加强了上条与茵蒂克丝关系的张力，为上条的介入行动提供了动机', 'function_calls': [{'action': 'register_character', 'params': {'name': '姬神秋沙', 'role': '吸血杀手/被追捕的关键角色', 'description': '拥有杀死吸血鬼能力的少女，从三泽塾逃脱，正被多方势力追捕', 'confidence': 0.9}}, {'action': 'update_character', 'params': {'name': '神秘巫女', 'new_role': '疑似姬神秋沙的另一个身份/吸血杀手', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['吸血鬼设定的引入略显突兀，需要更多铺垫', '史提尔的威胁与之前角色形象有一定冲突', '姬神秋沙逃脱与出现的逻辑链条需要更细致描写'], refinement_requests=['增加吸血鬼传说在学园都市的背景铺垫', '细化史提尔威胁动机的心理描写', '加强姬神秋沙逃脱过程的细节描述'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.030000000000000027, tokens_used=2743)",
+        "IterationResult(iteration_num=3, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['质疑吸血鬼的存在', '关心姬神秋沙的处境', '对史提尔的威胁产生强烈反应']}, {'name': '史提尔·马格努斯', 'role': '魔法师/情报提供者/威胁者', 'key_actions': ['解释吸血鬼和吸血杀手的关系', '威胁上条配合教会行动', \"提供炼金术师和'三泽塾'的情报\"]}, {'name': '茵蒂克丝', 'role': '女主角/被保护对象', 'key_actions': ['被史提尔作为威胁筹码提及']}, {'name': '姬神秋沙', 'role': '吸血杀手/被追捕对象', 'key_actions': [\"从'三泽塾'逃脱\", '在快餐店出现', '向上条求助100日元']}, {'name': '炼金术师', 'role': '幕后黑手/追捕者', 'key_actions': ['计划掳走吸血杀手', \"从'三泽塾'抢回姬神秋沙\"]}], 'events': [{'description': '史提尔解释吸血鬼与吸血杀手的关系以及炼金术师的计划', 'importance': 0.9, 'timeline': '当前时间线主要对话'}, {'description': '史提尔威胁上条配合教会行动，否则将对茵蒂克丝不利', 'importance': 0.95, 'timeline': '对话高潮部分'}, {'description': '上条回忆起与神秘巫女（姬神秋沙）在快餐店的相遇，意识到她的困境', 'importance': 0.85, 'timeline': '回忆片段，稍早于当前对话'}, {'description': \"炼金术师从'三泽塾'手中抢回姬神秋沙并困守其中\", 'importance': 0.88, 'timeline': '背景事件，发生在对话之前'}], 'analysis': {'main_theme': '超自然威胁下的保护与抉择', 'plot_significance': '本片段建立了吸血鬼传说的世界观基础，揭示了姬神秋沙作为吸血杀手的重要性，同时通过史提尔的威胁强化了上条面临的道德困境——在保护茵蒂克丝和帮助陌生少女之间的抉择', 'function_calls': [{'action': 'register_character', 'params': {'name': '姬神秋沙', 'role': '吸血杀手/被追捕的巫女', 'description': \"拥有杀死吸血鬼能力的少女，被炼金术师和'三泽塾'争夺，目前处于逃亡状态\", 'confidence': 0.9}}, {'action': 'register_character', 'params': {'name': '炼金术师', 'role': '幕后 antagonist/魔法师', 'description': \"企图获得吸血杀手的魔法师，目前控制着'三泽塾'并囚禁着姬神秋沙\", 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['吸血鬼设定的引入略显突兀', '史提尔的威胁动机与之前角色形象略有冲突'], refinement_requests=['可增加更多关于吸血鬼传说的铺垫', '让史提尔的威胁更符合其既有的性格逻辑'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2686)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 7,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 3,
+      "final_satisfaction": 0.82,
+      "processing_stage": "early",
+      "meaningful_improvements": 3,
+      "total_tokens": 7733,
+      "total_cost": 0.15466000000000002,
+      "characters_detected": [
+        "茵蒂克丝",
+        "蓝发耳环",
+        "神秘巫女",
+        "史提尔·马格努斯",
+        "炼金术师"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/保护者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "女主角/魔法侧关键角色",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "魔法师/盟友",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "姬神秋沙",
+          "role": "关键角色/被救对象",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "先枪骑士团成员",
+          "role": "魔法侧势力/探索者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['担忧姬神秋沙的命运', '决定前往三泽塾救人', '隐瞒茵蒂克丝行动', '与史提尔合作']}, {'name': '茵蒂克丝', 'role': '女主角/被保护者', 'key_actions': ['展现天真性格', '收养野猫斯芬克', '被上条保护远离危险']}, {'name': '史提尔·马格努斯', 'role': '魔法师/临时盟友', 'key_actions': ['设置保护结界', '部署猎杀魔女之王', '提供魔法支援']}, {'name': '姬神秋沙', 'role': '关键目标/牺牲者', 'key_actions': ['展现自我牺牲人生观', '成为上条救援目标']}, {'name': '先枪骑士团', 'role': '魔法侧调查队', 'key_actions': ['调查京都异常', '遭遇未知威胁']}], 'events': [{'description': '上条回忆姬神秋沙的自我牺牲人生观并决定前往救援', 'importance': 0.9, 'timeline': '片段1'}, {'description': '先枪骑士团调查京都山村的魔力异常并遭遇未知威胁', 'importance': 0.7, 'timeline': '片段2'}, {'description': '上条隐瞒茵蒂克丝前往三泽塾的计划并安排保护措施', 'importance': 0.8, 'timeline': '片段3'}, {'description': '茵蒂克丝收养野猫斯芬克展现天真性格', 'importance': 0.6, 'timeline': '片段4'}, {'description': '史提尔设置结界保护茵蒂克丝并部署猎杀魔女之王', 'importance': 0.8, 'timeline': '片段5'}], 'analysis': {'main_theme': '保护与牺牲的冲突', 'plot_significance': '建立三泽塾救援任务的基础，展现角色间的保护关系，铺垫魔法世界的危险性和角色成长', 'function_calls': [{'action': 'register_character', 'params': {'name': '姬神秋沙', 'role': '关键目标/自我牺牲者', 'description': '拥有自我牺牲人生观的少女，成为上条救援的对象', 'confidence': 0.9}}, {'action': 'register_character', 'params': {'name': '先枪骑士团', 'role': '魔法调查团队/牺牲者', 'description': '英国清教的骑士团，在京都调查中遭遇未知威胁', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['部分角色背景信息不够清晰', '时间线跳跃较大', '魔法设定解释略显复杂'], refinement_requests=['加强新出场角色的背景介绍', '更清晰地连接不同场景的时间关系', '简化魔法概念的初次解释'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2590)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/拯救者', 'key_actions': ['回忆姬神秋沙', '决定前往三泽塾', '保护茵蒂克丝', '与史提尔互动']}, {'name': '茵蒂克丝', 'role': '女主角/魔法侧关键角色', 'key_actions': ['隐藏野猫', '展现天真性格', '被上条保护']}, {'name': '史提尔·马格努斯', 'role': '魔法师/盟友', 'key_actions': ['设置结界保护茵蒂克丝', '提供魔法支援', '与上条合作']}, {'name': '姬神秋沙', 'role': '关键配角/被拯救对象', 'key_actions': ['展现自我牺牲人生观', '成为上条行动动机']}, {'name': '先枪骑士团成员', 'role': '魔法侧探索者', 'key_actions': ['调查京都山中小村', '面对未知威胁']}], 'events': [{'description': '上条回忆姬神秋沙并决定前往三泽塾拯救她', 'importance': 0.9, 'timeline': '当前主线'}, {'description': '先枪骑士团调查京都异常魔力现象并遭遇危机', 'importance': 0.7, 'timeline': '并行事件'}, {'description': '史提尔在学生宿舍设置结界保护茵蒂克丝', 'importance': 0.8, 'timeline': '主线准备阶段'}, {'description': '茵蒂克丝隐藏野猫展现性格特点', 'importance': 0.6, 'timeline': '主线间歇'}], 'analysis': {'main_theme': '自我牺牲与拯救他人的冲突', 'plot_significance': '建立三泽塾事件的前置铺垫，强化角色动机和关系建立', 'function_calls': [{'action': 'register_character', 'params': {'name': '姬神秋沙', 'role': '被囚禁的巫女/关键拯救对象', 'description': '拥有自我牺牲人生观的少女，被炼金术师囚禁在三泽塾', 'confidence': 0.85}}, {'action': 'register_character', 'params': {'name': '先枪骑士团成员', 'role': '英国清教侦查部队', 'description': '负责调查异常魔力现象的魔法师团队，在京都遭遇未知威胁', 'confidence': 0.75}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['多条故事线切换略显跳跃', '部分背景信息交代不够清晰'], refinement_requests=['加强主线与支线之间的过渡', '更明确交代魔法世界的规则和术语'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.030000000000000027, tokens_used=2566)",
+        "IterationResult(iteration_num=3, analysis={'characters': [{'name': '上条当麻', 'role': '主角/保护者', 'key_actions': ['回忆姬神秋沙', '决定前往三泽塾救人', '隐瞒茵蒂克丝行动', '与史提尔合作']}, {'name': '茵蒂克丝', 'role': '女主角/魔法侧关键角色', 'key_actions': ['收养野猫斯芬克', '被上条保护', '展现天真性格']}, {'name': '史提尔·马格努斯', 'role': '魔法师/盟友', 'key_actions': ['设置结界保护茵蒂克丝', '部署猎杀魔女之王', '与上条合作']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['被描述为自我牺牲的少女', '成为上条救援目标']}, {'name': '先枪骑士团成员', 'role': '魔法侧势力/探索者', 'key_actions': ['调查京都山中小村', '面对未知威胁']}], 'events': [{'description': '上条回忆姬神秋沙并决定前往三泽塾救援', 'importance': 0.9, 'timeline': '当前时间线'}, {'description': '先枪骑士团调查京都异常魔力现象并遭遇危机', 'importance': 0.7, 'timeline': '平行时间线/稍早'}, {'description': '史提尔在学生宿舍设置结界保护茵蒂克丝', 'importance': 0.8, 'timeline': '当前时间线'}, {'description': '茵蒂克丝收养野猫斯芬克，展现性格特点', 'importance': 0.6, 'timeline': '当前时间线'}], 'analysis': {'main_theme': '保护与牺牲、记忆与责任', 'plot_significance': '建立三泽塾事件的前奏，深化角色动机，展示魔法侧世界观', 'function_calls': [{'action': 'register_character', 'params': {'name': '姬神秋沙', 'role': '关键救援对象/自我牺牲者', 'description': '拥有自我牺牲人生观的少女，被上条认定为需要拯救的对象', 'confidence': 0.85}}, {'action': 'register_character', 'params': {'name': '先枪骑士团成员', 'role': '英国清教魔法师/侦察部队', 'description': '调查京都异常现象的魔法师团队，遭遇未知威胁', 'confidence': 0.75}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['时间线切换略显突兀', '部分魔法概念解释需要更多上下文'], refinement_requests=['加强不同场景间的过渡', '适当增加世界观解释的连贯性'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2577)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 8,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.8,
+      "processing_stage": "early",
+      "meaningful_improvements": 2,
+      "total_tokens": 4890,
+      "total_cost": 0.09780000000000001,
+      "characters_detected": [
+        "姬神秋沙",
+        "蓝发耳环",
+        "神秘巫女",
+        "史提尔·马格努斯",
+        "炼金术师"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/对抗者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "情报提供者/魔法师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['与史提尔同行', '询问敌人信息', '分析炼金术威胁', '观察战场环境']}, {'name': '史提尔·马格努斯', 'role': '魔法师/情报提供者/向导', 'key_actions': ['介绍奥雷欧斯', '解释炼金术原理', '评估敌人实力', '揭示与敌人的关系']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['将三泽塾改造成要塞', '设置陷阱阻挡入侵']}], 'events': [{'description': '史提尔向上条介绍敌人奥雷欧斯·伊萨德的背景和炼金术原理', 'importance': 0.9, 'timeline': '傍晚，前往三泽塾途中'}, {'description': '揭示史提尔与奥雷欧斯同属教会组织但不同宗派的关系', 'importance': 0.8, 'timeline': '对话中途'}, {'description': '抵达三泽塾学园都市分校，确认战场位置', 'importance': 0.7, 'timeline': '傍晚时分'}], 'analysis': {'main_theme': '魔法世界的规则与炼金术的威胁', 'plot_significance': '本片段通过史提尔的讲解建立了炼金术的世界观和规则体系，为后续冲突奠定基础。同时揭示了反派奥雷欧斯的动机和能力范围，为即将到来的战斗做好铺垫。角色关系方面，上条与史提尔的合作关系得到进一步发展。', 'function_calls': [{'action': 'register_character', 'params': {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师/罗马正教成员', 'description': '帕拉塞尔苏斯的后裔，擅长炼金术，将三泽塾改造成要塞的幕后黑手', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['炼金术解释部分略显冗长，可能影响叙事节奏', '新读者对魔法世界观的理解门槛较高'], refinement_requests=['可适当简化理论解释，增加具体实例', '通过上条的视角加入更多直观感受来降低理解难度'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2456)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/对抗者', 'key_actions': ['与史提尔同行调查', '质疑炼金术的威胁性', '分析战场环境']}, {'name': '史提尔·马格努斯', 'role': '情报提供者/魔法师', 'key_actions': ['解释奥雷欧斯的背景', '阐述炼金术原理', '揭示敌人弱点']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['将三泽塾改造成要塞', '设置陷阱阻挡入侵']}], 'events': [{'description': '史提尔向上条揭示敌人奥雷欧斯的身份和炼金术原理', 'importance': 0.9, 'timeline': '傍晚时分，前往三泽塾途中'}, {'description': '解释炼金术的本质是求知而非创造，以及终极目标是在脑海中模拟世界', 'importance': 0.85, 'timeline': '对话中期'}, {'description': '抵达三泽塾学园都市分校，确认战场环境', 'importance': 0.8, 'timeline': '对话结束后'}], 'analysis': {'main_theme': '魔法与科学的冲突，炼金术的知识追求与危险性', 'plot_significance': '这段对话建立了本卷主要反派奥雷欧斯的威胁等级和能力设定，同时通过史提尔的解释为后续战斗埋下伏笔，强调了炼金术师通过正确想象世界来操控现实的能力局限性和危险性', 'function_calls': [{'action': 'register_character', 'params': {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师/罗马正教成员', 'description': '帕拉塞尔苏斯的后裔，擅长炼金术，将三泽塾改造成要塞的幕后黑手', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.8}, satisfaction_level=0.8, identified_issues=['炼金术原理解释略显抽象，可能需要更多具体例子', '奥雷欧斯的动机尚未完全明确'], refinement_requests=['增加炼金术实际应用的简单示例', '逐步揭示奥雷欧斯的个人动机与目标'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.050000000000000044, tokens_used=2434)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 9,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 3,
+      "final_satisfaction": 0.82,
+      "processing_stage": "early",
+      "meaningful_improvements": 3,
+      "total_tokens": 7767,
+      "total_cost": 0.15534,
+      "characters_detected": [
+        "姬神秋沙",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "史提尔·马格努斯",
+        "炼金术师"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "魔法师/情报提供者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "姬神秋沙",
+          "role": "关键角色/被救对象",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['表达对危险的担忧', '质疑战术安排', '最终决定进入危险区域', '发现异常现象并试图救助伤者']}, {'name': '史提尔·马格努斯', 'role': '魔法师/情报提供者', 'key_actions': ['承认危险但坚持行动', '提供有限的情报和解释', '分析现场情况', '表现出对教会政治的愤慨']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['被提及为救援目标', '被描述为监禁状态']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['被暗示为幕后操纵者', '被指责故意分散教会战力']}], 'events': [{'description': '上条与史提尔讨论入侵三泽塾的策略和风险', 'importance': 0.9, 'timeline': '开场阶段'}, {'description': '两人决定从正门进入建筑物', 'importance': 0.8, 'timeline': '早期阶段'}, {'description': '发现疑似机器人的残骸，实则为人类尸体', 'importance': 0.95, 'timeline': '中期阶段'}, {'description': '上条试图救助学生但发现异常现象', 'importance': 0.9, 'timeline': '近期阶段'}], 'analysis': {'main_theme': '未知危险的对抗与道德抉择', 'plot_significance': '这些片段建立了主要冲突的基础，展示了反派设置的陷阱和主角面临的道德困境，为后续发展铺垫', 'function_calls': [{'action': 'register_character', 'params': {'name': 'Parsifa机器人/骑士', 'role': '牺牲者/战场受害者', 'description': '被摧毁的骑士团成员，可能是其他教会的战力', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['部分对话略显重复', '某些解释性对话显得过于直白'], refinement_requests=['增加更多心理描写来强化紧张感', '通过更 subtle 的方式展示世界观信息'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2478)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/救援执行者', 'key_actions': ['表达对闯入危险建筑的担忧', '质疑缺乏战术计划', '最终决定进入建筑救人', '发现机器人残骸并产生怀疑', '试图救助伤者但遭遇异常现象']}, {'name': '史提尔·马格努斯', 'role': '魔法师/情报提供者', 'key_actions': ['承认危险但坚持进入', '解释能力限制（猎杀魔女之王被派去保护他人）', '提供魔法知识（符文刻印）', '分析现场情况（骑士团模仿者全灭）', '揭露机器人实为人类尸体']}, {'name': '姬神秋沙', 'role': '被救对象/关键角色', 'key_actions': ['被间接提及为监禁的少女', '作为救援行动的主要动机']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['被暗示为设下陷阱者', '被指责故意分散教会战力']}], 'events': [{'description': '上条与史提尔争论进入三泽塾建筑的战术，史提尔透露能力受限并提议使用符文隐藏气息', 'importance': 0.8, 'timeline': '进入建筑前'}, {'description': '两人决定从正门进入建筑，上条克服恐惧决心拯救被监禁的姬神秋沙', 'importance': 0.9, 'timeline': '进入建筑时刻'}, {'description': '发现大厅内疑似机器人残骸，实为被摧毁的骑士团成员尸体，揭示战斗的残酷性', 'importance': 0.85, 'timeline': '进入建筑后初期'}, {'description': '上条试图救助伤者却发现学生们处于异常状态（僵硬如雕像），遭遇超自然现象', 'importance': 0.9, 'timeline': '发现尸体后不久'}], 'analysis': {'main_theme': '勇气与责任感的对抗——面对未知危险仍坚持拯救他人', 'plot_significance': '这些片段建立了主要的冲突框架：营救姬神秋沙对抗奥雷欧斯的陷阱。展示了上条从恐惧到决心的角色成长，同时揭示了反派的手段残忍和超自然威胁的升级，为后续战斗埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '三泽塾学生', 'role': '被控制的平民/环境要素', 'description': '处于异常僵硬状态的学生群体，可能是炼金术或魔法的影响结果', 'confidence': 0.7}}, {'action': 'register_character', 'params': {'name': '骑士团成员', 'role': '牺牲者/战力展示', 'description': '其他教会派来处理三泽塾事件的战斗人员，已全军覆没，展示敌人实力', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['角色心理描写略显重复（上条的恐惧多次强调）', '某些魔法概念解释不够清晰（如符文具体效果）'], refinement_requests=['增加更具体的环境恐怖描写增强紧张感', '通过对话更自然地带出魔法世界的规则和限制'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.030000000000000027, tokens_used=2728)",
+        "IterationResult(iteration_num=3, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['表达对危险的担忧', '质疑战术安排', '最终决定进入危险区域', '发现异常机器人残骸', '试图救助伤者但遭遇异常']}, {'name': '史提尔·马格努斯', 'role': '魔法师/情报提供者', 'key_actions': ['承认危险但坚持行动', '提供有限魔法能力信息', '分析机器人残骸和战场情况', '揭露炼金术师的阴谋']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['被间接提及作为救援目标']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['被揭露故意分散教会战力', '设置陷阱消耗敌方力量']}], 'events': [{'description': '上条与史提尔讨论入侵三泽塾战术，史提尔承认危险但坚持直接进入', 'importance': 0.7, 'timeline': '片段1-2'}, {'description': '两人进入三泽塾大厅，发现严重损坏的类人型机器人残骸', 'importance': 0.8, 'timeline': '片段3'}, {'description': '史提尔揭露机器人实为人类尸体，并分析炼金术师分散战力的阴谋', 'importance': 0.9, 'timeline': '片段4'}, {'description': '上条试图救助伤者却发现学生处于异常僵硬状态，意识到更大的危机', 'importance': 0.85, 'timeline': '片段5'}], 'analysis': {'main_theme': '未知危险的直面与道德抉择', 'plot_significance': '这些片段建立了三泽塾作为危险战场的气氛，揭示了反派的手段残忍，同时展现了主角面对未知恐惧时的勇气和道德坚持。机器人残骸的真实身份揭露了故事的黑暗面，为后续冲突埋下伏笔。', 'function_calls': [{'action': 'register_character', 'params': {'name': 'Parsifa机器人', 'role': '神秘科技造物/战场残骸', 'description': '严重损坏的类人型机器人，后被揭露实为穿着铠甲的人类尸体，刻有Parsifa字样', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['机器人真实身份的转折略显突兀', '部分魔法术语缺乏足够解释'], refinement_requests=['可提前铺垫更多关于炼金术师能力的线索', '增加对魔法体系的基础解释'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2561)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 10,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 3,
+      "final_satisfaction": 0.82,
+      "processing_stage": "early",
+      "meaningful_improvements": 3,
+      "total_tokens": 7643,
+      "total_cost": 0.15286000000000002,
+      "characters_detected": [
+        "姬神秋沙",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "史提尔·马格努斯",
+        "炼金术师"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "魔法师/情报提供者/威胁者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/情感支柱",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "无名骑士",
+          "role": "牺牲者/情节催化剂",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['尝试打破结界失败', '关心伤患状况', '与茵蒂克丝通电话寻求安慰', '与史提尔互动了解真相']}, {'name': '史提尔·马格努斯', 'role': '魔法师/情报提供者/威胁者', 'key_actions': ['解释结界原理', '宣告骑士死亡', '进行临终仪式', '透露与茵蒂克丝的过往关系']}, {'name': '茵蒂克丝', 'role': '被救对象/知识库', 'key_actions': ['接听电话显示科技无知', '展现失忆造成的缺陷', '提供情感支持']}, {'name': '无名骑士', 'role': '牺牲者/情节催化剂', 'key_actions': ['重伤濒死', '完成使命后安息']}], 'events': [{'description': '上条尝试暴力破坏结界失败，史提尔解释需要摧毁外部核心', 'importance': 0.7, 'timeline': '早期阶段'}, {'description': '无名骑士重伤死亡，史提尔进行临终仪式，凸显战场残酷性', 'importance': 0.8, 'timeline': '早期阶段'}, {'description': '上条与茵蒂克丝通电话，展现科技无知与失忆缺陷', 'importance': 0.6, 'timeline': '早期阶段'}, {'description': '史提尔透露与茵蒂克丝的过往关系及记忆消除的残酷真相', 'importance': 0.9, 'timeline': '早期阶段'}], 'analysis': {'main_theme': '魔法战场的残酷现实与角色情感羁绊的建立', 'plot_significance': '这些片段建立了主要的冲突环境（结界困局）、展现了魔法的残酷性（骑士死亡）、深化了主角与茵蒂克丝的情感联系，并揭示了史提尔与茵蒂克丝的复杂过往，为后续剧情发展奠定基础', 'function_calls': [{'action': 'register_character', 'params': {'name': '茵蒂克丝', 'role': '被救对象/知识库', 'description': '拥有十万三千本魔道书的失忆少女，科技常识缺乏', 'confidence': 0.9}}, {'action': 'register_character', 'params': {'name': '无名骑士', 'role': '牺牲者/情节催化剂', 'description': '重伤濒死的骑士，其死亡加深战场残酷感', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['部分角色动机尚不明确', '结界的具体机制需要更多解释', '时间线跳跃略显突兀'], refinement_requests=['增加更多角色背景铺垫', '细化魔法系统的规则说明', '加强场景转换的连贯性'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2579)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['尝试打破结界失败', '关心伤患状况', '与茵蒂克丝通电话寻求安慰', '与史提尔进行心理博弈']}, {'name': '史提尔·马格努斯', 'role': '魔法师/情报提供者/威胁者', 'key_actions': ['分析结界特性', '宣告骑士死亡', '进行送别仪式', '透露与茵蒂克丝的过往关系']}, {'name': '茵蒂克丝', 'role': '被保护对象/知识库', 'key_actions': ['笨拙地接听电话', '展现科学常识缺乏', '提供情感支持']}, {'name': '骑士', 'role': '垂死战士', 'key_actions': ['交代遗言', '坦然接受死亡']}], 'events': [{'description': '上条尝试暴力破坏结界失败，史提尔解释需要摧毁外部核心', 'importance': 0.7, 'timeline': '片段1'}, {'description': '骑士死亡，史提尔进行送别仪式，凸显战场残酷性', 'importance': 0.8, 'timeline': '片段2'}, {'description': '上条与茵蒂克丝通电话，展现情感依赖和角色反差', 'importance': 0.75, 'timeline': '片段3-4'}, {'description': '史提尔透露与茵蒂克丝的过往关系，建立角色背景和情感冲突', 'importance': 0.85, 'timeline': '片段5'}], 'analysis': {'main_theme': '战场残酷性与情感羁绊的建立', 'plot_significance': '通过结界困境和角色死亡事件强化危机感，同时通过电话互动和史提尔的坦白深化角色关系网络，为后续冲突铺垫情感基础', 'function_calls': [{'action': 'register_character', 'params': {'name': '骑士', 'role': '垂死战士/情节催化剂', 'description': '在死亡前传递重要信息的角色，其死亡强化了战场真实感和史提尔的角色深度', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['骑士角色信息过于模糊', '结界破坏规则的说明略显生硬'], refinement_requests=['增加骑士的背景铺垫', '更自然地融入魔法规则解释'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.030000000000000027, tokens_used=2481)",
+        "IterationResult(iteration_num=3, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['尝试打破结界失败', '关心伤者状况', '与茵蒂克丝通电话寻求安慰', '与史提尔进行心理博弈']}, {'name': '史提尔·马格努斯', 'role': '魔法师/情报提供者/威胁者', 'key_actions': ['分析结界特性', '宣告骑士死亡', '进行临终仪式', '透露与茵蒂克丝的过往关系']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['接听电话展现天真性格', '暴露科技常识缺乏', '成为上条的精神慰藉']}, {'name': '无名骑士', 'role': '牺牲者/情节催化剂', 'key_actions': ['重伤濒死', '通过眼神交流传递信息', '促使主角认知战场残酷性']}], 'events': [{'description': '上条尝试暴力破坏结界失败，史提尔解释需要摧毁外部核心', 'importance': 0.7, 'timeline': '片段1开头'}, {'description': '无名骑士伤重死亡，史提尔进行临终仪式，上条首次意识到战场残酷', 'importance': 0.9, 'timeline': '片段2中段'}, {'description': '上条与茵蒂克丝通电话，展现情感依赖与茵蒂克丝的科技无知', 'importance': 0.8, 'timeline': '片段4全程'}, {'description': '史提尔透露与茵蒂克丝的过往关系及记忆消除的悲剧', 'importance': 0.95, 'timeline': '片段5后半'}], 'analysis': {'main_theme': '魔法战场的残酷现实与角色间的情感羁绊', 'plot_significance': '这些片段通过死亡事件强化战场真实性，通过电话交流展现主角的心理脆弱面，通过史提尔的坦白揭示茵蒂克丝的悲剧背景，为后续冲突埋下情感伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'description': '拥有十万三千本魔道书的失忆少女，科技常识缺乏但魔法知识丰富', 'confidence': 0.9}}, {'action': 'register_character', 'params': {'name': '无名骑士', 'role': '牺牲者/情节催化剂', 'description': '重伤濒死的骑士，死亡促使主角成长', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['无名骑士角色背景过于模糊', '部分对话转换略显突兀'], refinement_requests=['可给骑士增加少量背景描写增强代入感', '优化对话过渡使情感转变更自然'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2583)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 11,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 3,
+      "final_satisfaction": 0.82,
+      "processing_stage": "middle",
+      "meaningful_improvements": 3,
+      "total_tokens": 7535,
+      "total_cost": 0.1507,
+      "characters_detected": [
+        "姬神秋沙",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "茵蒂克丝",
+        "先枪骑士团成员"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "魔法侧探索者/盟友",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "三泽塾学生",
+          "role": "被操控的群体/防御系统",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['探索密室环境', '应对球体攻击', '与史提尔合作逃生']}, {'name': '史提尔', 'role': '魔法侧探索者/战术指挥', 'key_actions': ['发现空间异常', '分析密室结构', '推下上条当麻（疑似战术）']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['被暗示需要救援']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['作为上条行动的情感动机']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['间接控制三泽塾防御机制']}], 'events': [{'description': '上条与史提尔发现五楼空间异常并寻找密室入口', 'importance': 0.7, 'timeline': '片段1-2'}, {'description': '分析三泽塾作为科学宗教的运作机制和危险程度', 'importance': 0.6, 'timeline': '片段2-3'}, {'description': '触发自动警报系统，遭到大量蓝白色球体攻击', 'importance': 0.8, 'timeline': '片段3-4'}, {'description': '楼梯间遭遇前后夹击，史提尔将上条推下楼梯', 'importance': 0.9, 'timeline': '片段5'}], 'analysis': {'main_theme': '现实与幻象的界限、信任与背叛、个人能力vs集体力量', 'plot_significance': '此段是情节转折点，展示了反派设置的防御机制威力，同时通过史提尔的异常行为埋下信任危机伏笔，为后续发展制造悬念', 'function_calls': [{'action': 'register_character', 'params': {'name': '史提尔·马格努斯', 'role': '必要之恶教会魔法师/战术专家', 'description': '经验丰富的魔法师，擅长符文魔法，与上条当麻形成临时同盟但行为难以预测', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['史提尔推下上条的行为动机交代不够清晰', '蓝白色球体的具体性质和威胁程度描述可更详细'], refinement_requests=['可增加史提尔的心理活动描写来解释其行动', '对球体的魔法特性或科学原理做简要说明以增强紧张感'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2542)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['探索密室环境', '应对球体攻击', '与史提尔合作逃生']}, {'name': '史提尔·马格努斯', 'role': '魔法侧探索者/战术指挥', 'key_actions': ['发现空间异常', '分析密室结构', '推下上条当麻实施计划']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['设置空间结界', '部署防御机制']}], 'events': [{'description': '上条与史提尔发现五楼空间异常并寻找密室入口', 'importance': 0.7, 'timeline': '探索阶段初期'}, {'description': '餐厅内学生集体注视上条，触发自动警报装置', 'importance': 0.8, 'timeline': '冲突爆发前兆'}, {'description': '蓝白色球体大规模攻击，前后夹击两人', 'importance': 0.9, 'timeline': '战斗高潮阶段'}, {'description': '史提尔将上条推下楼梯，疑似有秘密计划', 'importance': 0.85, 'timeline': '转折点'}], 'analysis': {'main_theme': '现实与虚幻的界限、信任与背叛、个人与集体的对抗', 'plot_significance': \"本段展现了奥雷欧斯炼金术结界的精妙设计，通过'硬币正反面'的空间概念制造战术困境。史提尔的异常冷静和最后行动暗示隐藏计划，为后续转折埋下伏笔。球体攻击的'质与量'问题突显上条能力的局限性\", 'function_calls': [{'action': 'register_character', 'params': {'name': '史提尔·马格努斯', 'role': '魔法侧探索者/必要之恶教会成员', 'description': '擅长符文魔法的魔法师，与上条当麻合作探索三泽塾', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['部分战斗描写略显重复', '史提尔推人动机需要更明确铺垫'], refinement_requests=['增加史提尔心理描写的暗示', '强化空间结界的视觉化描述'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.030000000000000027, tokens_used=2473)",
+        "IterationResult(iteration_num=3, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['探索三泽塾密室', '与史提尔合作应对危机', '被推下楼梯']}, {'name': '史提尔', 'role': '魔法侧探索者/盟友', 'key_actions': ['发现空间异常', '分析密室结构', '推下条当麻下楼梯']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['设置空间结界', '操控学生意识', '布置防御机制']}, {'name': '三泽塾学生', 'role': '被操控的群体/防御系统', 'key_actions': ['集体注视入侵者', '发动能量球攻击', '形成包围网']}], 'events': [{'description': '上条与史提尔发现五楼空间异常并寻找密室入口', 'importance': 0.7, 'timeline': '探索阶段初期'}, {'description': '在餐厅遭遇80名学生同时注视，触发警报系统', 'importance': 0.8, 'timeline': '冲突爆发点'}, {'description': '被大量蓝白色能量球追击，前后夹击陷入危机', 'importance': 0.9, 'timeline': '高潮战斗序列'}, {'description': '史提尔将上条推下楼梯，疑似有秘密计划', 'importance': 0.85, 'timeline': '转折点'}], 'analysis': {'main_theme': '现实与虚幻的界限·记忆与身份的困惑', 'plot_significance': '本段展现了奥雷欧斯炼金术的强大能力——操控空间和群体意识，同时通过上条对自身失忆前身份的反思，深化了角色内心冲突。战斗场面从个体对抗升级为群体对抗，体现量变引起质变的战术困境。', 'function_calls': [{'action': 'register_character', 'params': {'name': '史提尔', 'role': '魔法师/必要之恶教会成员', 'description': '擅长符文魔法的英国清教魔法师，与上条当麻临时合作', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['部分战斗描写节奏稍快，情绪转换不够自然', '史提尔推人行为的动机铺垫不足'], refinement_requests=['增加史提尔决策前的心理描写', '细化能量球攻击的视觉效果和威胁感'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2520)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 12,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "middle",
+      "meaningful_improvements": 2,
+      "total_tokens": 5171,
+      "total_cost": 0.10342000000000001,
+      "characters_detected": [
+        "茵蒂克丝",
+        "姬神秋沙",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "史提尔·马格努斯"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "魔法侧探索者/战术指挥",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "未知少女",
+          "role": "被控制的学生/魔法媒介",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['从楼上冲下楼梯', '试图拯救受伤少女', '用右手抵挡魔法球体', '保护昏迷的少女']}, {'name': '无名少女', 'role': '被操控的学生/魔法受害者', 'key_actions': ['吟唱魔法咒语', '召唤蓝白色球体', '因魔法反噬而重伤倒地']}, {'name': '史提尔·马格努斯', 'role': '魔法侧探索者/战术指挥', 'key_actions': ['寻找魔法核心位置', '分析防御机制', '与奥雷欧斯对峙']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['操控伪圣歌队', '追踪侵入者', '与史提尔对话']}], 'events': [{'description': '上条当麻在楼梯间遭遇被魔法控制的学生，少女因魔法反噬而重伤', 'importance': 0.9, 'timeline': '当前时间线主要事件'}, {'description': '上条试图拯救重伤少女但被魔法球体洪水包围，面临生命危险', 'importance': 0.95, 'timeline': '紧随第一事件后'}, {'description': '史提尔发现魔法核心隐藏位置并分析其防御机制', 'importance': 0.85, 'timeline': '与上条事件并行发生'}, {'description': '奥雷欧斯现身与史提尔对峙，询问另一侵入者下落', 'importance': 0.9, 'timeline': '史提尔探索后立即发生'}], 'analysis': {'main_theme': '魔法滥用导致的悲剧与牺牲，硬币正反面的对立概念', 'plot_significance': '这些事件展示了奥雷欧斯魔法体系的危险性，普通学生成为魔法实验的牺牲品，同时两条故事线（上条与史提尔）开始汇聚，为最终对决铺垫', 'function_calls': [{'action': 'register_character', 'params': {'name': '无名辫子少女', 'role': '被操控的学生/魔法反噬受害者', 'description': '戴着圆眼镜的黑辫子少女，被奥雷欧斯的魔法控制而成为魔法师，因身体无法承受魔法力量而重伤', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['无名角色缺乏具体身份标识', '魔法反噬的具体机制描述不够清晰'], refinement_requests=['为重要临时角色赋予代号或特征描述', '更详细解释魔法反噬的原理和后果'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.78, tokens_used=2568)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['从楼上冲下楼梯', '试图拯救受伤少女', '用右手抵挡魔法球体', '保护昏迷的少女']}, {'name': '史提尔·马格努斯', 'role': '魔法侧探索者/战术指挥', 'key_actions': ['寻找葛利果圣歌队核心', '分析魔法防御机制', '与奥雷欧斯对峙', '使用火焰魔法能力']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['控制三泽塾学生', '使用伪圣歌队魔法', '与史提尔对峙', '展示魔法掌控能力']}, {'name': '未知少女', 'role': '被控制的学生/魔法媒介', 'key_actions': ['吟唱魔法咒语', '召唤蓝白色球体', '魔法反噬受伤', '成为上条的负担']}], 'events': [{'description': '上条当麻遭遇被魔法控制的学生并试图拯救她', 'importance': 0.9, 'timeline': '片段1-3，战斗初期'}, {'description': '学生因魔法反噬而重伤，上条面临魔法球体洪水的攻击', 'importance': 0.85, 'timeline': '片段2-3，战斗高潮'}, {'description': '史提尔找到葛利果圣歌队核心并分析其防御机制', 'importance': 0.8, 'timeline': '片段4，平行时间线'}, {'description': '奥雷欧斯现身与史提尔对峙，揭示魔法计划', 'importance': 0.95, 'timeline': '片段5，关键转折点'}], 'analysis': {'main_theme': '魔法与现实的冲突、牺牲与拯救的抉择', 'plot_significance': '这些片段展示了多重冲突的并行发展：上条在物理层面的生存战斗与史提尔在魔法层面的战术对抗。奥雷欧斯的现身标志着冲突升级，为后续决战铺垫。硬币正反面的隐喻深化了现实与魔法世界的对立主题。', 'function_calls': [{'action': 'register_character', 'params': {'name': '未知少女', 'role': '被控制的学生/魔法牺牲品', 'description': '三泽塾中被奥雷欧斯魔法控制的学生，成为魔法仪式的媒介，因魔法反噬而重伤', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['未知少女的角色背景缺乏深度', '魔法反噬的机制解释不够清晰', '两条故事线的衔接略显突兀'], refinement_requests=['为被控制学生增加更多背景细节', '更详细解释魔法反噬的原理', '加强两条故事线的时间同步性提示'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2603)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 13,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "middle",
+      "meaningful_improvements": 2,
+      "total_tokens": 5090,
+      "total_cost": 0.1018,
+      "characters_detected": [
+        "姬神秋沙",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "茵蒂克丝",
+        "史提尔·马格努斯"
+      ],
+      "ai_characters": [
+        {
+          "name": "史提尔·马格努斯",
+          "role": "魔法侧探索者/战术指挥",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "姬神秋沙",
+          "role": "关键角色/被救对象",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '史提尔·马格努斯', 'role': '魔法侧探索者/战术指挥', 'key_actions': ['分析奥雷欧斯的攻击模式', '使用幻影战术欺骗敌人', '施展火焰剑攻击']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['使用瞬间炼金术攻击', '展现愤怒情绪', '信念被动摇']}, {'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['救助受伤学生', '与姬神秋沙互动']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['分析学生伤势', '提供医疗判断']}], 'events': [{'description': '奥雷欧斯使用瞬间炼金术对史提尔发动猛烈攻击，黄金飞镖具有强酸般的溶解效果', 'importance': 0.9, 'timeline': '战斗初期'}, {'description': '史提尔识破奥雷欧斯的攻击本质，指出其炼金术与普通强酸无异，动摇对手信念', 'importance': 0.85, 'timeline': '战斗中段'}, {'description': '史提尔使用光学幻影战术成功欺骗假奥雷欧斯，并用火焰剑重创对手', 'importance': 0.95, 'timeline': '战斗高潮'}, {'description': '上条当麻与姬神秋沙救助受伤学生，展现角色关怀的一面', 'importance': 0.7, 'timeline': '战斗后续'}], 'analysis': {'main_theme': '信念的冲突与魔法的本质探讨', 'plot_significance': '本段展现了魔法战斗的战术层次，同时深入探讨了奥雷欧斯追求吸血鬼力量的动机矛盾，为后续剧情发展埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '假奥雷欧斯', 'role': '奥雷欧斯的替身/分身', 'description': '可能是奥雷欧斯制造的分身或幻影，用于战斗试探', 'confidence': 0.8}}, {'action': 'update_character', 'params': {'name': '史提尔·马格努斯', 'new_role': '魔法战术家/心理战专家', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['战斗场景切换略显突兀', '假奥雷欧斯的身份解释不够清晰'], refinement_requests=['增加战斗场景过渡描述', '明确假奥雷欧斯的身份和与真身的关系'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.78, tokens_used=2568)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '史提尔·马格努斯', 'role': '魔法侧探索者/战术指挥', 'key_actions': ['分析奥雷欧斯的攻击模式', '使用幻影战术欺骗敌人', '施展火焰剑攻击']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['使用瞬间炼金术攻击', '展现愤怒情绪', '信念被动摇']}, {'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['救助受伤学生', '与姬神秋沙互动']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['评估伤员状况', '提供医疗判断']}], 'events': [{'description': '奥雷欧斯使用瞬间炼金术对史提尔发动猛烈攻击，黄金飞镖连接锁链具有强酸溶解效果', 'importance': 0.9, 'timeline': '战斗初期'}, {'description': '史提尔识破奥雷欧斯攻击本质并嘲讽其魔法理念，引发奥雷欧斯愤怒', 'importance': 0.85, 'timeline': '战斗中段'}, {'description': '史提尔使用光学幻影战术成功绕后，用火焰剑重创假奥雷欧斯', 'importance': 0.95, 'timeline': '战斗高潮'}, {'description': '上条当麻救助受伤学生，姬神秋沙提供医疗评估', 'importance': 0.7, 'timeline': '战斗后期'}], 'analysis': {'main_theme': '魔法理念的冲突与信念的考验', 'plot_significance': '本段展现了魔法战斗的战术层次和理念对抗，奥雷欧斯的信念被动摇，为后续剧情转折埋下伏笔，同时展示了多个角色的特质和关系动态', 'function_calls': [{'action': 'register_character', 'params': {'name': '戴眼镜的辫子女孩', 'role': '受害学生/剧情推动者', 'description': '被奥雷欧斯攻击受伤的学生，成为上条当麻救助对象', 'confidence': 0.75}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['假奥雷欧斯的身份和真实目的需要更明确解释', '部分战斗细节描述可能过于抽象'], refinement_requests=['增加对假奥雷奥斯特性的说明', '强化角色心理活动的描写深度'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2522)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 14,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 3,
+      "final_satisfaction": 0.82,
+      "processing_stage": "middle",
+      "meaningful_improvements": 3,
+      "total_tokens": 7694,
+      "total_cost": 0.15388000000000002,
+      "characters_detected": [
+        "姬神秋沙",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "茵蒂克丝",
+        "史提尔·马格努斯"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/救援者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "姬神秋沙",
+          "role": "关键角色/被救对象",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "受伤学生",
+          "role": "受害者/实验材料",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/救援者/战斗执行者', 'key_actions': ['救治伤患', '试图营救姬神秋沙', '与奥雷欧斯战斗', '使用幻想杀手能力']}, {'name': '姬神秋沙', 'role': '被救对象/关键角色/特殊能力者', 'key_actions': ['展示医疗知识', '对救援表现出困惑', '面对奥雷欧斯时的异常冷静', '保护受伤少女']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['残忍杀害学生', '使用瞬间炼金术', '对上条的能力感到震惊和好奇', '陷入疯狂状态']}, {'name': '受伤学生们', 'role': '受害者/剧情催化剂', 'key_actions': ['被奥雷欧斯溶解成金属液体']}], 'events': [{'description': '上条当麻成功为伤者止血并讨论后续医疗方案', 'importance': 0.7, 'timeline': '战斗前准备阶段'}, {'description': '上条试图说服姬神秋沙离开监禁地点，姬神表现出困惑和惊讶', 'importance': 0.8, 'timeline': '救援对话阶段'}, {'description': '奥雷欧斯出现并残忍地将六名学生溶解成金属液体', 'importance': 0.9, 'timeline': '冲突爆发时刻'}, {'description': '上条的幻想杀手能力意外克制奥雷欧斯的瞬间炼金术', 'importance': 0.95, 'timeline': '战斗转折点'}, {'description': '奥雷欧斯对上条的能力产生极大兴趣，战斗升级', 'importance': 0.85, 'timeline': '战斗高潮阶段'}], 'analysis': {'main_theme': '超自然能力与科学医学的冲突、救援与牺牲的伦理困境', 'plot_significance': '这是剧情的关键转折点，揭示了奥雷欧斯的真正残忍本性，展示了上条能力的特殊性，同时建立了姬神秋沙的神秘背景和异常心理状态', 'function_calls': [{'action': 'register_character', 'params': {'name': '受伤学生们', 'role': '集体受害者/剧情催化剂', 'description': '被奥雷欧斯残忍杀害并溶解成金属液体的六名学生，他们的死亡加剧了冲突的严重性', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['战斗节奏略显重复（飞镖攻击多次描述）', '姬神秋沙的心理转变需要更多铺垫'], refinement_requests=['增加奥雷欧斯动机的深度描写', '强化姬神秋沙与奥雷欧斯关系的背景说明', '细化战斗场景的空间感和紧张感'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2608)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/救援者', 'key_actions': ['救治伤患', '对抗奥雷欧斯', '保护姬神秋沙']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['医疗救助', '质疑救援动机', '面对奥雷欧斯时的异常冷静']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['使用瞬间炼金术', '溶解学生', '对上条的能力感到震惊和愤怒']}, {'name': '受伤学生们', 'role': '受害者/炼金材料', 'key_actions': ['被奥雷欧斯溶解成金属液体']}], 'events': [{'description': '上条当麻成功为重伤少女止血，但对其未来恢复表示担忧', 'importance': 0.7, 'timeline': '片段1开始'}, {'description': '上条邀请姬神秋沙离开监禁地点，姬神对救援动机产生疑问', 'importance': 0.8, 'timeline': '片段2开始'}, {'description': '奥雷欧斯出现并展示瞬间炼金术，溶解六名学生为金属液体', 'importance': 0.9, 'timeline': '片段3中段'}, {'description': '上条的幻想杀手能力意外破坏奥雷欧斯的黄金飞镖，引发反派震惊', 'importance': 0.95, 'timeline': '片段4'}, {'description': '奥雷欧斯 intensified 攻击，上条右手重伤，危机转向姬神和伤患', 'importance': 0.9, 'timeline': '片段5结束'}], 'analysis': {'main_theme': '救援与牺牲的伦理困境，超自然力量与科学医学的冲突', 'plot_significance': '此段展现主角救援行动遭遇重大阻碍，反派真实能力完全展现，幻想杀手能力的局限性首次明显暴露，为后续冲突升级埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '受伤少女', 'role': '次要受害者/救援对象', 'description': '被奥雷欧斯重伤的未知身份少女，需要紧急医疗救助', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['受伤少女身份背景未明确交代', '奥雷欧斯心理转变过程略显突兀', '姬神秋沙面对奥雷欧斯时的异常冷静缺乏充分解释'], refinement_requests=['可适当交代受伤少女与主线剧情的关系', '增加奥雷欧斯精神状态恶化的过渡描写', '为姬神的异常反应提供更多背景铺垫'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.030000000000000027, tokens_used=2592)",
+        "IterationResult(iteration_num=3, analysis={'characters': [{'name': '上条当麻', 'role': '主角/救援者', 'key_actions': ['救治伤患', '对抗奥雷欧斯', '保护姬神秋沙']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['医疗救助', '与奥雷欧斯对峙', '揭示真相']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['施展瞬间炼金术', '溶解学生', '攻击上条当麻']}, {'name': '受伤学生', 'role': '受害者/实验材料', 'key_actions': ['被溶解成金属液体']}], 'events': [{'description': '上条当麻成功为重伤少女止血，但面临后续医疗困境', 'importance': 0.7, 'timeline': '片段1'}, {'description': '上条试图说服姬神秋沙离开监禁地点，引发她的情感波动', 'importance': 0.8, 'timeline': '片段2'}, {'description': '奥雷欧斯出现并残忍溶解六名学生，展现其疯狂本质', 'importance': 0.9, 'timeline': '片段3'}, {'description': '上条的幻想杀手能力意外克制奥雷欧斯的瞬间炼金术', 'importance': 0.95, 'timeline': '片段4'}, {'description': '奥雷欧斯加强攻击，上条右手重伤，危机转向姬神秋沙', 'importance': 0.9, 'timeline': '片段5'}], 'analysis': {'main_theme': '拯救与牺牲的冲突，科学vs魔法的对抗', 'plot_significance': '本段是冲突升级的关键转折点，揭示了奥雷欧斯的真正疯狂和上条能力的特殊性，为后续决战埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '受伤学生', 'role': '实验受害者', 'description': '被奥雷欧斯用作炼金术材料的六名学生，被溶解成金属液体', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['战斗节奏略显重复', '部分角色心理描写可更深入'], refinement_requests=['增加奥雷欧斯的动机背景', '强化姬神秋沙的情感转变过程'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2494)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 15,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "middle",
+      "meaningful_improvements": 2,
+      "total_tokens": 4944,
+      "total_cost": 0.09888000000000001,
+      "characters_detected": [
+        "姬神秋沙",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "史提尔·马格努斯",
+        "茵蒂克丝"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/对抗者', 'key_actions': ['利用直觉分析敌人能力', '使用战术诱敌', '近身格斗压制敌人', '最终选择饶恕敌人']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['使用瞬间炼金能力', '战术失误被反制', '受伤逃亡', '心理崩溃求饶']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['作为战斗的间接动机']}], 'events': [{'description': '上条当麻成功破解奥雷欧斯的瞬间炼金攻击模式，利用敌人的武器反制造成其重伤', 'importance': 0.9, 'timeline': '战斗中期转折点'}, {'description': '奥雷欧斯心理防线崩溃，从傲慢的炼金术师转变为恐惧逃亡的状态', 'importance': 0.85, 'timeline': '战斗后期心理转变'}, {'description': '上条当麻在占据绝对优势时选择饶恕敌人，展现道德困境和人性复杂性', 'importance': 0.95, 'timeline': '战斗结局关键决策'}], 'analysis': {'main_theme': '力量与仁慈的辩证关系，以及正义执行中的道德困境', 'plot_significance': '这是对抗主要反派的关键转折点，不仅展示了主角的战术智慧，更重要的是揭示了角色的道德深度和复杂性，为后续情节发展埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '不知名少女', 'role': '牺牲者/背景角色', 'description': '为保护姬神秋沙而被奥雷欧斯转化为黄金的牺牲者，成为上条当麻行动的重要动机之一', 'confidence': 0.7}}, {'action': 'update_character', 'params': {'name': '奥雷欧斯·伊萨德', 'new_role': '主要反派/心理崩溃的炼金术师', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['战斗场景的心理描写略显重复', '反派转变节奏稍快可能缺乏铺垫'], refinement_requests=['增加奥雷欧斯心理崩溃的渐进过程描写', '强化上条道德抉择时的内心冲突展现'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.78, tokens_used=2525)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['用左手抓住黄金锁链', '用脚踩住锁链限制奥雷欧斯行动', '制定战术诱敌攻击', '用右拳和额头连续攻击敌人', '最终选择放过奥雷欧斯']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['使用瞬间炼金能力', '右脚被黄金岩浆烧伤', '在恐惧中逃跑', '被上条当麻追上并击败', '哭泣求饶']}], 'events': [{'description': '上条当麻识破瞬间炼金的弱点并成功反击，用锁链限制奥雷欧斯行动', 'importance': 0.9, 'timeline': '战斗初期'}, {'description': '奥雷欧斯右脚被自己创造的黄金岩浆严重烧伤，开始失去战斗优势', 'importance': 0.85, 'timeline': '战斗中段'}, {'description': '奥雷欧斯在恐惧中逃跑，但被上条当麻追上并彻底击败', 'importance': 0.95, 'timeline': '战斗高潮'}, {'description': '上条当麻在可以杀死奥雷欧斯的情况下选择放手，展现道德困境', 'importance': 0.9, 'timeline': '战斗结局'}], 'analysis': {'main_theme': '力量与道德的冲突，恐惧对人性的影响', 'plot_significance': '这是主角与主要反派的决定性对决，展现了上条当麻不仅依靠特殊能力，更依靠智慧和战术思维取胜。同时通过上条最后的道德选择，为角色增加了深度，暗示后续可能有更复杂的情节发展。', 'function_calls': []}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['战斗场景转换略显突兀', '奥雷欧斯心理转变过程可以更细致'], refinement_requests=['增加战斗场景的连贯性描述', '深化反派心理变化的描写层次', '加强道德抉择时的内心独白'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2419)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 16,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 3,
+      "final_satisfaction": 0.82,
+      "processing_stage": "middle",
+      "meaningful_improvements": 3,
+      "total_tokens": 7610,
+      "total_cost": 0.1522,
+      "characters_detected": [
+        "姬神秋沙",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "史提尔·马格努斯",
+        "茵蒂克丝"
+      ],
+      "ai_characters": [
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "魔法侧探索者/战术指挥",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/情感支柱",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['被史提尔击败', '承认自己一个人都没杀', '身体被火焰摧毁']}, {'name': '史提尔·马格努斯', 'role': '魔法侧探索者/战术指挥', 'key_actions': ['处决假奥雷欧斯', '使用火焰魔法', '在逃生楼梯中遭遇神秘敌人']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['发现史提尔的符文刻印', '利用魔道书知识追踪', '前往三泽塾战场']}, {'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['被暗示作为诱饵使用', '右手能力被对比分析']}], 'events': [{'description': '史提尔处决假奥雷欧斯，揭示炼金术师并非真正的凶手', 'importance': 0.9, 'timeline': '片段1-2，奥雷欧斯被消灭后'}, {'description': '茵蒂克丝发现史提尔留下的符文刻印，决定追踪前往战场', 'importance': 0.85, 'timeline': '片段3，浴室场景后'}, {'description': '史提尔在逃生楼梯遭遇神秘声音的袭击，陷入危机', 'importance': 0.95, 'timeline': '片段4，处决奥雷欧斯后立即'}, {'description': '茵蒂克丝抵达三泽塾，感知到异常的魔法结界和死亡气息', 'importance': 0.8, 'timeline': '片段4-5，追踪行动后'}], 'analysis': {'main_theme': '真相的多层性与身份迷惑', 'plot_significance': '本段揭示了奥雷欧斯并非真正的凶手，为后续真正的敌人埋下伏笔。同时茵蒂克丝的主动行动打破了被保护者的角色定位，为后续冲突升级做准备。史提尔遭遇的神秘敌人暗示着更大的阴谋正在展开。', 'function_calls': [{'action': 'register_character', 'params': {'name': '假奥雷欧斯', 'role': '替身/误导性反派', 'description': '被史提尔消灭的炼金术师替身，承认自己并非真正的凶手', 'confidence': 0.9}}, {'action': 'register_character', 'params': {'name': '神秘声音', 'role': '未知敌人/潜在威胁', 'description': '在逃生楼梯中突然出现的神秘存在，对史提尔构成致命威胁', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['真假奥雷欧斯的身份转换略显突兀', '神秘敌人的出现方式缺乏足够铺垫'], refinement_requests=['增加真假身份转换的线索铺垫', '为神秘敌人的出现提供更多环境描写暗示'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2628)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['被史提尔击败', '承认自己一个人都没杀', '身体被火焰摧毁']}, {'name': '史提尔·马格努斯', 'role': '魔法侧探索者/战术指挥', 'key_actions': ['处决假奥雷欧斯', '使用火焰魔法', '在逃生楼梯中遭遇神秘敌人']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['发现史提尔的符文刻印', '追踪魔力细线前往三泽塾', '分析魔法结界异常']}], 'events': [{'description': '史提尔处决假奥雷欧斯，揭示其并非真正的凶手', 'importance': 0.9, 'timeline': '片段1-2'}, {'description': '茵蒂克丝发现史提尔留下的符文刻印并决定追踪', 'importance': 0.85, 'timeline': '片段3'}, {'description': '史提尔在逃生楼梯遭遇神秘声音的袭击', 'importance': 0.95, 'timeline': '片段4'}, {'description': '茵蒂克丝到达三泽塾并感知到异常的魔法结界', 'importance': 0.8, 'timeline': '片段5'}], 'analysis': {'main_theme': '真相揭露与角色动机的交织', 'plot_significance': '这一阶段揭示了假奥雷欧斯并非真正的凶手，为后续真正的阴谋埋下伏笔。同时茵蒂克丝的主动行动和史提尔遭遇的神秘敌人预示着更大的危机正在逼近。', 'function_calls': [{'action': 'register_character', 'params': {'name': '斯芬克', 'role': '次要角色/宠物猫', 'description': '茵蒂克丝在宿舍遇到的三色猫，个性不可爱但似乎有特殊意义', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['假奥雷欧斯真实身份的揭示略显仓促', '神秘敌人的出现缺乏足够铺垫'], refinement_requests=['增加假奥雷欧斯背景的更多暗示', '为神秘敌人的出现提供更多环境描写铺垫'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.030000000000000027, tokens_used=2462)",
+        "IterationResult(iteration_num=3, analysis={'characters': [{'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['被史提尔击败', '承认失败', '身体被火焰摧毁']}, {'name': '史提尔·马格努斯', 'role': '魔法侧探索者/战术指挥', 'key_actions': ['处决假奥雷欧斯', '使用火焰魔法', '在逃生楼梯遭遇神秘敌人']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['发现符文刻印', '追踪史提尔', '到达三泽塾', '分析魔法异常']}, {'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['被提及右手能力', '作为诱饵被利用']}], 'events': [{'description': '史提尔处决假奥雷欧斯，揭示其并非真正的炼金术师', 'importance': 0.9, 'timeline': '片段1-2'}, {'description': '茵蒂克丝发现史提尔的符文刻印，决定追踪前往战场', 'importance': 0.85, 'timeline': '片段3'}, {'description': '史提尔在逃生楼梯遭遇神秘声音的袭击，陷入危机', 'importance': 0.95, 'timeline': '片段4'}, {'description': '茵蒂克丝到达三泽塾并感知到异常的魔法结界', 'importance': 0.8, 'timeline': '片段4-5'}], 'analysis': {'main_theme': '魔法与科学的冲突、身份欺骗与真实意图的揭露', 'plot_significance': '这一阶段揭示了奥雷欧斯的替身身份，建立了真正的威胁仍在暗处。茵蒂克丝的主动行动为后续冲突埋下伏笔，而史提尔遭遇的神秘敌人暗示着更大的阴谋。三泽塾的异常魔法环境为最终决战搭建了舞台。', 'function_calls': [{'action': 'register_character', 'params': {'name': '十三骑士团成员', 'role': '敌对势力/被消灭的魔法师', 'description': '被未知力量消灭的魔法骑士团成员，穿着施术铠', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['假奥雷欧斯的真实身份交代不够清晰', '神秘敌人的出现略显突兀'], refinement_requests=['可增加对假奥雷欧斯背景的简要说明', '为神秘敌人的出现增加更多铺垫'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2520)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 17,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "middle",
+      "meaningful_improvements": 2,
+      "total_tokens": 5254,
+      "total_cost": 0.10508,
+      "characters_detected": [
+        "姬神秋沙",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "史提尔·马格努斯",
+        "茵蒂克丝"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/拯救者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "姬神秋沙",
+          "role": "关键角色/吸血杀手",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/情感支柱",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "神秘男人",
+          "role": "新出现的强大魔法师",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['击败假奥雷欧斯', '试图带姬神离开', '面对真相的内心挣扎']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['揭露奥雷欧斯替身真相', '解释自身吸血杀手能力', '表达与奥雷欧斯的合作关系']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['遭遇不明怪物袭击', '被神秘男子所救', '认出金色大衍术']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['使用替身迷惑对手', '寻求吸血鬼力量', '与姬神达成交易']}, {'name': '神秘男子', 'role': '新出现的魔法师', 'key_actions': ['救下茵蒂克丝', '使用金色大衍术', '认识禁书目录']}], 'events': [{'description': '茵蒂克丝遭遇不明怪物的致命袭击，被神秘男子所救', 'importance': 0.9, 'timeline': '片段1-2，与主线并行发生'}, {'description': '上条当麻击败假奥雷欧斯后试图带姬神离开战场', 'importance': 0.85, 'timeline': '片段2，主线情节发展'}, {'description': '姬神揭露奥雷欧斯使用替身并解释自身吸血杀手的能力本质', 'importance': 0.95, 'timeline': '片段3-4，情节重大转折'}, {'description': '姬神解释与奥雷欧斯的合作关系和各自目的', 'importance': 0.8, 'timeline': '片段5，揭示角色动机'}], 'analysis': {'main_theme': '真相与表象的冲突、角色内心的挣扎与选择', 'plot_significance': '这是情节的重大转折点，揭露了反派使用替身的诡计，同时深入揭示了姬神秋沙作为吸血杀手的悲惨命运和与奥雷欧斯的复杂关系，为后续冲突升级埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '神秘男子', 'role': '黄金黎明魔法师/茵蒂克丝旧识', 'description': '使用金色大衍术的强大魔法师，认识茵蒂克丝但似乎对她失去记忆的情况有所了解', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['神秘男子身份信息不足', '怪物袭击事件的衔接略显突兀', '时间线切换可能造成阅读混乱'], refinement_requests=['增加神秘男子的背景铺垫', '加强两条故事线的逻辑连接', '明确时间线标识帮助读者理解并行事件'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2616)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/拯救者', 'key_actions': ['击败假奥雷欧斯', '试图带姬神离开', '面对真相的内心挣扎']}, {'name': '姬神秋沙', 'role': '关键角色/吸血杀手', 'key_actions': ['揭露奥雷欧斯替身真相', '解释自身吸血杀手能力', '表达不想伤害吸血鬼的立场']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['遭遇不明生物袭击', '被神秘男人所救', '认出金色大衍术']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['使用替身迷惑对手', '寻求吸血鬼力量', '与姬神达成交易']}, {'name': '神秘男人', 'role': '新出现的强大魔法师', 'key_actions': ['一击消灭不明生物', '与茵蒂克丝相认', '使用金色大衍术']}], 'events': [{'description': '茵蒂克丝遭遇严重变形的不明生物袭击，被神秘男人所救', 'importance': 0.9, 'timeline': '片段1-2，与主线并行发生'}, {'description': '上条当麻误以为击败奥雷欧斯，试图带姬神离开三泽塾', 'importance': 0.85, 'timeline': '片段2，主线情节发展'}, {'description': '姬神秋沙揭露被击败的奥雷欧斯只是替身，真相更加复杂', 'importance': 0.95, 'timeline': '片段3，情节重大转折'}, {'description': '姬神坦白吸血杀手身份及与奥雷欧斯的交易关系', 'importance': 0.9, 'timeline': '片段4-5，角色背景揭示'}], 'analysis': {'main_theme': '真相的多层性与自我认知的困境', 'plot_significance': '此段是情节的重大转折点，揭示了反派使用替身的诡计，同时深入展现了姬神秋沙作为吸血杀手的内心矛盾。两条故事线（茵蒂克丝遇袭与上条/姬神对话）并行发展，增加了叙事的紧张感和复杂性。', 'function_calls': [{'action': 'register_character', 'params': {'name': '神秘男人', 'role': '强大的魔法师/黄金黎明相关', 'description': '能够使用金色大衍术的强大魔法师，与茵蒂克丝有过去关联', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['神秘男人的身份和目的尚未明确', '两条故事线的衔接略显突兀', '奥雷欧斯真实意图仍需进一步揭示'], refinement_requests=['加强两条故事线之间的逻辑联系', '更清晰地暗示神秘男人的背景', '深化上条面对真相时的心理描写'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2638)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 18,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 3,
+      "final_satisfaction": 0.78,
+      "processing_stage": "middle",
+      "meaningful_improvements": 2,
+      "total_tokens": 7747,
+      "total_cost": 0.15494000000000002,
+      "characters_detected": [
+        "上条当麻",
+        "姬神秋沙",
+        "奥雷欧斯·伊萨德",
+        "受伤学生们",
+        "茵蒂克丝"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "姬神秋沙",
+          "role": "关键角色/被救对象",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/情感支柱",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['试图营救姬神秋沙', '对抗奥雷欧斯的炼金术', '意识到局势的危机性', '担心茵蒂克丝的安危']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['与奥雷欧斯对峙', '展现坚定的态度', '试图介入保护上条']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['展示强大的空间操控能力', '揭示吸血杀手的真相', '威胁禁书目录', '使用针剂强化自身']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['被奥雷欧斯提及为威胁目标', '成为上条的牵挂对象']}], 'events': [{'description': '奥雷欧斯突然现身并展示空间操控能力，阻止上条接近', 'importance': 0.9, 'timeline': '片段2开始'}, {'description': '奥雷欧斯揭示吸血杀手能力的真相——特殊血液而非力量', 'importance': 0.85, 'timeline': '片段3中段'}, {'description': '奥雷欧斯提及禁书目录（茵蒂克丝）并暗示对其采取行动', 'importance': 0.95, 'timeline': '片段4中段'}, {'description': '上条突然失去关键记忆，选择忽略危机返回宿舍', 'importance': 0.8, 'timeline': '片段5结尾'}], 'analysis': {'main_theme': '理想与现实的冲突、记忆操控与认知扭曲', 'plot_significance': '这段情节展现了奥雷欧斯能力的真正恐怖之处——不仅操控物理空间，还能影响认知和记忆。上条的记忆被篡改，暗示奥雷欧斯的能力远超表面所见，为后续冲突埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '史提尔', 'role': '盟友/魔法师', 'description': '被提及畏惧吸血鬼的强大魔法师，暗示与上条有合作关系', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['记忆篡改情节略显突兀', '奥雷欧斯能力范围界定不够清晰'], refinement_requests=['增加记忆被影响的心理描写过渡', '更明确界定炼金术的能力限制和原理'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2539)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['试图营救姬神秋沙', '对抗奥雷欧斯的炼金术', '分析局势寻找突破口', '担忧茵蒂克丝的安危']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['与奥雷欧斯对峙', '展现坚定的意志', '试图介入保护上条']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['使用炼金术操控空间距离', '揭示吸血杀手的真相', '提及禁书目录的威胁', '使用针剂强化能力']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['被奥雷欧斯视为重大威胁', '引发上条的担忧']}], 'events': [{'description': '奥雷欧斯突然现身并质疑上条的信念，展示其复活和空间操控能力', 'importance': 0.9, 'timeline': '片段1-2'}, {'description': '上条发现无法接近奥雷欧斯，遭遇空间扭曲的炼金术阻碍', 'importance': 0.85, 'timeline': '片段2'}, {'description': '奥雷欧斯揭示吸血杀手的真相——特殊血液而非力量，瓦解上条的希望', 'importance': 0.95, 'timeline': '片段3'}, {'description': '奥雷欧斯提及禁书目录（茵蒂克丝）的到来并视为重大威胁', 'importance': 0.9, 'timeline': '片段4'}, {'description': '上条在离开后产生不安的预感，暗示记忆可能被篡改', 'importance': 0.8, 'timeline': '片段5'}], 'analysis': {'main_theme': '理想与现实的冲突、力量的本质与局限性、记忆与认知的脆弱性', 'plot_significance': '这段情节是冲突升级的关键点，揭示了反派的能力本质和主角面临的绝境，同时埋下了记忆操纵和茵蒂克丝介入的伏笔，为后续转折奠定基础', 'function_calls': [{'action': 'register_character', 'params': {'name': '史提尔·马格努斯', 'role': '魔法师/盟友', 'description': '曾被提及畏惧吸血鬼的强大魔法师，暗示与主角方有关联', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['部分战斗逻辑略显抽象（空间扭曲的具体机制）', '记忆遗忘桥段的使用稍显突兀'], refinement_requests=['可更详细解释炼金术的空间原理', '对记忆修改的前因后果需要更自然的铺垫'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.030000000000000027, tokens_used=2595)",
+        "IterationResult(iteration_num=3, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['试图营救姬神秋沙', '对抗奥雷欧斯的炼金术', '分析战局并寻找突破口']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['与奥雷欧斯对峙', '展现坚定的意志', '试图介入保护上条']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['使用炼金术操控空间距离', '揭示吸血杀手的真相', '提及禁书目录的威胁']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['被奥雷欧斯提及为需要处理的目标', '成为上条担忧的对象']}], 'events': [{'description': '奥雷欧斯突然现身并质疑上条的信念，展示其复活和空间操控能力', 'importance': 0.9, 'timeline': '片段1-2'}, {'description': '上条发现无法接近奥雷欧斯，遭遇空间扭曲的炼金术阻碍', 'importance': 0.85, 'timeline': '片段2'}, {'description': '奥雷欧斯揭示吸血杀手能力的真相——仅对吸血鬼有效的特殊血液', 'importance': 0.95, 'timeline': '片段3'}, {'description': '姬神与奥雷欧斯的心理对峙，展现姬神的坚定立场', 'importance': 0.8, 'timeline': '片段4'}, {'description': '奥雷欧斯提及禁书目录（茵蒂克丝）的到来和处置难题', 'importance': 0.9, 'timeline': '片段4'}, {'description': '上条产生记忆模糊和危机感，但选择忽略并返回宿舍', 'importance': 0.75, 'timeline': '片段5'}], 'analysis': {'main_theme': '理想与现实的冲突、能力的局限性、记忆与认知的不可靠性', 'plot_significance': '此段展现奥雷欧斯能力的全面压制，揭示关键能力真相，引入新威胁（茵蒂克丝），同时通过上条的认知模糊为后续转折埋下伏笔', 'function_calls': [{'action': 'register_character', 'params': {'name': '史提尔·马格努斯', 'role': '魔法师/盟友', 'description': '被提及畏惧吸血鬼的强大魔法师，暗示其与主角方的关联', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['奥雷欧斯能力的具体原理略显模糊', '上条记忆模糊的过渡稍显突兀'], refinement_requests=['可稍加强调炼金术的规则限制', '记忆模糊段落可增加更具体的不安细节描写'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.0, tokens_used=2613)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 19,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "climax",
+      "meaningful_improvements": 2,
+      "total_tokens": 5426,
+      "total_cost": 0.10852,
+      "characters_detected": [
+        "上条当麻",
+        "姬神秋沙",
+        "奥雷欧斯·伊萨德",
+        "受伤学生们",
+        "茵蒂克丝"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者/救援者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "姬神秋沙",
+          "role": "关键营救对象/吸血鬼宿主",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "魔法师/盟友",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/情感支柱",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "银色铠甲骑士",
+          "role": "教会执行者/敌对势力",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['质疑教会骑士的动机', '试图阻止大楼爆破', '冲向爆炸现场', '发现大楼异常复原', '确认受害者平安', '与史提尔对峙并恢复记忆']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['被暗示困在大楼内', '成为各方争夺目标']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['施展大规模复原魔法', '在校长室反思自身变化', '展示强大的炼金能力']}, {'name': '受伤学生们', 'role': '受害者/炼金材料', 'key_actions': ['被奇迹般复原', '恢复正常上课状态', '展示奥雷欧斯能力的恐怖']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['可能被困大楼内', '成为上条行动的动力']}, {'name': '史提尔·马格努斯', 'role': '魔法师/盟友', 'key_actions': ['可能被困大楼内', '成为上条担心的对象', '被上条恢复记忆后攻击']}, {'name': '教会骑士', 'role': '敌对势力/极端分子', 'key_actions': ['包围三泽塾', '不顾平民安危爆破大楼', '展现宗教狂热']}], 'events': [{'description': '教会骑士包围三泽塾并实施爆破', 'importance': 0.9, 'timeline': '高潮初期'}, {'description': '大楼被炸毁后奇迹般自动复原', 'importance': 0.95, 'timeline': '高潮中期'}, {'description': '所有受害学生和人员完全恢复原状', 'importance': 0.85, 'timeline': '高潮中期'}, {'description': '上条当麻恢复记忆并反击史提尔', 'importance': 0.8, 'timeline': '高潮后期'}, {'description': '奥雷欧斯在校长室反思自身转变', 'importance': 0.75, 'timeline': '高潮结尾'}], 'analysis': {'main_theme': '现实扭曲与道德界限的冲突', 'plot_significance': '这是故事的核心转折点，展示了奥雷欧斯近乎神级的炼金能力，同时揭示了教会势力的极端手段，为上条与奥雷欧斯的最终对决铺垫', 'function_calls': [{'action': 'register_character', 'params': {'name': '教会骑士', 'role': '敌对势力/极端宗教分子', 'description': '身穿银色铠甲的教会人员，为了消灭奥雷欧斯不惜牺牲无辜平民，展现宗教狂热', 'confidence': 0.85}}, {'action': 'update_character', 'params': {'name': '史提尔·马格努斯', 'new_role': '魔法师/不可靠盟友', 'confidence': 0.8}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['教会骑士的动机转变略显突兀', '大楼复原的具体机制不够明确', '部分角色行动逻辑需要更清晰'], refinement_requests=['增加教会骑士决策过程的心理描写', '简要说明奥雷欧斯复原魔法的原理', '强化各势力冲突的深层原因'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.78, tokens_used=2746)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者/救援者', 'key_actions': ['试图阻止教会轰炸', '冲入废墟寻找同伴', '质疑奥雷欧斯的动机', '与史提尔对峙并恢复记忆']}, {'name': '姬神秋沙', 'role': '关键营救对象/吸血鬼宿主', 'key_actions': ['被奥雷欧斯控制', '成为事件核心目标']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['施展大规模炼金术', '重建三泽塾', '操纵现实', '陷入自我反思']}, {'name': '史提尔·马格努斯', 'role': '魔法师/盟友', 'key_actions': ['被卷入爆炸', '成为上条记忆恢复的关键']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['可能被困在建筑内', '增加上条的紧迫感']}, {'name': '银色铠甲骑士', 'role': '教会执行者/敌对势力', 'key_actions': ['包围三泽塾', '执行轰炸任务', '展现极端宗教狂热']}], 'events': [{'description': '教会骑士团轰炸三泽塾，试图消灭吸血鬼威胁', 'importance': 0.95, 'timeline': '高潮中期'}, {'description': '奥雷欧斯使用炼金术完全重建三泽塾，复活所有死者', 'importance': 1.0, 'timeline': '高潮转折点'}, {'description': '上条目睹学生完全复原，意识到现实被篡改的恐怖', 'importance': 0.9, 'timeline': '高潮后期'}, {'description': '上条恢复记忆并反击史提尔', 'importance': 0.85, 'timeline': '高潮收尾阶段'}, {'description': '奥雷欧斯在校长室反思自己的转变', 'importance': 0.88, 'timeline': '高潮并行事件'}], 'analysis': {'main_theme': '现实操纵与道德界限——探讨为了正确目的而使用极端手段的伦理困境', 'plot_significance': '这是整个第二卷的核心冲突爆发点，展示了奥雷欧斯的真正力量，同时揭示了教会势力的极端做法，为上条与奥雷欧斯的最终对决铺平道路', 'function_calls': [{'action': 'register_character', 'params': {'name': '银色铠甲骑士', 'role': '教会执行者/极端分子', 'description': '罗马正教成员，穿着银色全身铠甲，愿意为信仰牺牲一切包括无辜生命', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['银色铠甲骑士的动机和背景交代不够清晰', '奥雷欧斯重建大楼的具体魔法机制需要更多解释', '学生复活后的心理状态缺乏描写'], refinement_requests=['增加对教会骑士团背景的简要说明', '细化炼金术运作原理的暗示', '添加学生对事件感知的细节描写'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2680)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 20,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "climax",
+      "meaningful_improvements": 2,
+      "total_tokens": 5254,
+      "total_cost": 0.10508,
+      "characters_detected": [
+        "上条当麻",
+        "姬神秋沙",
+        "奥雷欧斯·伊萨德",
+        "受伤学生们",
+        "茵蒂克丝"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "魔法师/情报提供者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/情感支柱",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "姬神秋沙",
+          "role": "关键角色/被救对象",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['分析奥雷欧斯的能力限制', '质疑奥雷欧斯的真实目的', '试图拯救茵蒂克丝']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['背叛信仰追求吸血鬼力量', '试图改变茵蒂克丝记忆', '与史提尔对峙']}, {'name': '史提尔·马格努斯', 'role': '魔法师/盟友', 'key_actions': ['分析奥雷欧斯的魔法理论', '揭示上条已拯救茵蒂克丝的真相', '阻止上条冲动行动']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['作为奥雷欧斯执念的核心', '处于被改造记忆的危险中']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['被奥雷欧斯利用作为工具', '默默观察奥雷欧斯的堕落']}], 'events': [{'description': '奥雷欧斯发现无法拯救茵蒂克丝的真相', 'importance': 0.95, 'timeline': '过去回忆片段'}, {'description': '史提尔揭示上条已经拯救过茵蒂克丝的事实', 'importance': 0.9, 'timeline': '当前高潮阶段'}, {'description': '奥雷欧斯与史提尔的理念对峙', 'importance': 0.85, 'timeline': '当前高潮阶段'}, {'description': '奥雷欧斯试图改变茵蒂克丝记忆的计划暴露', 'importance': 0.88, 'timeline': '当前高潮阶段'}], 'analysis': {'main_theme': '救赎的悖论与执念的堕落', 'plot_significance': '高潮部分揭示了奥雷欧斯行动的根本矛盾：试图拯救一个已经被拯救的人，同时暴露了他能力的本质限制和道德沦丧', 'function_calls': [{'action': 'register_character', 'params': {'name': '史提尔·马格努斯', 'role': '魔法师/英国清教成员/盟友', 'description': '使用符文魔法的魔法师，曾为拯救茵蒂克丝而努力，现在与上条当麻合作对抗奥雷欧斯', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.78}, satisfaction_level=0.78, identified_issues=['部分背景信息需要前文上下文才能完全理解', '奥雷欧斯的心理转变过程略显跳跃'], refinement_requests=['可增加奥雷欧斯心理挣扎的具体描写', '明确时间线的过渡会更清晰'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.78, tokens_used=2572)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['分析奥雷欧斯的能力限制', '质疑奥雷欧斯的动机', '试图拯救茵蒂克丝']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['背叛信仰追求力量', '利用吸血杀手', '试图改变茵蒂克丝记忆']}, {'name': '史提尔·马格努斯', 'role': '魔法师/情报提供者', 'key_actions': ['解释魔法理论', '揭示奥雷欧斯的堕落', '阻止上条冲动行动']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['作为奥雷欧斯的目标沉睡', '象征救赎的象征']}, {'name': '姬神秋沙', 'role': '关键角色/被救对象', 'key_actions': ['被奥雷欧斯利用', '作为实现目标的工具']}], 'events': [{'description': '奥雷欧斯揭示其堕落过程：从理想主义者变为为达目的不择手段的反派', 'importance': 0.9, 'timeline': '片段1-2的背景叙述'}, {'description': '史提尔揭露奥雷欧斯反弹葛利果圣歌队的惊人事实，显示其异常力量', 'importance': 0.85, 'timeline': '片段2末尾'}, {'description': '上条与史提尔分析奥雷欧斯能力的矛盾与限制，发现其并非全能', 'importance': 0.88, 'timeline': '片段3'}, {'description': '史提尔揭示关键真相：茵蒂克丝已经被上条拯救，奥雷欧斯的行动毫无意义', 'importance': 0.95, 'timeline': '片段4末尾'}, {'description': '奥雷欧斯与史提尔对峙，展现其扭曲的救赎观和已经完全堕落的心理状态', 'importance': 0.92, 'timeline': '片段5'}], 'analysis': {'main_theme': '扭曲的救赎与理想主义的堕落', 'plot_significance': '这是高潮部分的核心冲突揭示——奥雷欧斯从追求拯救他人的理想主义者堕落为不择手段的疯狂反派，而其追求的目标（拯救茵蒂克丝）实际上已经被主角完成，这使得他的所有行动都变成了无意义的悲剧', 'function_calls': [{'action': 'register_character', 'params': {'name': '史提尔·马格努斯', 'role': '魔法师/情报提供者/前盟友', 'description': '英国清教的魔法师，曾经与奥雷欧斯有共同目标，现在成为对抗他的关键人物', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['部分背景信息交代较为零散，需要读者拼凑完整故事线', '奥雷欧斯的心理转变过程虽然合理但节奏稍快'], refinement_requests=['可以增加更多奥雷欧斯内心挣扎的具体描写', '加强当前对峙场景的紧张感和戏剧性冲突'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.039999999999999925, tokens_used=2682)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 21,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 1,
+      "final_satisfaction": 0.88,
+      "processing_stage": "climax",
+      "meaningful_improvements": 1,
+      "total_tokens": 2608,
+      "total_cost": 0.052160000000000005,
+      "characters_detected": [
+        "上条当麻",
+        "姬神秋沙",
+        "奥雷欧斯·伊萨德",
+        "受伤学生们",
+        "茵蒂克丝"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/拯救者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/悲剧炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "情感核心/被保护对象",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "姬神秋沙",
+          "role": "牺牲者/关键转折点",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "催化剂/信息揭露者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/拯救者', 'key_actions': ['保护茵蒂克丝', '用右手破解金色大衍术', '拯救姬神秋沙']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/悲剧炼金术师', 'key_actions': ['试图伤害茵蒂克丝但失败', '攻击姬神秋沙', '金色大衍术被破解']}, {'name': '茵蒂克丝', 'role': '情感核心/被保护对象', 'key_actions': ['苏醒后只关注上条当麻', '彻底遗忘奥雷欧斯', '成为奥雷欧斯崩溃的导火索']}, {'name': '姬神秋沙', 'role': '牺牲者/关键转折点', 'key_actions': ['挡在上条面前保护奥雷欧斯', '被奥雷欧斯攻击', '被上条拯救']}, {'name': '史提尔', 'role': '催化剂/信息揭露者', 'key_actions': ['揭露上条拯救茵蒂克丝的真相', '刺激奥雷欧斯的心理弱点']}], 'events': [{'description': '史提尔揭露上条当麻已拯救茵蒂克丝的真相，彻底击溃奥雷欧斯的心理防线', 'importance': 0.95, 'timeline': '高潮前期'}, {'description': '茵蒂克丝苏醒后只认得上条当麻，完全遗忘奥雷欧斯，加深反派崩溃', 'importance': 0.9, 'timeline': '高潮中期'}, {'description': '奥雷欧斯无法伤害茵蒂克丝，显示其内心最后的挣扎与矛盾', 'importance': 0.85, 'timeline': '高潮中期'}, {'description': '姬神秋沙为保护奥雷欧斯而挡枪，被奥雷欧斯攻击', 'importance': 0.92, 'timeline': '高潮转折点'}, {'description': '上条当麻用右手破解金色大衍术，拯救姬神秋沙', 'importance': 0.96, 'timeline': '高潮顶点'}], 'analysis': {'main_theme': '执念的破灭与救赎的真实意义', 'plot_significance': '这是整个冲突的核心转折点，奥雷欧斯的执念彻底崩溃，上条当麻的能力得到关键验证，同时展现了真正的拯救不是通过极端手段，而是纯粹的情感连接', 'function_calls': [{'action': 'register_character', 'params': {'name': '史提尔', 'role': '信息揭露者/催化剂', 'description': '魔法师，通过揭露真相来刺激奥雷欧斯心理弱点', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.88}, satisfaction_level=0.88, identified_issues=['部分角色动机转折略显突然', '战斗节奏在某些段落稍显跳跃'], refinement_requests=['可增加奥雷欧斯内心独白来平滑转折', '细化战斗场景的过渡描写'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.88, tokens_used=2608)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 22,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 2,
+      "final_satisfaction": 0.82,
+      "processing_stage": "climax",
+      "meaningful_improvements": 2,
+      "total_tokens": 5118,
+      "total_cost": 0.10236,
+      "characters_detected": [
+        "受伤学生们",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "史提尔",
+        "茵蒂克丝"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "催化剂/信息揭露者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "姬神秋沙",
+          "role": "关键受害者/触发点",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['用右手破解窒息命令', '分析奥雷欧斯的攻击模式', '为保护他人硬接魔弹攻击']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['使用金色大衍术下达致命命令', '分析上条当麻的能力弱点', '使用魔弹进行范围攻击']}, {'name': '史提尔', 'role': '催化剂/信息揭露者', 'key_actions': ['提醒上条当麻危险', '观察战斗局势并提供支援']}, {'name': '姬神秋沙', 'role': '关键受害者/触发点', 'key_actions': ['作为奥雷欧斯实验对象', '触发上条当麻的救援行动']}], 'events': [{'description': '奥雷欧斯使用金色大衍术命令上条当麻窒息，上条通过自我催吐破解', 'importance': 0.9, 'timeline': '高潮中期'}, {'description': '上条当麻发现奥雷欧斯攻击速度的弱点，建立战斗信心', 'importance': 0.85, 'timeline': '高潮中期'}, {'description': '奥雷欧斯转变策略使用魔弹攻击，上条为保护姬神和史提尔硬接攻击', 'importance': 0.95, 'timeline': '高潮关键转折点'}, {'description': '姬神秋沙的吸血鬼幸存者背景揭露，解释奥雷欧斯实验动机', 'importance': 0.8, 'timeline': '高潮前期背景交代'}], 'analysis': {'main_theme': '理想与现实的冲突、保护与牺牲、超能力与魔法的对抗', 'plot_significance': '这是整个冲突的核心对决，上条当麻面对拥有近乎无敌能力的奥雷欧斯，通过智慧和牺牲精神寻找突破口，同时揭示了反派背后的悲剧动机', 'function_calls': [{'action': 'register_character', 'params': {'name': '姬神秋沙', 'role': '关键受害者/吸血鬼幸存者/触发点', 'description': '十年前京都吸血鬼事件的唯一幸存者，拥有特殊体质，是奥雷欧斯实验的核心对象', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['战斗节奏略显跳跃，部分转折缺乏足够铺垫', '奥雷欧斯的动机与当前行动的连接可以更明确'], refinement_requests=['增加上条心理活动的细节描写以增强紧张感', '强化奥雷欧斯理想破灭与当前疯狂行为的情感连接'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=2569)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['破解金色大衍术的呼吸封锁', '分析奥雷欧斯的攻击模式', '保护姬神和史提尔而承受攻击']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['使用金色大衍术下达死亡命令', '分析上条当麻的右手能力', '改变战术使用物理远程攻击']}, {'name': '史提尔', 'role': '催化剂/信息揭露者', 'key_actions': ['警告上条当麻的危险', '作为战斗旁观者提供视角']}, {'name': '姬神秋沙', 'role': '关键受害者/触发点', 'key_actions': ['作为奥雷欧斯攻击的诱因', '连接吸血鬼背景故事']}], 'events': [{'description': '奥雷欧斯使用金色大衍术封锁上条当麻的呼吸，试图使其窒息而死', 'importance': 0.9, 'timeline': '高潮中期'}, {'description': '上条当麻通过自我催吐破解呼吸封锁，展现其应变能力', 'importance': 0.85, 'timeline': '高潮中期'}, {'description': '奥雷欧斯意识到上条右手能消除金色大衍术，转而使用物理枪械攻击', 'importance': 0.95, 'timeline': '高潮转折点'}, {'description': '上条为保护姬神和史提尔而硬接十发魔弹，展现牺牲精神', 'importance': 0.88, 'timeline': '高潮后期'}], 'analysis': {'main_theme': '理想与现实的冲突、牺牲与保护、超能力与魔法的对抗', 'plot_significance': '这是战斗的关键转折点，奥雷欧斯从纯粹使用炼金术转变为混合战术，上条当麻面临更严峻的生存挑战，同时揭示了姬神的吸血鬼杀手背景故事与当前危机的联系', 'function_calls': [{'action': 'register_character', 'params': {'name': '姬神秋沙', 'role': '吸血鬼杀手/关键受害者', 'description': '拥有吸血鬼杀手体质的少女，是奥雷欧斯计划的核心', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.82}, satisfaction_level=0.82, identified_issues=['战斗节奏稍快，部分细节可能需要更详细描述', '吸血鬼背景故事与当前战斗的衔接可以更平滑'], refinement_requests=['增加奥雷欧斯心理变化的描写', '强化吸血鬼背景与当前战斗的象征联系', '稍微放慢战斗节奏以增强紧张感'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.06999999999999995, tokens_used=2549)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 23,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 1,
+      "final_satisfaction": 0.92,
+      "processing_stage": "climax",
+      "meaningful_improvements": 1,
+      "total_tokens": 2463,
+      "total_cost": 0.049260000000000005,
+      "characters_detected": [
+        "受伤学生们",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "史提尔",
+        "茵蒂克丝"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "催化剂/信息揭露者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/情感支柱",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['分析奥雷欧斯的弱点', '发现金色大衍术真相', '断臂后大笑反击']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['使用金色大衍术', '频繁注射药物', '切断上条右手']}, {'name': '史提尔', 'role': '催化剂/信息揭露者', 'key_actions': ['牺牲自己提供关键信息', '指出奥雷欧斯弱点', '用猎杀魔女之王分散注意力']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['解析葛利果圣歌队原理', '因残酷场面晕厥']}], 'events': [{'description': '史提尔牺牲自己揭露奥雷欧斯弱点', 'importance': 0.95, 'timeline': '高潮中期'}, {'description': '上条当麻断臂后大笑并发现金色大衍术真相', 'importance': 1.0, 'timeline': '高潮转折点'}, {'description': '奥雷欧斯切断上条右手试图消除幻想杀手能力', 'importance': 0.9, 'timeline': '高潮关键转折'}, {'description': '茵蒂克丝解析葛利果圣歌队运作原理', 'importance': 0.7, 'timeline': '高潮前期'}], 'analysis': {'main_theme': '真相揭露与自我牺牲', 'plot_significance': '这是整个故事的高潮转折点，通过史提尔的牺牲和上条的断臂，揭示了金色大衍术的真正弱点，为最终对决奠定基础', 'function_calls': [{'action': 'register_character', 'params': {'name': '姬神秋沙', 'role': '关键证人/吸血鬼杀手', 'description': '奥雷欧斯寻找的吸血杀手，与众人有旧识关系', 'confidence': 0.85}}]}}, confidence_scores={'overall': 0.92}, satisfaction_level=0.92, identified_issues=['部分角色动机需要更明确解释', '战斗节奏略显急促'], refinement_requests=['增加奥雷欧斯心理描写', '细化金色大衍术限制条件的说明'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.92, tokens_used=2463)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 24,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 1,
+      "final_satisfaction": 0.92,
+      "processing_stage": "ending",
+      "meaningful_improvements": 1,
+      "total_tokens": 2599,
+      "total_cost": 0.051980000000000005,
+      "characters_detected": [
+        "受伤学生们",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "史提尔",
+        "茵蒂克丝"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/心理战术执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/自我毁灭者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "催化剂/幸存者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/情感核心",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/心理战术执行者', 'key_actions': ['利用心理战术让奥雷欧斯自我怀疑', '假装看破金色大衍术的弱点', '通过笑容和姿态制造压迫感']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/自我毁灭者', 'key_actions': ['因过度自信转为自我怀疑', '金色大衍术因内心动摇而失效', '被自己的恐惧具现化的龙王吞噬']}, {'name': '史提尔·马格努斯', 'role': '催化剂/幸存者', 'key_actions': ['作为奥雷欧斯恐惧的具现化证明', '在结局中探望上条当麻', '揭示事件真相']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感核心', 'key_actions': ['作为冲突的根源躺在桌上', '成为对峙场景的中心象征']}], 'events': [{'description': '上条当麻通过心理战术让奥雷欧斯对金色大衍术产生怀疑', 'importance': 0.95, 'timeline': '高潮决战阶段'}, {'description': '奥雷欧斯的恐惧具现化导致史提尔复活，进一步加剧其心理崩溃', 'importance': 0.9, 'timeline': '决战转折点'}, {'description': '透明龙王吞噬奥雷欧斯，象征其被自身恐惧彻底毁灭', 'importance': 0.98, 'timeline': '决战结局'}, {'description': '史提尔探望受伤的上条当麻并揭示真相', 'importance': 0.85, 'timeline': '终章/结局后'}], 'analysis': {'main_theme': '心理战与自我毁灭', 'plot_significance': '通过非武力方式解决冲突，强调心理层面的对抗和反派的内在矛盾导致自我毁灭', 'function_calls': [{'action': 'register_character', 'params': {'name': '姬神秋沙', 'role': '关键配角/吸血杀手', 'description': \"拥有特殊能力'吸血杀手'的角色，在奥雷欧斯的计划中扮演重要角色\", 'confidence': 0.85}}, {'action': 'register_character', 'params': {'name': '透明龙王', 'role': '恐惧具现化/终结执行者', 'description': '由奥雷欧斯内心恐惧具现化的怪物，最终吞噬了炼金术师', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.92}, satisfaction_level=0.92, identified_issues=['姬神秋沙的角色在结尾部分提及但未充分展开', '透明龙王的出现和吞噬过程描述略显抽象'], refinement_requests=['增加姬神秋沙在结局后的角色交代', '对透明龙王的象征意义进行更具体的解释'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.92, tokens_used=2599)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 25,
+      "volume_id": 2,
+      "chunks_processed": 5,
+      "total_iterations": 1,
+      "final_satisfaction": 0.92,
+      "processing_stage": "ending",
+      "meaningful_improvements": 1,
+      "total_tokens": 2620,
+      "total_cost": 0.0524,
+      "characters_detected": [
+        "受伤学生们",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "史提尔",
+        "茵蒂克丝"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔·马格努斯",
+          "role": "催化剂/信息揭露者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/情感支柱",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "姬神秋沙",
+          "role": "受害者/需要保护者",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['与史提尔讨论事件后续', '表达对史提尔善举的感动', '关心姬神秋沙的未来', '反思战斗中的异常现象']}, {'name': '史提尔·马格努斯', 'role': '催化剂/信息揭露者', 'key_actions': ['解释如何欺骗奥雷欧斯', '告知奥雷欧斯的悲惨结局', '提出并执行让奥雷欧斯重生的计划', '展现罕见的温柔一面']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['打断上条与史提尔的互动', '报告姬神秋沙的情况', '与上条进行轻松互动缓解紧张氛围']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['失去所有记忆成为空白状态', '被史提尔整形改变身份获得新生', '成为各方势力追捕的目标']}, {'name': '姬神秋沙', 'role': '受害者/需要保护者', 'key_actions': ['入住同一医院', '获得教会安置的解决方案']}], 'events': [{'description': '史提尔揭露欺骗奥雷欧斯的魔法手段', 'importance': 0.7, 'timeline': '结局初期'}, {'description': '史提尔告知奥雷欧斯成为全球追捕目标', 'importance': 0.9, 'timeline': '结局中期'}, {'description': '史提尔提出并执行让失忆奥雷欧斯重生的计划', 'importance': 0.95, 'timeline': '结局关键转折点'}, {'description': '茵蒂克丝介入并报告姬神秋沙情况', 'importance': 0.6, 'timeline': '结局后期'}, {'description': '决定将姬神秋沙安置在教会解决保护问题', 'importance': 0.8, 'timeline': '结局收尾'}], 'analysis': {'main_theme': '救赎与重生——即使对反派也给予改过自新的机会', 'plot_significance': '完整解决了三泽塾事件的所有悬疑线索，为反派安排了意想不到的救赎结局，同时为主角团队的角色成长提供了深刻体现', 'function_calls': [{'action': 'register_character', 'params': {'name': '姬神秋沙', 'role': '吸血杀手/需要保护者', 'description': '拥有吸血杀手能力的少女，曾是奥雷欧斯的实验对象，事件后需要新的保护方式', 'confidence': 0.9}}]}}, confidence_scores={'overall': 0.92}, satisfaction_level=0.92, identified_issues=['龙王之首的谜团未完全解答', '部分过渡略显突兀'], refinement_requests=['可对龙王现象给予更明确解释', '加强场景转换的连贯性'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.92, tokens_used=2620)"
+      ],
+      "early_terminated": false
+    },
+    {
+      "batch_id": 26,
+      "volume_id": 2,
+      "chunks_processed": 1,
+      "total_iterations": 3,
+      "final_satisfaction": 0.75,
+      "processing_stage": "ending",
+      "meaningful_improvements": 1,
+      "total_tokens": 4086,
+      "total_cost": 0.08172,
+      "characters_detected": [
+        "受伤学生们",
+        "上条当麻",
+        "奥雷欧斯·伊萨德",
+        "史提尔",
+        "茵蒂克丝"
+      ],
+      "ai_characters": [
+        {
+          "name": "上条当麻",
+          "role": "主角/行动执行者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "奥雷欧斯·伊萨德",
+          "role": "主要反派/炼金术师",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "史提尔",
+          "role": "催化剂/信息揭露者",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "茵蒂克丝",
+          "role": "被保护对象/情感支柱",
+          "source": "AI_analysis"
+        },
+        {
+          "name": "受伤学生们",
+          "role": "受害者/炼金材料",
+          "source": "AI_analysis"
+        }
+      ],
+      "iterations": [
+        "IterationResult(iteration_num=1, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['对抗奥雷欧斯', '保护茵蒂克丝']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['施展大衍术', '追求成神']}, {'name': '史提尔', 'role': '催化剂/信息揭露者', 'key_actions': ['提供炼金术信息', '协助对抗']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['提供情感支持', '作为目标']}, {'name': '受伤学生们', 'role': '受害者/炼金材料', 'key_actions': ['作为冲突的受害者', '推动剧情发展']}], 'events': [{'description': '奥雷欧斯施展大衍术追求成神，引发主要冲突', 'importance': 0.9, 'timeline': '高潮阶段'}, {'description': '炼金术历史背景和派系介绍，为反派动机提供理论基础', 'importance': 0.7, 'timeline': '背景说明'}, {'description': '主角团队对抗炼金术师的最终对决', 'importance': 0.95, 'timeline': '结局阶段'}], 'analysis': {'main_theme': '人类追求神性的危险与界限', 'plot_significance': '通过炼金术的历史背景和派系介绍，深化了反派动机的合理性，同时为主角的对抗提供了理论基础，使结局的冲突更具深度和哲学意义', 'function_calls': [{'action': 'register_character', 'params': {'name': '苏黎世派炼金术师', 'role': '理论提供者/背景角色', 'description': '提出在脑海中施展炼金术理念的派系代表', 'confidence': 0.7}}, {'action': 'register_character', 'params': {'name': '维也纳派炼金术师', 'role': '背景提及/禁忌知识代表', 'description': '涉及性魔法仪式的炼金术派系，作为禁忌知识的象征', 'confidence': 0.6}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['炼金术理论解释略显冗长，可能影响叙事节奏', '新引入的派系概念与主线剧情的直接关联性不够明确'], refinement_requests=['将炼金术理论更紧密地结合到角色决策和行动中', '简化历史背景说明，聚焦于对当前冲突的直接影响'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.75, tokens_used=1366)",
+        "IterationResult(iteration_num=2, analysis={'characters': [{'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['施展基于苏黎世派炼金术的法术', '追求人类神化的理念']}, {'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['对抗炼金术师的威胁']}, {'name': '史提尔', 'role': '催化剂/信息揭露者', 'key_actions': ['提供炼金术背景信息']}], 'events': [{'description': '揭示奥雷欧斯使用的炼金术派系背景和理论来源', 'importance': 0.7, 'timeline': '结尾解释性段落'}, {'description': '阐述大衍术作为新兴宗教的本质和基督教色彩的融合', 'importance': 0.8, 'timeline': '结尾世界观构建'}], 'analysis': {'main_theme': '炼金术的历史演变与魔法理论的多元化', 'plot_significance': '为反派的动机和能力提供深层次的历史和理论背景，增强故事的真实感和深度，同时为冲突的解决提供理论基础', 'function_calls': [{'action': 'register_character', 'params': {'name': '苏黎世派炼金术师', 'role': '理论奠基者/背景角色', 'description': '将荣格心理学融入炼金术的理论派系', 'confidence': 0.8}}, {'action': 'register_character', 'params': {'name': '维也纳派炼金术师', 'role': '背景参考/禁忌魔法代表', 'description': '涉及性魔法仪式的炼金术派系，因内容敏感未被详细描述', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['结尾部分过于侧重理论解释，可能冲淡情节紧张感', '新引入的派系信息与主线角色关联度不够直接'], refinement_requests=['将理论解释更紧密地与角色决策或冲突解决相结合', '简化派系介绍，聚焦于对当前事件有直接影响的内容'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.0, tokens_used=1260)",
+        "IterationResult(iteration_num=3, analysis={'characters': [{'name': '上条当麻', 'role': '主角/行动执行者', 'key_actions': ['对抗奥雷欧斯', '保护茵蒂克丝', '解决炼金术危机']}, {'name': '奥雷欧斯·伊萨德', 'role': '主要反派/炼金术师', 'key_actions': ['施展大衍术', '追求成神', '利用学生作为炼金材料']}, {'name': '史提尔', 'role': '催化剂/信息揭露者', 'key_actions': ['提供炼金术信息', '协助对抗奥雷欧斯']}, {'name': '茵蒂克丝', 'role': '被保护对象/情感支柱', 'key_actions': ['提供情感支持', '可能涉及魔法知识']}, {'name': '受伤学生们', 'role': '受害者/炼金材料', 'key_actions': ['作为奥雷欧斯实验的牺牲品', '推动主角行动动机']}], 'events': [{'description': '奥雷欧斯施展基于大衍术的炼金法术，追求人类成神的目标', 'importance': 0.9, 'timeline': '故事高潮阶段'}, {'description': '揭示炼金术的历史背景和不同流派（苏黎世派、维也纳派）的差异', 'importance': 0.7, 'timeline': '解释性段落，为结局提供背景'}, {'description': '主角对抗奥雷欧斯的炼金术阴谋，保护无辜学生', 'importance': 0.95, 'timeline': '结局核心冲突解决'}], 'analysis': {'main_theme': '科学与魔法的冲突、人类追求神性的危险性、保护无辜者的责任', 'plot_significance': '通过炼金术的历史背景解释，为反派的动机和行为提供了深度，同时为主角的对抗行动建立了理论基础。结局通过知识揭露和实际行动的结合来解决核心冲突', 'function_calls': [{'action': 'register_character', 'params': {'name': '苏黎世派炼金术师', 'role': '理论奠基者/背景角色', 'description': '将荣格心理学融入炼金术的理论派系代表', 'confidence': 0.8}}, {'action': 'register_character', 'params': {'name': '维也纳派炼金术师', 'role': '禁忌知识持有者/背景角色', 'description': '涉及性魔法仪式的炼金术派系，因内容敏感未被详细描述', 'confidence': 0.7}}]}}, confidence_scores={'overall': 0.75}, satisfaction_level=0.75, identified_issues=['炼金术理论解释过于学术化，可能影响阅读流畅性', '新引入的派系信息在结局部分显得有些突兀', '维也纳派的提及但未展开可能让读者困惑'], refinement_requests=['将理论解释更自然地融入对话或行动中', '提前铺垫炼金术不同流派的信息', '要么完整介绍维也纳派，要么省略提及以避免分散注意力'], reasoning_trace=['Successfully parsed JSON response with 6 fields'], improvement_score=0.0, tokens_used=1460)"
+      ],
+      "early_terminated": true
+    }
+  ],
+  "config": {
+    "mode": "iterative",
+    "max_iterations": 3,
+    "satisfaction_threshold": 0.8
+  }
+}

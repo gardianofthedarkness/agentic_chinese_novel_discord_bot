@@ -1,0 +1,71 @@
+version: '3.9'
+
+services:
+  # Qdrant Vector Database
+  qdrant:
+    image: qdrant/qdrant:v1.15.0
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - ./qdrant_data:/qdrant/storage
+    restart: unless-stopped
+    networks:
+      - novel-network
+
+  # PostgreSQL Database for processing results
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: novel_processing
+      POSTGRES_USER: novel_user
+      POSTGRES_PASSWORD: novel_pass
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    restart: unless-stopped
+    networks:
+      - novel-network
+
+  # Unified Backend Service
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile.unified-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - QDRANT_URL=http://qdrant:6333
+      - POSTGRES_HOST=postgres
+      - POSTGRES_DB=novel_processing
+      - POSTGRES_USER=novel_user
+      - POSTGRES_PASSWORD=novel_pass
+      - POSTGRES_PORT=5433
+    depends_on:
+      - qdrant
+      - postgres
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    networks:
+      - novel-network
+
+  # Frontend (optional - for web interface)
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - novel-network
+
+volumes:
+  postgres_data:
+
+networks:
+  novel-network:
+    driver: bridge

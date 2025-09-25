@@ -1,0 +1,20 @@
+langchain
+ebooklib
+beautifulsoup4
+pandas
+transformers
+sentence-transformers
+torch
+tiktoken
+pyarrow
+qdrant-client
+pymupdf
+azure-ai-inference
+sentencepiece
+protobuf
+accelerate
+# PostgreSQL support for unified processing
+psycopg2-binary
+# Additional dependencies for unified processor
+asyncio
+aiohttp

@@ -1,0 +1,113 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+debug_logs/
+
+# Database data (but keep schema)
+qdrant_data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+nul
+temp/
+tmp/
+
+# API keys and secrets (keep .env.example but not .env)
+.env
+*.key
+*.secret
+
+# Build outputs
+*.tar.gz
+*.zip
+
+# Docker
+docker-compose.override.yml
+
+# Testing
+.coverage
+.pytest_cache/
+.tox/
+htmlcov/
+
+# Project specific temporary files
+*debug*
+*test_*
+*_test.py
+*_debug.py
+*working*
+*final*
+*fixed*
+*manual*
+*quick*
+*guild*
+*global*
+*force*
+*sync*
+*logging*
+*generate*
+*diagnostic*
+sync_output.log
+diagnostic.log
+server.log
