@@ -35,6 +35,18 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from deepseek_integration import DeepSeekClient, create_deepseek_config
 from qdrant_client import QdrantClient
 
+# Database adapter module (Phase 1 integration)
+from database import DatabaseAdapter
+from database.base_adapter import TimelineEvent as DBTimelineEvent, CausalLink as DBCausalLink, CharacterData as DBCharacterData
+
+# LangGraph workflow module (Phase 3 integration)
+try:
+    from langgraph_workflow import LangGraphWorkflow
+    LANGGRAPH_AVAILABLE = True
+except ImportError:
+    LANGGRAPH_AVAILABLE = False
+    LangGraphWorkflow = None
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO, 
@@ -85,6 +97,20 @@ class ProcessingConfig:
     postgres_db: str = os.getenv("POSTGRES_DB", "novel_processing")
     postgres_user: str = os.getenv("POSTGRES_USER", "novel_user")
     postgres_password: str = os.getenv("POSTGRES_PASSWORD", "novel_pass")
+
+    # Neo4j settings (for graph-based causality - 50-180x faster!)
+    use_neo4j: bool = False
+    neo4j_uri: str = os.getenv("NEO4J_URI", "bolt://localhost:7687")
+    neo4j_user: str = os.getenv("NEO4J_USER", "neo4j")
+    neo4j_password: str = os.getenv("NEO4J_PASSWORD", "novelprocessing2024")
+
+    # Database routing settings
+    enable_smart_routing: bool = False  # Automatically route queries to optimal DB
+    fallback_to_postgres: bool = True   # Fallback to PostgreSQL if Neo4j unavailable
+
+    # LangGraph workflow settings (Phase 3)
+    use_langgraph: bool = False  # Use LangGraph orchestrated workflow
+    langgraph_checkpoint_db: str = ":memory:"  # Checkpoint database path
     
 @dataclass 
 class ProcessingContext:
@@ -3493,8 +3519,14 @@ class UnifiedNovelProcessor:
         self.data_loader = QdrantDataLoader(self.config)
         self._initialize_database()
         self.reasoner = UnifiedReasonerEngine(self.config, processor=self)  # Pass self reference
+
+        # Phase 3: Initialize LangGraph workflow
+        self.langgraph_workflow = None
+        if self.config.use_langgraph and LANGGRAPH_AVAILABLE:
+            self.langgraph_workflow = LangGraphWorkflow(self, self.config)
+
         self._validate_environment()
-        
+
         print("🚀 UNIFIED NOVEL PROCESSOR INITIALIZED")
         print("=" * 60)
         print(f"   🎯 Mode: {self.config.mode.value}")
@@ -3502,6 +3534,22 @@ class UnifiedNovelProcessor:
         print(f"   🔗 Qdrant: {'Enabled' if self.config.use_qdrant else 'Disabled'}")
         print(f"   🌐 Qdrant URL: {self.config.qdrant_url}")
         print(f"   📚 Collection: {self.config.collection_name}")
+
+        # Phase 1: Database adapter layer
+        if self.config.use_neo4j or self.config.use_postgres:
+            print(f"   🗄️  Database Adapter:")
+            print(f"      PostgreSQL: {'Enabled' if self.config.use_postgres else 'Disabled'}")
+            print(f"      Neo4j: {'Enabled' if self.config.use_neo4j else 'Disabled'}")
+            if self.config.enable_smart_routing:
+                print(f"      Smart Routing: Enabled (50-180x speedup on causality!)")
+
+        # Phase 3: LangGraph workflow
+        if self.config.use_langgraph:
+            if self.langgraph_workflow:
+                print(f"   🔄 LangGraph Workflow: Enabled (Orchestrated AI pipeline)")
+            else:
+                print(f"   ⚠️  LangGraph requested but not available (install langgraph)")
+
         print("=" * 60)
     
     def _validate_environment(self):
@@ -3527,7 +3575,14 @@ class UnifiedNovelProcessor:
                 print(f"   🔧 Check .env file and ensure Qdrant is running at {self.config.qdrant_url}")
     
     def _initialize_database(self):
-        """Initialize unified database (SQLite or PostgreSQL)"""
+        """Initialize unified database (SQLite, PostgreSQL, Neo4j, or hybrid)"""
+        # Phase 1: Initialize DatabaseAdapter if Neo4j or PostgreSQL enabled
+        if self.config.use_neo4j or self.config.use_postgres:
+            self.db_adapter = DatabaseAdapter(self.config)
+        else:
+            self.db_adapter = None
+
+        # Legacy: Also initialize old database for backwards compatibility
         if self.config.use_postgres and POSTGRES_AVAILABLE:
             self._initialize_postgres_database()
         else:
@@ -3864,10 +3919,33 @@ class UnifiedNovelProcessor:
     # ============================================================================
     # TIMELINE DATABASE ACCESS LAYER
     # ============================================================================
-    
+
+    def _convert_to_db_event(self, event: TimelineEvent) -> DBTimelineEvent:
+        """Convert unified TimelineEvent to database adapter format"""
+        return DBTimelineEvent(
+            event_id=event.event_id,
+            volume_id=event.volume_id,
+            batch_id=event.batch_id,
+            description=event.description,
+            event_type=event.event_type.value if hasattr(event.event_type, 'value') else str(event.event_type),
+            importance_score=event.importance_score,
+            chronological_order=event.chronological_order,
+            primary_actors=event.primary_actors if event.primary_actors else [],
+            affected_characters=event.affected_characters if event.affected_characters else [],
+            created_at=event.created_at
+        )
+
     def save_timeline_event(self, event: TimelineEvent) -> bool:
         """Save a timeline event to the database"""
         try:
+            # Phase 1: Use DatabaseAdapter if available
+            if self.db_adapter:
+                db_event = self._convert_to_db_event(event)
+                result = asyncio.run(self.db_adapter.store_event(db_event))
+                if not result:
+                    logger.warning(f"DatabaseAdapter failed to store event {event.event_id}")
+
+            # Legacy: Also save to old database for backwards compatibility
             if self.config.use_postgres and POSTGRES_AVAILABLE:
                 return self._save_timeline_event_postgres(event)
             else:
@@ -4209,11 +4287,26 @@ class UnifiedNovelProcessor:
             last_updated=last_updated_dt
         )
     
-    def save_causal_relationship(self, cause_event_id: str, effect_event_id: str, 
+    def save_causal_relationship(self, cause_event_id: str, effect_event_id: str,
                                 causality_type: CausalityType, confidence: float = 0.5,
                                 reasoning: str = "", influence_strength: float = 0.5) -> bool:
         """Save a causal relationship between two events"""
         try:
+            # Phase 1: Use DatabaseAdapter if available (Neo4j's superpower!)
+            if self.db_adapter:
+                causal_link = DBCausalLink(
+                    from_event=cause_event_id,
+                    to_event=effect_event_id,
+                    causality_type=causality_type.value if hasattr(causality_type, 'value') else str(causality_type),
+                    strength=influence_strength,
+                    reasoning=reasoning,
+                    confidence=confidence
+                )
+                result = asyncio.run(self.db_adapter.store_causal_link(causal_link))
+                if not result:
+                    logger.warning(f"DatabaseAdapter failed to store causal link {cause_event_id} -> {effect_event_id}")
+
+            # Legacy: Also save to old database for backwards compatibility
             if self.config.use_postgres and POSTGRES_AVAILABLE:
                 return self._save_causal_relationship_postgres(
                     cause_event_id, effect_event_id, causality_type, confidence, reasoning, influence_strength

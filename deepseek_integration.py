@@ -92,7 +92,48 @@ class DeepSeekClient:
                 "success": False,
                 "error": f"Request failed: {str(e)}"
             }
-    
+
+    async def generate_response(self, prompt: str, temperature: float = 0.7,
+                               max_tokens: int = 2048) -> str:
+        """
+        Generic method to generate a response from a text prompt
+        Used by LangGraph workflow for character/event/causality extraction
+
+        Args:
+            prompt: Text prompt for the AI
+            temperature: Sampling temperature (0.0-1.0)
+            max_tokens: Maximum tokens in response
+
+        Returns:
+            Generated text response
+        """
+        if not self.session:
+            await self.initialize()
+
+        messages = [{"role": "user", "content": prompt}]
+
+        request_data = {
+            "model": self.config.model,
+            "messages": messages,
+            "max_tokens": max_tokens,
+            "temperature": temperature,
+            "stream": False
+        }
+
+        try:
+            async with self.session.post(
+                f"{self.config.base_url}/chat/completions",
+                json=request_data
+            ) as response:
+                if response.status == 200:
+                    result = await response.json()
+                    return result["choices"][0]["message"]["content"]
+                else:
+                    error_text = await response.text()
+                    raise Exception(f"DeepSeek API error {response.status}: {error_text}")
+        except Exception as e:
+            raise Exception(f"DeepSeek request failed: {str(e)}")
+
     async def generate_character_analysis(self, character_name: str, 
                                         personality: str, recent_events: List[str],
                                         query: str) -> Dict[str, Any]:
