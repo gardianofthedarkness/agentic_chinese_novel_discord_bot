@@ -10,7 +10,18 @@
       "Bash(curl:*)",
       "Bash(psql:*)",
       "Bash(git checkout:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(ls -la *.js *.ts)",
+      "Bash(ls -la /Users/zhuqiang/Code/agentic_chinese_novel_discord_bot_recovered/*.js)",
+      "Bash(.venv/bin/pip install:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:discord.com)",
+      "WebFetch(domain:docs.discord.com)",
+      "WebFetch(domain:www.answeroverflow.com)",
+      "WebFetch(domain:stateful.com)",
+      "WebFetch(domain:birdie0.github.io)",
+      "WebFetch(domain:support-dev.discord.com)"
     ],
     "deny": []
   }

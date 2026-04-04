@@ -63,9 +63,16 @@ class EndNode(BaseNode):
         if self._harness and state.get("run_config"):
             channel = state["run_config"].stream_channel
             try:
-                # stream_string_to_channel streams word-by-word then sends __END__
-                await self._harness.stream_string_to_channel(channel, final_text)
-                logger.debug(f"EndNode: streamed reply to channel={channel!r}")
+                # ChatNode already streamed the answer token-by-token AND sent __END__
+                # when it detected FINAL ANSWER: live. Only stream here as a fallback
+                # (e.g. if the model didn't follow the format and ChatNode fell through).
+                # We detect this by checking output_tokens — if empty, ChatNode didn't stream.
+                already_streamed = state.get("metadata", {}).get("answer_streamed", False)
+                if not already_streamed and final_text:
+                    await self._harness.stream_string_to_channel(channel, final_text, delay=0.025)
+                    logger.debug(f"EndNode: fallback-streamed reply to channel={channel!r}")
+                else:
+                    logger.debug("EndNode: answer already streamed by ChatNode, skipping")
             except Exception as exc:
                 logger.warning(f"EndNode: failed to publish to stream: {exc}")
 

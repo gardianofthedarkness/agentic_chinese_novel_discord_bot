@@ -26,6 +26,18 @@ from app.core.tool_factory import ToolFactory
 
 logger = logging.getLogger(__name__)
 
+# Human-readable status captions shown in the Discord embed footer
+_TOOL_STATUS: Dict[str, str] = {
+    "run_cypher":       "🔍 Querying knowledge graph…",
+    "upload_neo4j":     "📝 Saving to knowledge graph…",
+    "semantic_search":  "🔎 Searching novel passages…",
+    "send_message":     "💬 Composing reply…",
+    "end_tool":         "✅ Finishing up…",
+    "read_file":        "📖 Reading file…",
+    "list_files":       "📂 Listing files…",
+    "run_skill":        "⚙️ Running skill…",
+}
+
 
 @NodeFactory.register
 class ToolNode(BaseNode):
@@ -64,11 +76,19 @@ class ToolNode(BaseNode):
 
         logger.debug(f"ToolNode: executing tool={name!r} inputs={inputs}")
 
+        # Publish a status update so the Discord bot can show a live caption.
+        # Prefer the LLM-provided reason; fall back to hardcoded label.
+        run_config = state.get("run_config")
+        if self._harness and run_config:
+            reason = call.get("reason", "").strip()
+            fallback = _TOOL_STATUS.get(name, f"Using {name}…")
+            status_label = f"🔧 {reason}" if reason else fallback
+            await self._harness.publish_status(run_config.stream_channel, status_label)
+
         if not ToolFactory.is_registered(name):
             result = json.dumps({"error": f"Unknown tool: {name!r}"})
         else:
             tool = self._get_tool(name)
-            run_config = state.get("run_config")
             task_id = run_config.task_id if run_config else ""
 
             if self._harness:

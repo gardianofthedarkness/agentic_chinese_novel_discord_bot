@@ -662,3 +662,13 @@ class Neo4jAdapter(BaseDatabaseAdapter):
         except Exception as e:
             logger.error(f"Plot bottleneck query failed: {e}")
             return []
+
+    async def run_cypher(self, query: str, params: Dict[str, Any] = None) -> List[Dict[str, Any]]:
+        """Execute an arbitrary Cypher query and return results as a list of dicts."""
+        try:
+            with self.driver.session() as session:
+                result = session.run(query, **(params or {}))
+                return [dict(record) for record in result]
+        except Exception as e:
+            logger.error(f"run_cypher failed: {e}")
+            raise

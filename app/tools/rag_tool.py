@@ -66,10 +66,10 @@ class SemanticSearchTool(BaseTool):
                 )
             else:
                 # Fallback: scroll all and do substring filter (dev/demo mode)
-                all_points = await self._qdrant.scroll_all(collection)
+                all_points = self._qdrant.scroll_all(limit=100)
                 results = [
                     p for p in all_points
-                    if query.lower() in str(p.get("payload", "")).lower()
+                    if query.lower() in str(p).lower()
                 ][:limit]
 
             return json.dumps({"results": results})

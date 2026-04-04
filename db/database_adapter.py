@@ -346,6 +346,16 @@ class DatabaseAdapter:
         return await self.neo4j.find_plot_bottlenecks(volume_id, limit)
 
     # ========================================================================
+    # RAW CYPHER (used by agent tools)
+    # ========================================================================
+
+    async def run_cypher(self, query: str, params: Dict[str, Any] = None) -> List[Dict[str, Any]]:
+        """Execute a raw Cypher query against Neo4j. Falls back to empty list if unavailable."""
+        if not self.neo4j:
+            raise RuntimeError("Neo4j not available — cannot run Cypher query")
+        return await self.neo4j.run_cypher(query, params or {})
+
+    # ========================================================================
     # UTILITY & MONITORING
     # ========================================================================
 

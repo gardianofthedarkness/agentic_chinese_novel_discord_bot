@@ -119,6 +119,24 @@ def _require_app() -> Any:
 # Endpoints
 # ---------------------------------------------------------------------------
 
+@app.get("/health")
+async def health_check():
+    """Legacy health endpoint for Discord bot compatibility."""
+    ready = _app_instance is not None
+    db_connected = ready and getattr(_app_instance, "_db", None) is not None
+    return {
+        "status": "healthy" if ready else "starting",
+        "mode": "langgraph_react_agent_v3",
+        "services": {
+            "intelligent_agent": ready,
+            "rag": db_connected,
+            "deepseek": ready,
+            "character_discovery": db_connected,
+            "storyline_analysis": db_connected,
+        },
+    }
+
+
 @app.get("/api/agent/status")
 async def agent_status():
     ready = _app_instance is not None
@@ -127,6 +145,42 @@ async def agent_status():
         "agent_type": "langgraph_react_agent_v3",
         "capabilities": ["chat", "roleplay", "novel_processing", "causality_analysis", "rag"],
         "ready": ready,
+    }
+
+
+@app.get("/api/agent/memory")
+async def agent_memory():
+    """Return KB statistics for the Discord bot /memory command."""
+    instance = _require_app()
+    db = getattr(instance, "_db", None)
+    stats: Dict[str, Any] = {
+        "character_count": 0,
+        "storyline_count": 0,
+        "timeline_events": 0,
+    }
+    characters: Dict[str, Any] = {}
+    if db is not None:
+        try:
+            if hasattr(db, "neo4j") and db.neo4j:
+                with db.neo4j.driver.session() as session:
+                    r = session.run("MATCH (c:Character) RETURN count(c) AS cnt")
+                    stats["character_count"] = r.single()["cnt"]
+                    chars = session.run(
+                        "MATCH (c:Character) RETURN c.name AS name, c.character_type AS type LIMIT 20"
+                    )
+                    characters = {row["name"]: {"type": row["type"]} for row in chars}
+                    ev = session.run("MATCH (e:Event) RETURN count(e) AS cnt")
+                    stats["timeline_events"] = ev.single()["cnt"]
+        except Exception as exc:
+            logger.warning(f"memory stats query failed: {exc}")
+    return {
+        "memory": {
+            "stats": stats,
+            "characters": characters,
+            "storylines": [],
+            "chapters_processed": stats.get("timeline_events", 0),
+            "last_updated": "Recently",
+        }
     }
 
 

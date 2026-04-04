@@ -2,10 +2,10 @@
   "name": "mojin-discord-js-bot",
   "version": "1.0.0",
   "description": "Discord.js bot with Python API integration for RAG and character simulation",
-  "main": "discord-bot.js",
+  "main": "agentic-discord-bot.js",
   "scripts": {
-    "start": "node discord-bot.js",
-    "dev": "nodemon discord-bot.js",
+    "start": "node agentic-discord-bot.js",
+    "dev": "nodemon agentic-discord-bot.js",
     "api": "python api_server.py",
     "test": "node test/test-connection.js"
   },

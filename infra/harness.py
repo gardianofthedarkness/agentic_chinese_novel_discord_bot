@@ -142,9 +142,17 @@ class InfraHarness:
         text: str,
         *,
         chunk_size: int = 8,
+        delay: float = 0.02,
     ) -> None:
         """Stream a pre-formed string to `channel` word-by-word."""
-        await self.streamer.stream_string(channel, text, chunk_size=chunk_size)
+        await self.streamer.stream_string(channel, text, chunk_size=chunk_size, delay=delay)
+
+    async def publish_status(self, channel: str, message: str) -> None:
+        """Publish a status caption to the stream channel (prefixed [STATUS])."""
+        try:
+            await self.pool.publish(channel, f"[STATUS] {message}")
+        except Exception as exc:
+            logger.debug(f"publish_status failed (non-fatal): {exc}")
 
     async def subscribe(
         self,

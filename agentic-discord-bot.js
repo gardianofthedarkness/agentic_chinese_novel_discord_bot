@@ -91,17 +91,73 @@ class AgenticAPIClient {
                 message: message,
                 history: conversationHistory
             };
-            
+
             if (characterName) {
                 requestData.character_name = characterName;
             }
-            
+
             const response = await this.client.post('/api/agent/chat', requestData);
             return response.data;
         } catch (error) {
             logger.error('Intelligent chat failed:', error.message);
             throw error;
         }
+    }
+
+    /**
+     * Stream a chat response.
+     * @param {string} message
+     * @param {Array}  history
+     * @param {string|null} characterName
+     * @param {function(string, string): void} onUpdate — called with (accumulatedText, statusCaption)
+     * @returns {Promise<string>} final accumulated response
+     */
+    async chatStream(message, history = [], characterName = null, onUpdate) {
+        const requestData = {
+            message,
+            history,
+            stream: true,
+            discord_channel: 'direct',
+        };
+        if (characterName) requestData.character_name = characterName;
+
+        const enqueueResp = await this.client.post('/api/agent/chat', requestData);
+        const { stream_url } = enqueueResp.data;
+
+        const streamResp = await axios.get(`${this.baseURL}${stream_url}`, {
+            responseType: 'stream',
+            timeout: 0,
+            headers: { Accept: 'text/event-stream' },
+        });
+
+        return new Promise((resolve, reject) => {
+            let accumulated = '';
+            let currentStatus = '🧠 Thinking…';
+            let lineBuf = '';
+
+            streamResp.data.on('data', (chunk) => {
+                lineBuf += chunk.toString();
+                const lines = lineBuf.split('\n');
+                lineBuf = lines.pop() ?? '';
+
+                for (const line of lines) {
+                    if (!line.startsWith('data: ')) continue;
+                    const token = line.slice(6);
+                    if (token === '[DONE]') { resolve(accumulated); return; }
+                    if (token.startsWith('[ERROR]')) { reject(new Error(token)); return; }
+                    if (token.startsWith('[STATUS] ')) {
+                        currentStatus = token.slice(9);
+                        if (onUpdate) onUpdate(accumulated, currentStatus);
+                    } else if (token) {
+                        accumulated += token;
+                        if (onUpdate) onUpdate(accumulated, currentStatus);
+                    }
+                }
+            });
+
+            streamResp.data.on('end', () => resolve(accumulated));
+            streamResp.data.on('error', (err) => reject(err));
+        });
     }
 
     async exploreTopic(topic, depth = 'medium') {
@@ -447,149 +503,95 @@ async function handleAnalyzeCommand(interaction) {
     }
 }
 
+// Keep the "Bot is typing..." indicator alive every 9s for the duration of generation
+function startTypingLoop(interaction) {
+    let stopped = false;
+    const tick = () => {
+        if (stopped) return;
+        interaction.channel.sendTyping().catch(() => {});
+        setTimeout(tick, 9000);
+    };
+    tick();
+    return () => { stopped = true; };
+}
+
 async function handleChatCommand(interaction) {
     await interaction.deferReply();
-    
+
     const message = interaction.options.getString('message');
-    
-    // Send a progress indicator for complex requests
-    if (message.length > 50) {
-        await interaction.editReply('🧠 AI is processing your complex request... This may take up to 2 minutes.');
-    }
     const characterName = interaction.options.getString('character');
     const channelId = interaction.channel.id;
-    
-    // Get conversation history
     const history = conversationHistories.get(channelId) || [];
-    
-    try {
-        // Add character_name to request if specified
-        const chatData = {
-            message: message,
-            history: history
-        };
-        
+
+    const makeEmbed = (text, status, streaming) => {
+        const display = (text || '\u200b') + (streaming && text ? ' ▌' : '');
+        const embed = new EmbedBuilder().setTimestamp();
         if (characterName) {
-            chatData.character_name = characterName;
-        }
-        
-        const result = await apiClient.intelligentChat(message, history, characterName);
-        
-        const embed = new EmbedBuilder()
-            .setTimestamp();
-        
-        // Process the response for Discord limits
-        const { mainContent, additionalChunks } = processLongResponse(result.response);
-        
-        // Different styling based on whether it's character chat or general chat
-        if (result.character) {
-            // Character roleplay response
-            embed.setTitle(`🎭 ${result.character.name}`)
-                .setDescription(mainContent)
-                .setColor(0xff6b6b);
-            
-            if (result.character.traits) {
-                embed.addFields({
-                    name: '✨ Character Traits',
-                    value: result.character.traits.join(', '),
-                    inline: true
-                });
-            }
-            
-            embed.addFields({
-                name: '🎪 Roleplay Mode',
-                value: `Type: ${result.character.type || 'Unknown'}`,
-                inline: true
-            });
+            embed.setTitle(`🎭 ${characterName}`).setDescription(display).setColor(0xff6b6b);
         } else {
-            // General AI assistant response
-            embed.setTitle('🤖 AI Literary Assistant')
-                .setDescription(mainContent)
-                .setColor(0x0099ff);
+            embed.setTitle('🤖 AI Literary Assistant').setDescription(display).setColor(0x0099ff);
         }
-        
-        // Add context information
-        if (result.context) {
-            const contextParts = [];
-            if (result.context.characters_available && result.context.characters_available.length > 0) {
-                contextParts.push(`Characters: ${result.context.characters_available.slice(0, 5).join(', ')}`);
-            }
-            if (result.context.storylines_tracked) {
-                contextParts.push(`Storylines: ${result.context.storylines_tracked}`);
-            }
-            if (result.context.rag_sources) {
-                contextParts.push(`Sources: ${result.context.rag_sources}`);
-            }
-            
-            if (contextParts.length > 0) {
-                embed.addFields({
-                    name: '📊 Context',
-                    value: contextParts.join(' | '),
-                    inline: false
-                });
-            }
-        }
-        
-        // Send the main embed
-        await interaction.editReply({ embeds: [embed] });
-        
-        // Send additional chunks if any
-        if (additionalChunks.length > 0) {
-            // Add a small delay to ensure proper message ordering
-            await new Promise(resolve => setTimeout(resolve, 500));
-            
-            for (let i = 0; i < additionalChunks.length; i++) {
-                const chunk = additionalChunks[i];
-                if (chunk.trim()) {
-                    // Add chunk numbers for very long responses
-                    const chunkHeader = additionalChunks.length > 1 ? `**[Part ${i + 1}/${additionalChunks.length}]**\n\n` : '';
-                    await interaction.followUp({ 
-                        content: chunkHeader + chunk.trim(), 
-                        ephemeral: false 
-                    });
-                    
-                    // Progressive delay between chunks to avoid rate limits
-                    if (i < additionalChunks.length - 1) {
-                        const delay = Math.min(1000 + (i * 200), 3000); // Progressive delay up to 3s
-                        await new Promise(resolve => setTimeout(resolve, delay));
-                    }
+        if (status) embed.setFooter({ text: status });
+        return embed;
+    };
+
+    await interaction.editReply({ embeds: [makeEmbed('', '🧠 Thinking…', true)] });
+
+    const stopTyping = startTypingLoop(interaction);
+
+    let lastEditAt = 0;
+    let editInFlight = false;
+    const EDIT_INTERVAL_MS = 1200;
+
+    const onUpdate = (accumulated, status) => {
+        const now = Date.now();
+        if (editInFlight || now - lastEditAt < EDIT_INTERVAL_MS) return;
+        editInFlight = true;
+        lastEditAt = now;
+        interaction.editReply({ embeds: [makeEmbed(accumulated, status, true)] })
+            .catch(() => {})
+            .finally(() => { editInFlight = false; });
+    };
+
+    try {
+        const finalResponse = await apiClient.chatStream(message, history, characterName, onUpdate);
+        stopTyping();
+
+        // Final clean edit — remove cursor and status footer
+        const { mainContent, additionalChunks } = processLongResponse(finalResponse);
+        await interaction.editReply({ embeds: [makeEmbed(mainContent, null, false)] });
+
+        for (let i = 0; i < additionalChunks.length; i++) {
+            const chunk = additionalChunks[i];
+            if (chunk.trim()) {
+                const header = additionalChunks.length > 1 ? `**[Part ${i + 1}/${additionalChunks.length}]**\n\n` : '';
+                await interaction.followUp({ content: header + chunk.trim() });
+                if (i < additionalChunks.length - 1) {
+                    await new Promise(r => setTimeout(r, Math.min(1000 + i * 200, 3000)));
                 }
             }
         }
-        
-        // Update conversation history
+
         history.push(
             { role: 'user', content: message },
-            { role: 'assistant', content: result.response }
+            { role: 'assistant', content: finalResponse }
         );
-        
-        // Keep only last 10 messages
-        if (history.length > 10) {
-            history.splice(0, history.length - 10);
-        }
-        
+        if (history.length > 10) history.splice(0, history.length - 10);
         conversationHistories.set(channelId, history);
-        
+
     } catch (error) {
+        stopTyping();
         logger.error('Chat command error:', error);
-        
-        // More specific error handling for different failure types
         let errorMessage = 'Failed to process your message. ';
-        
         if (error.message.includes('timeout') || error.message.includes('ECONNRESET')) {
-            errorMessage += 'The AI system is taking longer than expected. Please try again with a shorter message.';
-        } else if (error.message.includes('413') || error.message.includes('too large')) {
-            errorMessage += 'Your message may be too long. Please try a shorter question.';
-        } else if (error.message.includes('408') || error.message.includes('Request Timeout')) {
-            errorMessage += 'The AI system may be busy processing. Please wait a moment and try again.';
+            errorMessage += 'The AI system is taking longer than expected. Please try again.';
         } else if (error.message.includes('429') || error.message.includes('rate limit')) {
             errorMessage += 'Rate limit reached. Please wait a moment before trying again.';
         } else if (error.message.includes('50013') || error.message.includes('Missing Permissions')) {
             errorMessage += 'Bot missing permissions to send messages or embeds.';
         } else {
-            errorMessage += 'The AI system may be busy or characters may not be available yet. Please try again.';
+            errorMessage += 'The AI system may be busy. Please try again in a moment.';
         }
-        
         await interaction.editReply(errorMessage);
     }
 }
@@ -604,7 +606,7 @@ async function handleExploreCommand(interaction) {
         const result = await apiClient.exploreTopic(topic, depth);
         
         // Process exploration response for Discord limits
-        const { mainContent, additionalChunks } = processLongResponse(result.analysis);
+        const { mainContent, additionalChunks } = processLongResponse(result.exploration || result.analysis || '');
 
         const embed = new EmbedBuilder()
             .setTitle(`🔍 Deep Exploration: ${topic}`)
@@ -790,7 +792,10 @@ async function registerCommands() {
 
 // Error handling
 process.on('unhandledRejection', (reason, promise) => {
-    logger.error('Unhandled Rejection at:', promise, 'reason:', reason);
+    logger.error('Unhandled Rejection', {
+        reason: reason instanceof Error ? reason.message : String(reason),
+        stack: reason instanceof Error ? reason.stack : undefined,
+    });
 });
 
 process.on('uncaughtException', (error) => {
