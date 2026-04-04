@@ -41,6 +41,7 @@ class AppConfig:
     llm_temperature: float = 0.7
 
     # ---- Neo4j -------------------------------------------------------------
+    use_neo4j: bool = field(default_factory=lambda: os.getenv("USE_NEO4J", "true").lower() == "true")
     neo4j_uri: str = field(default_factory=lambda: os.getenv("NEO4J_URI", "bolt://localhost:7687"))
     neo4j_user: str = field(default_factory=lambda: os.getenv("NEO4J_USER", "neo4j"))
     neo4j_password: str = field(default_factory=lambda: os.getenv("NEO4J_PASSWORD", ""))
@@ -82,8 +83,6 @@ class AppConfig:
         )
 
     def validate(self) -> None:
-        if not self.neo4j_password:
-            raise ValueError("NEO4J_PASSWORD is required")
         if self.use_postgres and not self.postgres_password:
             raise ValueError("POSTGRES_PASSWORD is required when USE_POSTGRES=true")
         if not self.deepseek_api_key:

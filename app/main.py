@@ -44,6 +44,7 @@ class App:
         self.graph: Any = None
         self.harness: Optional[InfraHarness] = None
         self._db: Any = None
+        self._qdrant: Any = None
         self._worker: Optional[AsyncAgentWorker] = None
         self._worker_task: Optional[asyncio.Task] = None
 
@@ -64,18 +65,21 @@ class App:
         try:
             from db.database_adapter import DatabaseAdapter
             self._db = DatabaseAdapter(cfg)
-            await self._db.connect()
-            logger.info("DatabaseAdapter connected")
+            logger.info("DatabaseAdapter ready")
         except Exception as exc:
             logger.warning(f"DB unavailable (continuing without): {exc}")
 
-        try:
-            from db.qdrant_adapter import QdrantAdapter
-            qdrant = QdrantAdapter(cfg)
-            await qdrant.connect()
-            logger.info("QdrantAdapter connected")
-        except Exception as exc:
-            logger.warning(f"Qdrant unavailable (continuing without): {exc}")
+        if getattr(cfg, "use_qdrant", False):
+            try:
+                from db.qdrant_adapter import QdrantAdapter
+                qdrant = QdrantAdapter(cfg)
+                if qdrant.connect():
+                    self._qdrant = qdrant
+                    logger.info("QdrantAdapter connected")
+                else:
+                    qdrant = None
+            except Exception as exc:
+                logger.warning(f"Qdrant unavailable (continuing without): {exc}")
 
         # --- Infra harness (Redis) ----------------------------------------
         redis_url = getattr(cfg, "redis_url", "redis://localhost:6379/0")
@@ -104,6 +108,10 @@ class App:
             await self._worker.stop()
         if self._worker_task:
             self._worker_task.cancel()
+        if self._qdrant:
+            self._qdrant.disconnect()
+        if self._db:
+            self._db.disconnect()
         if self.harness:
             await self.harness.close()
         logger.info("App stopped")

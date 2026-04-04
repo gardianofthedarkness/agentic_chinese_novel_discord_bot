@@ -13,6 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Source
 COPY app/      ./app/
+COPY infra/    ./infra/
 COPY helpers/  ./helpers/
 COPY utils/    ./utils/
 COPY db/       ./db/
