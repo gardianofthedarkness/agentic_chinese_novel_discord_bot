@@ -31,6 +31,7 @@ from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, Tool
 from app.core.node_base import BaseNode
 from app.core.node_factory import NodeFactory
 from app.core.tool_factory import ToolFactory
+from app.tools.skill_tools import _discover_skills, compute_active_tools
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +43,8 @@ _WINDOW         = max(len(_TOOL_PREFIX), len(_ANSWER_PREFIX)) + 8
 
 _SYSTEM_TEMPLATE = """\
 You are a helpful assistant for a Chinese novel analysis system.
-You have access to the following tools:
+
+{skill_section}
 
 {tool_docs}
 
@@ -55,10 +57,25 @@ When you have a final answer for the user, respond with EXACTLY:
 FINAL ANSWER: <your response here>
 
 Never mix the two formats in a single turn.
-Always prefer using a tool when you are unsure; only emit FINAL ANSWER
-when you have enough information to respond completely.
 The "reason" field is shown to the user while the tool runs — keep it brief and specific, \
-e.g. "Finding events where Li Mu appears" or "Checking relationships between characters".
+e.g. "Finding events where 萧炎 appears" or "Checking relationships between characters".
+"""
+
+_SKILL_MENU_TEMPLATE = """\
+## Focus Mode
+You are in general mode. Available skills you can activate:
+{skill_list}
+
+To activate a skill and unlock its specialized tools, call:
+TOOL_CALL: {{"name": "focus_skill", "reason": "Loading <skill> skill", "inputs": {{"skill_name": "<name>"}}}}
+
+Activate a skill BEFORE attempting to query novels, roleplay, or process files.
+"""
+
+_FOCUSED_TEMPLATE = """\
+## Active Skills: {skill_names}
+
+{skill_prompts}
 """
 
 
@@ -135,9 +152,42 @@ class ChatNode(BaseNode):
 
     # ------------------------------------------------------------------
 
+    @staticmethod
+    def _build_skill_section(loaded_skills: list) -> str:
+        all_skills = _discover_skills()
+
+        if not loaded_skills:
+            # Show skill menu
+            skill_list = "\n".join(
+                f"  - **{s.name}**: {s.description}"
+                for s in all_skills.values()
+            )
+            return _SKILL_MENU_TEMPLATE.format(skill_list=skill_list)
+
+        # Show loaded skill prompts
+        skill_names = ", ".join(loaded_skills)
+        prompts = []
+        for skill_name in loaded_skills:
+            skill_cls = all_skills.get(skill_name)
+            if skill_cls:
+                prompts.append(f"### Skill: {skill_name}\n{skill_cls.get_prompt()}")
+        return _FOCUSED_TEMPLATE.format(
+            skill_names=skill_names,
+            skill_prompts="\n\n".join(prompts),
+        )
+
+    # ------------------------------------------------------------------
+
     async def run(self, state: Dict[str, Any]) -> Dict[str, Any]:
-        tool_docs = ToolFactory.build_tool_docs()
-        system_prompt = _SYSTEM_TEMPLATE.format(tool_docs=tool_docs)
+        loaded_skills = state.get("loaded_skills") or []
+        active_tools = compute_active_tools(loaded_skills)  # None = all tools
+
+        skill_section = self._build_skill_section(loaded_skills)
+        tool_docs = ToolFactory.build_tool_docs(active_tools=active_tools)
+        system_prompt = _SYSTEM_TEMPLATE.format(
+            skill_section=skill_section,
+            tool_docs=tool_docs,
+        )
 
         api_messages = _to_api_messages(
             [SystemMessage(content=system_prompt)] + list(state["messages"])
@@ -147,18 +197,8 @@ class ChatNode(BaseNode):
         run_config = state.get("run_config")
         channel = run_config.stream_channel if run_config else None
 
-        # Announce thinking immediately before the first LLM token arrives
         if self._harness and channel:
             await self._harness.publish_status(channel, "🧠 Thinking…")
-
-        # ------------------------------------------------------------------
-        # Streaming state machine
-        # ------------------------------------------------------------------
-        # States:
-        #   "scanning"         — rolling-window scan for prefix
-        #   "in_json"          — brace-depth counting; fire tool on close
-        #   "streaming_answer" — publish tokens straight to Redis
-        # ------------------------------------------------------------------
 
         machine   = "scanning"
         full_text = ""      # full LLM output (for message history)
@@ -175,7 +215,7 @@ class ChatNode(BaseNode):
 
             # ── SCANNING ───────────────────────────────────────────────
             if machine == "scanning":
-                window = (window + token)[-(_WINDOW * 4):]
+                window = (window + token)[-_WINDOW:]
 
                 # Check for TOOL_CALL:
                 if _TOOL_PREFIX in window:
@@ -219,7 +259,6 @@ class ChatNode(BaseNode):
                 if self._harness and channel:
                     await self._harness.pool.publish(channel, token)
 
-        # Close the answer stream so SSE subscribers see [DONE]
         if is_answer and self._harness and channel:
             await self._harness.pool.publish_end(channel)
 

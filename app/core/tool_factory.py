@@ -135,22 +135,18 @@ class ToolFactory:
     # ------------------------------------------------------------------
 
     @classmethod
-    def build_tool_docs(cls) -> str:
+    def build_tool_docs(cls, active_tools: Optional[List[str]] = None) -> str:
         """
         Build a human-readable tool catalogue for the LLM system prompt.
 
-        Format::
-
-            ## Available Tools
-
-            ### search_events
-            Search for events in the knowledge base.
-            Parameters: query (str, required), limit (int, default 5)
-
-            ...
+        Args:
+            active_tools: If provided, only include tools in this list.
+                          If None, include all registered tools.
         """
         lines = ["## Available Tools\n"]
         for spec in cls.get_all_specs():
+            if active_tools is not None and spec["name"] not in active_tools:
+                continue
             lines.append(f"### {spec['name']}")
             lines.append(spec["description"])
             props = spec.get("parameters", {}).get("properties", {})

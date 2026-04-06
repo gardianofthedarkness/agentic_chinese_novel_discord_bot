@@ -22,6 +22,32 @@ from .base_adapter import (
 logger = logging.getLogger(__name__)
 
 
+def _serialize_value(v: Any, _depth: int = 0) -> Any:
+    """Recursively convert Neo4j types to JSON-serializable Python types."""
+    if _depth > 20:
+        return str(v)
+    try:
+        from neo4j.graph import Node, Relationship, Path
+        if isinstance(v, Node):
+            return {"_id": v.element_id, "_labels": list(v.labels), **dict(v)}
+        if isinstance(v, Relationship):
+            return {"_type": v.type, "_start": v.start_node.element_id,
+                    "_end": v.end_node.element_id, **dict(v)}
+        if isinstance(v, Path):
+            return [_serialize_value(n, _depth + 1) for n in v.nodes]
+    except ImportError:
+        pass
+    if isinstance(v, dict):
+        return {k: _serialize_value(val, _depth + 1) for k, val in v.items()}
+    if isinstance(v, (list, tuple)):
+        return [_serialize_value(i, _depth + 1) for i in v]
+    return v
+
+
+def _serialize_record(record: Any) -> Dict[str, Any]:
+    return {k: _serialize_value(record[k]) for k in record.keys()}
+
+
 class Neo4jAdapter(BaseDatabaseAdapter):
     """
     Neo4j implementation of database adapter
@@ -668,7 +694,7 @@ class Neo4jAdapter(BaseDatabaseAdapter):
         try:
             with self.driver.session() as session:
                 result = session.run(query, **(params or {}))
-                return [dict(record) for record in result]
+                return [_serialize_record(record) for record in result]
         except Exception as e:
             logger.error(f"run_cypher failed: {e}")
             raise

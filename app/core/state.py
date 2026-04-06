@@ -46,7 +46,6 @@ class AgentState(TypedDict):
     """
 
     # Conversation history (LangChain messages).
-    # Capped at 100 messages by the _append reducer to prevent OOM.
     messages: Annotated[Sequence[BaseMessage], operator.add]
 
     # Log of (tool_name, input_dict, output_str) tuples.
@@ -63,6 +62,9 @@ class AgentState(TypedDict):
 
     # Free-form metadata (debug info, metrics, etc.).
     metadata: Annotated[Dict[str, Any], _replace]
+
+    # Loaded skill names — active_tools is derived from this on each turn.
+    loaded_skills: Annotated[List[str], _replace]
 
 
 def make_initial_state(
@@ -94,6 +96,7 @@ def make_initial_state(
         is_complete=False,
         run_config=run_config,
         metadata={"started_at": datetime.utcnow().isoformat()},
+        loaded_skills=[],
     )
 
 

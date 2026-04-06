@@ -57,6 +57,14 @@ import app.tools.file_tools     # noqa: F401
 import app.tools.neo4j_tools    # noqa: F401
 import app.tools.rag_tool       # noqa: F401
 import app.tools.skill_tools    # noqa: F401
+# Legacy tool modules (optional — register if present)
+for _mod in ("causality_tools", "character_tools", "event_tools"):
+    try:
+        __import__(f"app.tools.{_mod}")
+    except ImportError:
+        pass
+    except Exception as _e:
+        logger.warning(f"Error loading optional tool module {_mod!r}: {_e}")
 
 logger = logging.getLogger(__name__)
 

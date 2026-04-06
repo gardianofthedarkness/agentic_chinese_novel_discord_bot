@@ -46,7 +46,6 @@ class ToolNode(BaseNode):
     node_id = "tool"
 
     def __init__(self, **deps: Any) -> None:
-        # Store deps so we can lazily build tool instances on first use.
         self._deps = deps
         self._harness = deps.get("harness")
         self._tool_instances: Dict[str, Any] = {}
@@ -76,8 +75,6 @@ class ToolNode(BaseNode):
 
         logger.debug(f"ToolNode: executing tool={name!r} inputs={inputs}")
 
-        # Publish a status update so the Discord bot can show a live caption.
-        # Prefer the LLM-provided reason; fall back to hardcoded label.
         run_config = state.get("run_config")
         if self._harness and run_config:
             reason = call.get("reason", "").strip()
@@ -106,8 +103,35 @@ class ToolNode(BaseNode):
 
         logger.debug(f"ToolNode: tool={name!r} result length={len(result)}")
 
-        return {
-            "messages": [
-                ToolMessage(content=result, tool_call_id=name)
-            ]
+        # Strip internal _state_updates key before LLM sees the result
+        visible_result = result
+        state_updates: Dict[str, Any] = {}
+        if result and result.lstrip().startswith("{"):
+            try:
+                result_data = json.loads(result)
+                state_updates = result_data.pop("_state_updates", {})
+                if state_updates:
+                    visible_result = json.dumps(result_data)
+            except json.JSONDecodeError:
+                pass
+
+        updates: Dict[str, Any] = {
+            "messages": [ToolMessage(content=visible_result, tool_call_id=name)],
+            "tool_calls": [],
         }
+
+        if state_updates:
+            from app.tools.skill_tools import compute_active_tools  # noqa: avoid circular at import time
+            current_loaded = list(state.get("loaded_skills") or [])
+            add = state_updates.get("loaded_skills_add")
+            if add and add not in current_loaded:
+                current_loaded.append(add)
+            remove = state_updates.get("loaded_skills_remove")
+            if remove == "all":
+                current_loaded = []
+            elif remove and remove in current_loaded:
+                current_loaded.remove(remove)
+            updates["loaded_skills"] = current_loaded
+            logger.info(f"ToolNode: skill state → loaded={current_loaded}, active={compute_active_tools(current_loaded)}")
+
+        return updates
